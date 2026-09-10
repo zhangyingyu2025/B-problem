@@ -1,0 +1,131 @@
+{
+  "seed": 20260910,
+  "independent_oracle_seed": 20260911,
+  "tests_run": 27,
+  "failures": 0,
+  "errors": 0,
+  "elapsed_seconds": 0.7211848000001737,
+  "python": "3.12.1 (tags/v3.12.1:2305ca5, Dec  7 2023, 22:03:25) [MSC v.1937 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "success": true,
+  "oracle_random_systems": 160,
+  "synthetic_random_targets": 30,
+  "target_observation_counts": [
+    3,
+    4,
+    5
+  ],
+  "case_results": [
+    {
+      "case_id": "empty_outward_rays",
+      "status": "empty",
+      "deterministic_json_and_svg": true
+    },
+    {
+      "case_id": "equilateral_counterexample",
+      "status": "bounded",
+      "deterministic_json_and_svg": true
+    },
+    {
+      "case_id": "two_station",
+      "status": "bounded",
+      "deterministic_json_and_svg": true
+    },
+    {
+      "case_id": "unbounded_single_station",
+      "status": "unbounded",
+      "deterministic_json_and_svg": true
+    }
+  ],
+  "protected_inputs": [
+    {
+      "path": "2013参考论文.pdf",
+      "unchanged": true
+    },
+    {
+      "path": "CUMCM2026Problems/CUMCM2026Problems/A题/A题.pdf",
+      "unchanged": true
+    },
+    {
+      "path": "CUMCM2026Problems/CUMCM2026Problems/A题/附件/附件1.xlsx",
+      "unchanged": true
+    },
+    {
+      "path": "CUMCM2026Problems/CUMCM2026Problems/A题/附件/附件2.xlsx",
+      "unchanged": true
+    },
+    {
+      "path": "CUMCM2026Problems/CUMCM2026Problems/A题/附件/附件3/result1.xlsx",
+      "unchanged": true
+    },
+    {
+      "path": "CUMCM2026Problems/CUMCM2026Problems/A题/附件/附件3/result2.xlsx",
+      "unchanged": true
+    },
+    {
+      "path": "CUMCM2026Problems/CUMCM2026Problems/A题/附件/附件3/result3.xlsx",
+      "unchanged": true
+    },
+    {
+      "path": "CUMCM2026Problems/CUMCM2026Problems/A题/附件/附件3/result4.xlsx",
+      "unchanged": true
+    },
+    {
+      "path": "CUMCM2026Problems/CUMCM2026Problems/B题/B题.pdf",
+      "unchanged": true
+    },
+    {
+      "path": "CUMCM2026Problems/CUMCM2026Problems/B题/附件/附件1.docx",
+      "unchanged": true
+    },
+    {
+      "path": "CUMCM2026Problems/CUMCM2026Problems/B题/附件/附件2.docx",
+      "unchanged": true
+    },
+    {
+      "path": "CUMCM2026Problems/CUMCM2026Problems/C题/C题.pdf",
+      "unchanged": true
+    },
+    {
+      "path": "CUMCM2026Problems/CUMCM2026Problems/C题/附件/附件1.xlsx",
+      "unchanged": true
+    },
+    {
+      "path": "CUMCM2026Problems/CUMCM2026Problems/C题/附件/附件2.xlsx",
+      "unchanged": true
+    },
+    {
+      "path": "CUMCM2026Problems/CUMCM2026Problems/C题/附件/附件3.xlsx",
+      "unchanged": true
+    },
+    {
+      "path": "CUMCM2026Problems/CUMCM2026Problems/C题/附件/附件4.xlsx",
+      "unchanged": true
+    },
+    {
+      "path": "CUMCM2026Problems/CUMCM2026Problems/C题/附件/附件5/result1.xlsx",
+      "unchanged": true
+    },
+    {
+      "path": "CUMCM2026Problems/CUMCM2026Problems/C题/附件/附件5/result2.xlsx",
+      "unchanged": true
+    },
+    {
+      "path": "CUMCM2026Problems/CUMCM2026Problems/C题/附件/附件5/result3.xlsx",
+      "unchanged": true
+    },
+    {
+      "path": "CUMCM2026Problems/CUMCM2026Problems/C题/附件/附件5/result4-2.xlsx",
+      "unchanged": true
+    },
+    {
+      "path": "CUMCM2026Problems/CUMCM2026Problems/C题/附件/附件5/result4-3.xlsx",
+      "unchanged": true
+    },
+    {
+      "path": "CUMCM2026Problems/CUMCM2026Problems/format2026.doc",
+      "unchanged": true
+    }
+  ],
+  "protected_inputs_unchanged": true
+}

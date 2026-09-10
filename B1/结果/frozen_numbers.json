@@ -1,0 +1,108 @@
+{
+  "data_kind": "synthetic",
+  "seed": 20260910,
+  "cases": {
+    "empty_outward_rays": {
+      "status": "empty",
+      "input_sha256": "acac2d89144c603cba38815a8bdf7a1e4da2732645444877a04aa99eeba6be44",
+      "diameter_m": null,
+      "farthest_pair": null,
+      "diameter_circle": null,
+      "minimum_enclosing_circle": null,
+      "circle_crosscheck_passed": null
+    },
+    "equilateral_counterexample": {
+      "status": "bounded",
+      "input_sha256": "19a4cdb3ca7687a23fbed33c01e4a0092941e3bb80f084375793b676083d3399",
+      "diameter_m": 36.0,
+      "farthest_pair": [
+        [
+          1.3127425272378462e-13,
+          0.0
+        ],
+        [
+          18.00000000000013,
+          31.176914536239796
+        ]
+      ],
+      "diameter_circle": {
+        "center": [
+          9.000000000000131,
+          15.588457268119898
+        ],
+        "radius_m": 18.0,
+        "covers": false,
+        "uncovered_vertex_indices": [
+          1
+        ],
+        "uncovered_vertices": [
+          [
+            36.00000000000013,
+            0.0
+          ]
+        ]
+      },
+      "minimum_enclosing_circle": {
+        "center": [
+          18.00000000000013,
+          10.392304845413268
+        ],
+        "radius_m": 20.784609690826528,
+        "diameter_m": 41.569219381653056,
+        "support_indices": [
+          0,
+          1,
+          2
+        ]
+      },
+      "circle_crosscheck_passed": true
+    },
+    "two_station": {
+      "status": "bounded",
+      "input_sha256": "df3ffd4af2fdfde4461fed466e3a09ac7fa43a805f3eff8cdbdfe5ce4f2faf36",
+      "diameter_m": 6.984153898349609,
+      "farthest_pair": [
+        [
+          0.0,
+          -3.431122519292626
+        ],
+        [
+          0.0,
+          3.553031379056983
+        ]
+      ],
+      "diameter_circle": {
+        "center": [
+          0.0,
+          0.060954429882178404
+        ],
+        "radius_m": 3.4920769491748045,
+        "covers": true,
+        "uncovered_vertex_indices": [],
+        "uncovered_vertices": []
+      },
+      "minimum_enclosing_circle": {
+        "center": [
+          0.0,
+          0.060954429882178404
+        ],
+        "radius_m": 3.4920769491748045,
+        "diameter_m": 6.984153898349609,
+        "support_indices": [
+          1,
+          3
+        ]
+      },
+      "circle_crosscheck_passed": true
+    },
+    "unbounded_single_station": {
+      "status": "unbounded",
+      "input_sha256": "4d331e836a4772216adc2ddb99816f079d76c83f232333163bc84e7ee016b885",
+      "diameter_m": null,
+      "farthest_pair": null,
+      "diameter_circle": null,
+      "minimum_enclosing_circle": null,
+      "circle_crosscheck_passed": null
+    }
+  }
+}

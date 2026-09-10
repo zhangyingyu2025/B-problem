@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="680" viewBox="0 0 1000 680">
+<rect width="1000" height="680" fill="#f8fafc"/>
+<g font-family="Segoe UI,Arial,sans-serif" fill="#152333">
+<text x="40" y="45" font-size="25" font-weight="600">B1 equilateral_counterexample (synthetic)</text>
+<text x="40" y="75" font-size="15">Synthetic validation case | Coordinates in metres | Equal x/y scale</text>
+<rect x="45" y="105" width="600" height="505" rx="8" fill="white" stroke="#d7dfe7"/>
+<polygon points="225.532312,443.041028 514.328225,443.041028 369.930268,192.936431" fill="#dbeafe" fill-opacity="0.75" stroke="#1d4ed8" stroke-width="2"/>
+<circle cx="369.930268" cy="359.672829" r="166.736398" fill="none" stroke="#047857" stroke-width="2" />
+<path d="M365.93026834998466,359.672828970128h8 M369.93026834998466,355.672828970128v8" stroke="#047857"/>
+<circle cx="297.731290" cy="317.988729" r="144.397957" fill="none" stroke="#be123c" stroke-width="2" stroke-dasharray="7 5"/>
+<path d="M293.7312900111009,317.9887293909575h8 M297.7312900111009,313.9887293909575v8" stroke="#be123c"/>
+<polyline points="225.532312,443.041028 369.930268,192.936431" fill="none" stroke="#be123c" stroke-width="2"/>
+<circle cx="225.532312" cy="443.041028" r="4" fill="#1d4ed8"/><text x="233.532312" y="435.041028" font-size="13">V0</text>
+<circle cx="514.328225" cy="443.041028" r="4" fill="#1d4ed8"/><text x="522.328225" y="435.041028" font-size="13">V1</text>
+<circle cx="369.930268" cy="192.936431" r="4" fill="#1d4ed8"/><text x="377.930268" y="184.936431" font-size="13">V2</text>
+<line x1="675" x2="700" y1="140" y2="140" stroke="#1d4ed8" stroke-width="3"/><text x="710" y="145" font-size="14">Feasible polygon</text>
+<line x1="675" x2="700" y1="180" y2="180" stroke="#be123c" stroke-width="3"/><text x="710" y="185" font-size="14">Farthest-pair midpoint circle</text>
+<line x1="675" x2="700" y1="220" y2="220" stroke="#047857" stroke-width="3"/><text x="710" y="225" font-size="14">Minimum enclosing circle</text>
+<text x="675" y="290" font-size="14">Status: bounded</text>
+<text x="675" y="321" font-size="14">Vertices: 3</text>
+<text x="675" y="352" font-size="14">Diameter: 36 m</text>
+<text x="675" y="383" font-size="14">Radius D/2: 18 m</text>
+<text x="675" y="414" font-size="14">Same-diameter cover: FALSE</text>
+<text x="675" y="445" font-size="14">Min. cover diameter: 41.569219 m</text>
+<text x="675" y="476" font-size="14">Independent check: True</text>
+<text x="45" y="640" font-size="14">Blue vertices satisfy all bearing half-planes. The drawing window does not constrain the solver.</text>
+</g></svg>
