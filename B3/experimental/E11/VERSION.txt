@@ -1,0 +1,6 @@
+E11 experimental prototype
+Packaged: 2026-09-11
+Scope: offline only; not rehearsal/formal ready
+Verified against uploaded B-problem-jty.zip using repository B1 geometry,
+B3 OfflineTransport, and protocol Client.
+Fixed 12 cases: 12/12 all cleared; weighted 257.083 s/source.
