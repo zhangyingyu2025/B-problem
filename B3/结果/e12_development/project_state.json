@@ -1,0 +1,26 @@
+{
+  "stage": "development200_complete_awaiting_user_review",
+  "phase_a_approved": true,
+  "protected_e11_tag": "e11-validated",
+  "development_cases": 200,
+  "development_runs": 800,
+  "source_count_each_strategy": 2598,
+  "equivalence_cases": 100,
+  "equivalence_passed": true,
+  "additional_six_pairs_in_development": 95,
+  "candidates": [
+    "T2",
+    "T4",
+    "T6"
+  ],
+  "qualified_candidates": [
+    "T2",
+    "T4",
+    "T6"
+  ],
+  "promoted_candidate": null,
+  "new_official_runs": 0,
+  "new_formal_runs": 0,
+  "locked_validation_runs": 0,
+  "next_action": "停止；用户复核完整配对与分层风险结果后再决定下一步"
+}

@@ -1,0 +1,11 @@
+{
+  "runs_verified": 800,
+  "paired_rows": 600,
+  "protected_files": 41,
+  "raw_action_hashes_verified": true,
+  "max_accounting_difference_s": 4.978246579412371e-07,
+  "disqualified_runs": [],
+  "new_official_runs": 0,
+  "new_formal_runs": 0,
+  "locked_validation_runs": 0
+}

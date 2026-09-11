@@ -1,0 +1,83 @@
+{
+  "seed": 27182906,
+  "strategy": "T2",
+  "case_hash": "173d8d24af42c70692a3f7f5c81bcae274c4699a63dd803104e60eafafac45ca",
+  "group": "random",
+  "error_mode": "fixed_field",
+  "N": 12,
+  "k0": 3,
+  "chosen_template": 7,
+  "selector_invoked": true,
+  "rotation": 50,
+  "all_cleared": true,
+  "qualified_run": true,
+  "guards": {
+    "all_cleared": true,
+    "station_evidence": true,
+    "enter_exit": true,
+    "all_accepted": true,
+    "accounting": true
+  },
+  "cleared_count": 12,
+  "discovered_count": 12,
+  "uncleared_channels": [],
+  "metrics": {
+    "movement_m": 14761.407107944126,
+    "measurements": 154,
+    "switches": 141,
+    "clear_attempts": 12,
+    "clear_successes": 12,
+    "clear_failures": 0,
+    "transport_retries": 0,
+    "virtual_time_s": 3923.281422
+  },
+  "time_per_source_s": 326.9401185,
+  "costs": {
+    "movement_s": 2952.2814215888257,
+    "measurement_s": 770.0,
+    "switch_s": 141.0,
+    "clear_success_s": 60.0,
+    "clear_failure_s": 0.0
+  },
+  "costs_by_reason": {
+    "E11:discovery": {
+      "movement_s": 721.8641679554969,
+      "measurement_s": 595.0,
+      "switch_s": 118.0,
+      "clear_success_s": 0.0,
+      "clear_failure_s": 0.0,
+      "actions": 119
+    },
+    "E11:joint_route_transit": {
+      "movement_s": 1023.4852677122415,
+      "measurement_s": 145.0,
+      "switch_s": 17.0,
+      "clear_success_s": 0.0,
+      "clear_failure_s": 0.0,
+      "actions": 29
+    },
+    "E11:joint_safe_supplement": {
+      "movement_s": 523.8033346988005,
+      "measurement_s": 30.0,
+      "switch_s": 6.0,
+      "clear_success_s": 0.0,
+      "clear_failure_s": 0.0,
+      "actions": 6
+    },
+    "E11_clear": {
+      "movement_s": 683.1286512222861,
+      "measurement_s": 0.0,
+      "switch_s": 0.0,
+      "clear_success_s": 60.0,
+      "clear_failure_s": 0.0,
+      "actions": 12
+    }
+  },
+  "action_count": 168,
+  "canonical_sha256": "f2d9bd525ec006a0ff8555f76cce2da5ed4d7369e573cae6ae87da2ebb2c8495",
+  "action_log": "B3/结果/offline_logs/e12-risk-development-20260911T111939727609/27182906-T2.jsonl",
+  "action_log_sha256": "1be10c5058d2884a7e0f81384cff08882b6ba6d6d3a37641617cb5c1a33fbfae",
+  "wall_s": 1.4300632000013138,
+  "error": null,
+  "six_action_equivalent": null
+}

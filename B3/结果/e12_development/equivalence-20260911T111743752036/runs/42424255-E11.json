@@ -1,0 +1,82 @@
+{
+  "seed": 42424255,
+  "strategy": "E11",
+  "case_hash": "5c5141f23a3efb25deebd77dce16ed1a1f3ec39e3eda88a7f9a6a2b09f89b6fb",
+  "group": "cluster/fixed_field",
+  "error_mode": "fixed_field",
+  "N": 16,
+  "k0": 16,
+  "chosen_template": 6,
+  "selector_invoked": false,
+  "rotation": 0,
+  "all_cleared": true,
+  "qualified_run": true,
+  "guards": {
+    "all_cleared": true,
+    "station_evidence": true,
+    "enter_exit": true,
+    "all_accepted": true,
+    "accounting": true
+  },
+  "cleared_count": 16,
+  "discovered_count": 16,
+  "uncleared_channels": [],
+  "metrics": {
+    "movement_m": 2292.8740405256644,
+    "measurements": 41,
+    "switches": 40,
+    "clear_attempts": 21,
+    "clear_successes": 16,
+    "clear_failures": 5,
+    "transport_retries": 0,
+    "virtual_time_s": 798.574808
+  },
+  "time_per_source_s": 49.9109255,
+  "costs": {
+    "movement_s": 458.5748081051329,
+    "measurement_s": 205.0,
+    "switch_s": 40.0,
+    "clear_success_s": 80.0,
+    "clear_failure_s": 15.0
+  },
+  "costs_by_reason": {
+    "E11:discovery": {
+      "movement_s": 0.0,
+      "measurement_s": 100.0,
+      "switch_s": 19.0,
+      "clear_success_s": 0.0,
+      "clear_failure_s": 0.0,
+      "actions": 20
+    },
+    "E11:safe_supp_round_1": {
+      "movement_s": 232.5323878646302,
+      "measurement_s": 80.0,
+      "switch_s": 16.0,
+      "clear_success_s": 0.0,
+      "clear_failure_s": 0.0,
+      "actions": 16
+    },
+    "E11_clear": {
+      "movement_s": 226.0424202405026,
+      "measurement_s": 0.0,
+      "switch_s": 0.0,
+      "clear_success_s": 80.0,
+      "clear_failure_s": 15.0,
+      "actions": 21
+    },
+    "E11:mec_center_recovery": {
+      "movement_s": 0.0,
+      "measurement_s": 25.0,
+      "switch_s": 5.0,
+      "clear_success_s": 0.0,
+      "clear_failure_s": 0.0,
+      "actions": 5
+    }
+  },
+  "action_count": 64,
+  "canonical_sha256": "cebc5fde3d3ad194d3d150ef54418fbff8111208f1e658fa743b0f6f41874063",
+  "action_log": "B3/结果/offline_logs/e12-risk-equivalence-20260911T111743773045/42424255-E11.jsonl",
+  "action_log_sha256": "51093bee47c91c0c42abec780524fdf821f83a9bd2805582e8cb35b124a032ed",
+  "wall_s": 4.380457000002934,
+  "error": null
+}

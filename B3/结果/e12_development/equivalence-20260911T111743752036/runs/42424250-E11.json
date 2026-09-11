@@ -1,0 +1,82 @@
+{
+  "seed": 42424250,
+  "strategy": "E11",
+  "case_hash": "13527f1ef5e8d097c091139f4d2ee3bce7d09cd5fc6a5b1fd0d4139f63a49604",
+  "group": "cluster/fixed_field",
+  "error_mode": "fixed_field",
+  "N": 11,
+  "k0": 11,
+  "chosen_template": 6,
+  "selector_invoked": false,
+  "rotation": 30,
+  "all_cleared": true,
+  "qualified_run": true,
+  "guards": {
+    "all_cleared": true,
+    "station_evidence": true,
+    "enter_exit": true,
+    "all_accepted": true,
+    "accounting": true
+  },
+  "cleared_count": 11,
+  "discovered_count": 11,
+  "uncleared_channels": [],
+  "metrics": {
+    "movement_m": 6958.1057814635815,
+    "measurements": 117,
+    "switches": 111,
+    "clear_attempts": 11,
+    "clear_successes": 11,
+    "clear_failures": 0,
+    "transport_retries": 0,
+    "virtual_time_s": 2142.621156
+  },
+  "time_per_source_s": 194.78374145454546,
+  "costs": {
+    "movement_s": 1391.6211562927163,
+    "measurement_s": 585.0,
+    "switch_s": 111.0,
+    "clear_success_s": 55.0,
+    "clear_failure_s": 0.0
+  },
+  "costs_by_reason": {
+    "E11:discovery": {
+      "movement_s": 1063.7570495929963,
+      "measurement_s": 370.0,
+      "switch_s": 68.0,
+      "clear_success_s": 0.0,
+      "clear_failure_s": 0.0,
+      "actions": 74
+    },
+    "E11:joint_route_transit": {
+      "movement_s": 197.46032092306706,
+      "measurement_s": 210.0,
+      "switch_s": 42.0,
+      "clear_success_s": 0.0,
+      "clear_failure_s": 0.0,
+      "actions": 42
+    },
+    "E11:joint_safe_supplement": {
+      "movement_s": 2.3863035105460653,
+      "measurement_s": 5.0,
+      "switch_s": 1.0,
+      "clear_success_s": 0.0,
+      "clear_failure_s": 0.0,
+      "actions": 1
+    },
+    "E11_clear": {
+      "movement_s": 128.01748226610667,
+      "measurement_s": 0.0,
+      "switch_s": 0.0,
+      "clear_success_s": 55.0,
+      "clear_failure_s": 0.0,
+      "actions": 11
+    }
+  },
+  "action_count": 130,
+  "canonical_sha256": "a0fc7ed3146eb658f523403d4f8092210abcc5d7c308d25e7d53dcf13018afbd",
+  "action_log": "B3/结果/offline_logs/e12-risk-equivalence-20260911T111743773045/42424250-E11.jsonl",
+  "action_log_sha256": "03e8a9b6165d9985384e8fcde35957dcd58c9aa11606c9b04a09674430e97421",
+  "wall_s": 1.0083086000013282,
+  "error": null
+}

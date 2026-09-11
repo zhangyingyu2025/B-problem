@@ -1,0 +1,30 @@
+stage: E12_Risk_development_only
+authorization: 用户已通过Phase_A并授权100场等价回归及200场四策略配对，完成后停止
+baseline: e11-validated (e3888ee)
+protected: E11全部文件、B1/B2、Phase_A引擎与结果、protocol_adapter、offline_environment
+editable: 仅新增离线实验工具、纯k0 selector、永久回归测试和本阶段产物
+primary_goal: 降低逐场T/N的P95及CVaR95，单位秒每源
+candidates: [E11, T2, T4, T6]
+thresholds: {T2: 2, T4: 4, T6: 6}
+templates: {six: [6, 1130], seven: [7, 1005]}
+equivalence:
+  seeds: 42424200-42424299
+  cases: 100
+  groups: 每20场一组，random/fixed_field、boundary/endpoints、cluster/fixed_field、origin/fixed_field、random/endpoints
+  source_counts: 10加seed模7，生成器原定义不变
+  comparison: 冻结E11与强制六点hook完整事件及最终metrics严格相等，仅忽略请求身份和墙钟字段
+development:
+  seeds: 27182800-27182999
+  cases: 200
+  pattern: random
+  error_mode: fixed_field
+  pairing: 四策略各自完整运行，同一序列化case和error_mode，禁止复用其他策略输出
+  total_runs: 800
+excluded: fixed12、31415900-31415979、locked_validation、official_simulator、formal
+quantiles: sorted values上采用h=(n-1)*p的线性插值
+cvar95: 最大ceil(0.05*n)项的算术平均；分层样本少时显式报告tail_count
+paired_delta: Y_candidate-Y_E11，其中Y=T/N；同时保存总时间差及动作成本差
+correctness_guard: 全清、发现证据、enter/exit、accepted、动作成本分解、冻结哈希、六点动作等价
+failure_rule: 任一未全清或独立guard失败立即记录候选不合格；仍保留并执行其余预注册case供诊断，不再允许凭性能获选
+budget: 100场等价配对加200场四策略；最多4个独立Python进程；单case单策略超时120秒；无新增候选或阈值修改
+stop_rule: development200完成即停止，只交付统计与证据，不自动晋级或运行locked_validation

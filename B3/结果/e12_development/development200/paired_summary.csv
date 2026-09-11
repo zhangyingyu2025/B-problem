@@ -1,0 +1,4 @@
+﻿strategy,pairs,qualified_pairs,win_rate,tie_rate,median_delta_s_per_source,P95_delta_s_per_source,worst_delta_s_per_source,worst_seed,mean_delta_movement_m,mean_delta_measurements,mean_delta_switches,mean_delta_clear_failures,qualified_candidate,P95_below_E11,CVaR95_below_E11,weighted_below_E11
+T2,200,200,0.52,0.005,-1.0171108999999774,27.932598892307666,46.56581058333336,27182920,-394.1257886560077,11.065,9.685,-0.035,True,True,True,True
+T4,200,200,0.485,0.075,0.0,26.37072306713281,46.56581058333336,27182920,-376.9069679911453,10.215,8.96,-0.005,True,False,True,True
+T6,200,200,0.31,0.395,0.0,20.274046446153864,36.66574692307694,27182949,-252.33335896703176,6.335,5.475,0.025,True,False,False,True
