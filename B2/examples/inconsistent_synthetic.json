@@ -1,0 +1,5 @@
+{
+  "data_kind": "synthetic",
+  "description": "人工构造矛盾：第一点离圆域过远却报告向东正常读数",
+  "observation": {"x": 4000, "y": 0, "svd_deg": 0}
+}

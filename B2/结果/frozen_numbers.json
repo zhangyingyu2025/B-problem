@@ -1,0 +1,81 @@
+{
+  "scope": "validated synthetic examples of a conservative numerical strategy",
+  "not_global_optima": true,
+  "cases": {
+    "central_synthetic": {
+      "data_kind": "synthetic",
+      "status": "completed_with_numerical_bounds",
+      "recommended_local_m": [
+        775.0,
+        -625.0
+      ],
+      "recommended_world_m": [
+        775.0,
+        -625.0
+      ],
+      "movement_m": 995.6153875869938,
+      "worst_diameter_bounds_m": [
+        136.1258265089285,
+        137.04971959565918
+      ],
+      "worst_mec_radius_bounds_m": [
+        68.06291325446435,
+        68.52485979782969
+      ],
+      "clearance_20m_assessment": "counterexample_observation_found",
+      "candidate_count": 146,
+      "source_result": "B2/结果/central_synthetic.json"
+    },
+    "edge_synthetic": {
+      "data_kind": "synthetic",
+      "status": "completed_with_numerical_bounds",
+      "recommended_local_m": [
+        225.0,
+        -225.0
+      ],
+      "recommended_world_m": [
+        1725.0,
+        -225.0
+      ],
+      "movement_m": 318.1980515339464,
+      "worst_diameter_bounds_m": [
+        16.63639494134815,
+        17.63513262249148
+      ],
+      "worst_mec_radius_bounds_m": [
+        8.318197470674097,
+        8.817566311245743
+      ],
+      "clearance_20m_assessment": "supported_by_conservative_float_upper",
+      "candidate_count": 156,
+      "source_result": "B2/结果/edge_synthetic.json"
+    },
+    "inconsistent_synthetic": {
+      "status": "inconsistent_observation"
+    },
+    "wrap_synthetic": {
+      "data_kind": "synthetic",
+      "status": "completed_with_numerical_bounds",
+      "recommended_local_m": [
+        775.0,
+        -625.0
+      ],
+      "recommended_world_m": [
+        769.516405688249,
+        -631.7392669263468
+      ],
+      "movement_m": 995.6153875869938,
+      "worst_diameter_bounds_m": [
+        136.1258265089285,
+        137.04971959565918
+      ],
+      "worst_mec_radius_bounds_m": [
+        68.06291325446435,
+        68.52485979782969
+      ],
+      "clearance_20m_assessment": "counterexample_observation_found",
+      "candidate_count": 146,
+      "source_result": "B2/结果/wrap_synthetic.json"
+    }
+  }
+}

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900">
+<rect width="1200" height="900" fill="white"/>
+<style>text{font-family:"Microsoft YaHei",Arial,sans-serif;fill:#243746} .small{font-size:14px}</style>
+<text x="45" y="40" font-size="25">B2  第二检测点：接收保障与最坏情况定位</text>
+<text x="45" y="68" font-size="15">数据标记：synthetic  |  主指标 D，辅助指标 R_min；非连续全局最优证明</text>
+<text x="45" y="130" font-size="16">状态：inconsistent_observation</text>
+</svg>

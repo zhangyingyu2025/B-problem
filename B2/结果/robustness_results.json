@@ -1,0 +1,39 @@
+{
+  "status": "passed_with_documented_float_limits",
+  "seed": 20260911,
+  "checks": [
+    {
+      "case": "central_synthetic",
+      "reference_digits": 65,
+      "dense_angle_count": 257,
+      "dense_max_diameter_m": 136.12582650892844,
+      "dense_max_mec_radius_m": 68.06291325446422,
+      "inside_adaptive_envelopes": true,
+      "is_global_certificate": false
+    },
+    {
+      "case": "edge_synthetic",
+      "reference_digits": 65,
+      "dense_angle_count": 257,
+      "dense_max_diameter_m": 16.636394941348097,
+      "dense_max_mec_radius_m": 8.318197470674049,
+      "inside_adaptive_envelopes": true,
+      "is_global_certificate": false
+    },
+    {
+      "case": "wrap_synthetic",
+      "reference_digits": 65,
+      "dense_angle_count": 257,
+      "dense_max_diameter_m": 136.12582650892844,
+      "dense_max_mec_radius_m": 68.06291325446422,
+      "inside_adaptive_envelopes": true,
+      "is_global_certificate": false
+    }
+  ],
+  "b1_dependency_hash_count": 3,
+  "baseline_failures": {
+    "forward": "unbounded pure angular intersection",
+    "lateral": "target (1500,0), R=1500, s2=(0,600) loses signal"
+  },
+  "scope": "synthetic offline validation; no simulator; no rigorous interval certificate"
+}
