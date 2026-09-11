@@ -1,0 +1,160 @@
+{
+  "scope": "correctness_only_not_performance_selection",
+  "trace_directory": "B3/\u7ed3\u679c/offline_logs/e12-equivalence-20260911T110455717132",
+  "records": [
+    {
+      "seed": 24494904,
+      "pattern": "random",
+      "mode": "default",
+      "actions": 138,
+      "exact_equal": true,
+      "rotation": 20,
+      "k0": 4,
+      "virtual_time_s": 3190.195658,
+      "canonical_sha256": "bf07e6dd2e097b8325349aed72852d3aa11956de38c9398e36b9d77d6dc680ff"
+    },
+    {
+      "seed": 24494904,
+      "pattern": "random",
+      "mode": "forced6",
+      "actions": 138,
+      "exact_equal": true,
+      "rotation": 20,
+      "k0": 4,
+      "virtual_time_s": 3190.195658,
+      "canonical_sha256": "bf07e6dd2e097b8325349aed72852d3aa11956de38c9398e36b9d77d6dc680ff"
+    },
+    {
+      "seed": 1200601,
+      "pattern": "random",
+      "mode": "default",
+      "actions": 148,
+      "exact_equal": true,
+      "rotation": 5,
+      "k0": 4,
+      "virtual_time_s": 3361.203472,
+      "canonical_sha256": "2902be3b5c646435c789e410f2f7dec4fd2b1b8ee3e84a7b74521c57711b3914"
+    },
+    {
+      "seed": 1200601,
+      "pattern": "random",
+      "mode": "forced6",
+      "actions": 148,
+      "exact_equal": true,
+      "rotation": 5,
+      "k0": 4,
+      "virtual_time_s": 3361.203472,
+      "canonical_sha256": "2902be3b5c646435c789e410f2f7dec4fd2b1b8ee3e84a7b74521c57711b3914"
+    },
+    {
+      "seed": 1200602,
+      "pattern": "random",
+      "mode": "default",
+      "actions": 151,
+      "exact_equal": true,
+      "rotation": 35,
+      "k0": 5,
+      "virtual_time_s": 3612.183044,
+      "canonical_sha256": "cb873714729d0fe86601e977b14aeabc31dd5d9c89713f2ce2590de318a5983e"
+    },
+    {
+      "seed": 1200602,
+      "pattern": "random",
+      "mode": "forced6",
+      "actions": 151,
+      "exact_equal": true,
+      "rotation": 35,
+      "k0": 5,
+      "virtual_time_s": 3612.183044,
+      "canonical_sha256": "cb873714729d0fe86601e977b14aeabc31dd5d9c89713f2ce2590de318a5983e"
+    },
+    {
+      "seed": 1200610,
+      "pattern": "boundary",
+      "mode": "default",
+      "actions": 157,
+      "exact_equal": true,
+      "rotation": 0,
+      "k0": 0,
+      "virtual_time_s": 4008.449114,
+      "canonical_sha256": "d4985ef4ac7029728d577b9fb827c49ce07b5f486c981dff3ab96d6fbc9af110"
+    },
+    {
+      "seed": 1200610,
+      "pattern": "boundary",
+      "mode": "forced6",
+      "actions": 157,
+      "exact_equal": true,
+      "rotation": 0,
+      "k0": 0,
+      "virtual_time_s": 4008.449114,
+      "canonical_sha256": "d4985ef4ac7029728d577b9fb827c49ce07b5f486c981dff3ab96d6fbc9af110"
+    },
+    {
+      "seed": 1200611,
+      "pattern": "cluster",
+      "mode": "default",
+      "actions": 102,
+      "exact_equal": true,
+      "rotation": 30,
+      "k0": 15,
+      "virtual_time_s": 957.028154,
+      "canonical_sha256": "be338b0267e452c13550dfef8f223861daf347ccd0a551cc643c8bbee9d003a3"
+    },
+    {
+      "seed": 1200611,
+      "pattern": "cluster",
+      "mode": "forced6",
+      "actions": 102,
+      "exact_equal": true,
+      "rotation": 30,
+      "k0": 15,
+      "virtual_time_s": 957.028154,
+      "canonical_sha256": "be338b0267e452c13550dfef8f223861daf347ccd0a551cc643c8bbee9d003a3"
+    },
+    {
+      "seed": 1200612,
+      "pattern": "origin",
+      "mode": "default",
+      "actions": 130,
+      "exact_equal": true,
+      "rotation": 5,
+      "k0": 4,
+      "virtual_time_s": 3502.154692,
+      "canonical_sha256": "f5034b6cd4404041c9fb0a1e547be4b75ae5cc8eb8f5f38e2ac6dec5a1ad202f"
+    },
+    {
+      "seed": 1200612,
+      "pattern": "origin",
+      "mode": "forced6",
+      "actions": 130,
+      "exact_equal": true,
+      "rotation": 5,
+      "k0": 4,
+      "virtual_time_s": 3502.154692,
+      "canonical_sha256": "f5034b6cd4404041c9fb0a1e547be4b75ae5cc8eb8f5f38e2ac6dec5a1ad202f"
+    },
+    {
+      "seed": 1200613,
+      "pattern": "random",
+      "mode": "default",
+      "actions": 38,
+      "exact_equal": true,
+      "rotation": 0,
+      "k0": null,
+      "virtual_time_s": 199.0,
+      "canonical_sha256": "ab26cdc4a821548960782be856ee7e32ea55a77f8f5659d00d5738eab42acef8"
+    },
+    {
+      "seed": 1200613,
+      "pattern": "random",
+      "mode": "forced6",
+      "actions": 38,
+      "exact_equal": true,
+      "rotation": 0,
+      "k0": null,
+      "virtual_time_s": 199.0,
+      "canonical_sha256": "ab26cdc4a821548960782be856ee7e32ea55a77f8f5659d00d5738eab42acef8"
+    }
+  ]
+}

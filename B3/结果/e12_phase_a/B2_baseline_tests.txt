@@ -1,0 +1,34 @@
+test_bad_inputs (test_b2.DomainTests.test_bad_inputs) ... ok
+test_circle_clipping_shortens_reading_interval (test_b2.DomainTests.test_circle_clipping_shortens_reading_interval) ... ok
+test_external_tangent_source_set (test_b2.DomainTests.test_external_tangent_source_set) ... ok
+test_fixed_seed_reception_and_no_near (test_b2.DomainTests.test_fixed_seed_reception_and_no_near) ... ok
+test_inconsistent_and_external_first_point (test_b2.DomainTests.test_inconsistent_and_external_first_point) ... ok
+test_near_only_source_set_rejected (test_b2.DomainTests.test_near_only_source_set_rejected) ... ok
+test_projection_contains_all_sampled_sources (test_b2.DomainTests.test_projection_contains_all_sampled_sources) ... ok
+test_reception_boundary_guard (test_b2.DomainTests.test_reception_boundary_guard) ... ok
+test_safe_and_effective_are_different (test_b2.DomainTests.test_safe_and_effective_are_different) ... ok
+test_adaptive_bounds_cover_dense_independent_grid (test_b2.EvaluationTests.test_adaptive_bounds_cover_dense_independent_grid) ... ok
+test_budget_exhaustion_is_explicit (test_b2.EvaluationTests.test_budget_exhaustion_is_explicit) ... ok
+test_high_precision_disagreement_is_not_silent (test_b2.EvaluationTests.test_high_precision_disagreement_is_not_silent) ... ok
+test_mirror_symmetry (test_b2.EvaluationTests.test_mirror_symmetry) ... ok
+test_more_refinement_tightens_envelope (test_b2.EvaluationTests.test_more_refinement_tightens_envelope) ... ok
+test_primary_and_auxiliary_fields_separate (test_b2.EvaluationTests.test_primary_and_auxiliary_fields_separate) ... ok
+test_scaling_all_physical_lengths (test_b2.EvaluationTests.test_scaling_all_physical_lengths) ... ok
+test_translate_rotate_wrap_invariance (test_b2.EvaluationTests.test_translate_rotate_wrap_invariance) ... ok
+test_worst_sample_has_valid_physical_witness (test_b2.EvaluationTests.test_worst_sample_has_valid_physical_witness) ... ok
+test_circle_rectangle_segment_point (test_b2.GeometryTests.test_circle_rectangle_segment_point) ... ok
+test_degenerate_outer_source_endpoint (test_b2.GeometryTests.test_degenerate_outer_source_endpoint) ... ok
+test_float_vs_independent_precise (test_b2.GeometryTests.test_float_vs_independent_precise) ... ok
+test_high_precision_trigonometry (test_b2.GeometryTests.test_high_precision_trigonometry) ... ok
+test_mec_equilateral_not_half_diameter (test_b2.GeometryTests.test_mec_equilateral_not_half_diameter) ... ok
+test_precise_failure_baseline_unbounded (test_b2.GeometryTests.test_precise_failure_baseline_unbounded) ... ok
+test_b1_dependency_hashes_unchanged (test_b2.IntegrationTests.test_b1_dependency_hashes_unchanged) ... ok
+test_candidate_budget_and_no_candidate (test_b2.IntegrationTests.test_candidate_budget_and_no_candidate) ... ok
+test_deterministic_search_and_distinct_domains (test_b2.IntegrationTests.test_deterministic_search_and_distinct_domains) ... ok
+test_json_and_svg_round_trip (test_b2.IntegrationTests.test_json_and_svg_round_trip) ... ok
+test_twenty_meter_coverage_positive_case (test_b2.IntegrationTests.test_twenty_meter_coverage_positive_case) ... ok
+
+----------------------------------------------------------------------
+Ran 29 tests in 1.936s
+
+OK

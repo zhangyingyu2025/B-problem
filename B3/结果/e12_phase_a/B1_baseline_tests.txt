@@ -1,0 +1,32 @@
+test_backward_rays_do_not_intersect (test_b1.BearingAndPropertyTests.test_backward_rays_do_not_intersect) ... ok
+test_invalid_input (test_b1.BearingAndPropertyTests.test_invalid_input) ... ok
+test_one_station_unbounded (test_b1.BearingAndPropertyTests.test_one_station_unbounded) ... ok
+test_seeded_true_target_containment_and_monotonicity (test_b1.BearingAndPropertyTests.test_seeded_true_target_containment_and_monotonicity) ... ok
+test_symmetric_two_station_cocircular_regression (test_b1.BearingAndPropertyTests.test_symmetric_two_station_cocircular_regression) ... ok
+test_transform_invariance (test_b1.BearingAndPropertyTests.test_transform_invariance) ... ok
+test_zero_wrap_duplicate_and_no_signal (test_b1.BearingAndPropertyTests.test_zero_wrap_duplicate_and_no_signal) ... ok
+test_json_svg_reproducibility_and_input_protection (test_b1.CLITests.test_json_svg_reproducibility_and_input_protection) ... ok
+test_nan_and_duplicate_json_rejected (test_b1.CLITests.test_nan_and_duplicate_json_rejected) ... ok
+test_bounded_vertex_failure_is_not_empty (test_b1.FeasibilityTests.test_bounded_vertex_failure_is_not_empty) ... ok
+test_constraint_permutation (test_b1.FeasibilityTests.test_constraint_permutation) ... ok
+test_empty_independent_of_vertices_and_cone (test_b1.FeasibilityTests.test_empty_independent_of_vertices_and_cone) ... ok
+test_full_plane_halfplane_strip_and_line_have_no_vertices (test_b1.FeasibilityTests.test_full_plane_halfplane_strip_and_line_have_no_vertices) ... ok
+test_independent_fourier_motzkin_oracle (test_b1.FeasibilityTests.test_independent_fourier_motzkin_oracle) ... ok
+test_point_segment_ray (test_b1.FeasibilityTests.test_point_segment_ray) ... ok
+test_recession_certificate_exact (test_b1.FeasibilityTests.test_recession_certificate_exact) ... ok
+test_tiny_gap_not_silently_expanded (test_b1.FeasibilityTests.test_tiny_gap_not_silently_expanded) ... ok
+test_zero_normal_tautology (test_b1.FeasibilityTests.test_zero_normal_tautology) ... ok
+test_almost_right_triangle_circle_is_uncertain (test_b1.GeometryTests.test_almost_right_triangle_circle_is_uncertain) ... ok
+test_circle_check_for_right_and_obtuse_triangle (test_b1.GeometryTests.test_circle_check_for_right_and_obtuse_triangle) ... ok
+test_mec_does_not_control_primary_verdict (test_b1.GeometryTests.test_mec_does_not_control_primary_verdict) ... ok
+test_near_parallel_active_boundaries_are_uncertain (test_b1.GeometryTests.test_near_parallel_active_boundaries_are_uncertain) ... ok
+test_rational_acute_triangle (test_b1.GeometryTests.test_rational_acute_triangle) ... ok
+test_realizable_equilateral_counterexample (test_b1.GeometryTests.test_realizable_equilateral_counterexample) ... ok
+test_rectangle_and_multiple_farthest_pairs (test_b1.GeometryTests.test_rectangle_and_multiple_farthest_pairs) ... ok
+test_redundant_near_parallel_does_not_spoil_box (test_b1.GeometryTests.test_redundant_near_parallel_does_not_spoil_box) ... ok
+test_single_point_and_segment_circles (test_b1.GeometryTests.test_single_point_and_segment_circles) ... ok
+
+----------------------------------------------------------------------
+Ran 27 tests in 0.754s
+
+OK

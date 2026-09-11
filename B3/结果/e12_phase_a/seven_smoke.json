@@ -1,0 +1,14 @@
+[
+  {
+    "pattern": "random",
+    "cleared": 10,
+    "total": 10,
+    "actions": 156
+  },
+  {
+    "pattern": "boundary",
+    "cleared": 10,
+    "total": 10,
+    "actions": 159
+  }
+]

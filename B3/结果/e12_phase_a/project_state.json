@@ -1,0 +1,27 @@
+{
+  "stage": "E12_phase_A_complete_awaiting_user_review",
+  "branch": "codex/e12-coverage-hook",
+  "frozen_e11_commit": "e3888ee4e3c44301b9ee139365e24dcaab226d48",
+  "baseline_e11": {
+    "starts": 9,
+    "valid_runs": 7,
+    "enter_failures": 2,
+    "discovered": 93,
+    "cleared": 93,
+    "weighted_time_per_discovered_source_s": 263.1773303010753,
+    "true_counts_verified": 0
+  },
+  "tests": {
+    "B1": 27,
+    "B2": 29,
+    "B3": 33,
+    "total": 89,
+    "action_equivalence_pairs": 14,
+    "seven_site_smoke_cases": 2
+  },
+  "protected_raw_hashes_verified": true,
+  "E12_official_runs": 0,
+  "new_formal_runs": 0,
+  "performance_tuning_runs": 0,
+  "next_action": "用户复核本阶段后才进入Phase D；不自动调参或连接模拟器"
+}
