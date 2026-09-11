@@ -1,0 +1,12 @@
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+.cache/
+*.tmp
+.env
+.env.*
+!.env.example
+B3/结果/rehearsal_logs/
+B3/结果/formal_logs/
+B3/结果/offline_logs/

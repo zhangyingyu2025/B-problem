@@ -1,0 +1,9 @@
+WARN citation ledger not created yet
+WARN artifact manifest not created yet
+WARN no frozen_numbers.json found yet
+ERROR missing required directory: 题目/
+ERROR missing required directory: 数据/
+ERROR missing required directory: 求解/
+ERROR missing required directory: 论文/
+ERROR missing 求解/project_state.yaml (run scripts/init_project.py first)
+FAIL errors=5 warnings=3

@@ -1,0 +1,97 @@
+B1
+test_backward_rays_do_not_intersect (test_b1.BearingAndPropertyTests.test_backward_rays_do_not_intersect) ... ok
+test_invalid_input (test_b1.BearingAndPropertyTests.test_invalid_input) ... ok
+test_one_station_unbounded (test_b1.BearingAndPropertyTests.test_one_station_unbounded) ... ok
+test_seeded_true_target_containment_and_monotonicity (test_b1.BearingAndPropertyTests.test_seeded_true_target_containment_and_monotonicity) ... ok
+test_symmetric_two_station_cocircular_regression (test_b1.BearingAndPropertyTests.test_symmetric_two_station_cocircular_regression) ... ok
+test_transform_invariance (test_b1.BearingAndPropertyTests.test_transform_invariance) ... ok
+test_zero_wrap_duplicate_and_no_signal (test_b1.BearingAndPropertyTests.test_zero_wrap_duplicate_and_no_signal) ... ok
+test_json_svg_reproducibility_and_input_protection (test_b1.CLITests.test_json_svg_reproducibility_and_input_protection) ... ok
+test_nan_and_duplicate_json_rejected (test_b1.CLITests.test_nan_and_duplicate_json_rejected) ... ok
+test_bounded_vertex_failure_is_not_empty (test_b1.FeasibilityTests.test_bounded_vertex_failure_is_not_empty) ... ok
+test_constraint_permutation (test_b1.FeasibilityTests.test_constraint_permutation) ... ok
+test_empty_independent_of_vertices_and_cone (test_b1.FeasibilityTests.test_empty_independent_of_vertices_and_cone) ... ok
+test_full_plane_halfplane_strip_and_line_have_no_vertices (test_b1.FeasibilityTests.test_full_plane_halfplane_strip_and_line_have_no_vertices) ... ok
+test_independent_fourier_motzkin_oracle (test_b1.FeasibilityTests.test_independent_fourier_motzkin_oracle) ... ok
+test_point_segment_ray (test_b1.FeasibilityTests.test_point_segment_ray) ... ok
+test_recession_certificate_exact (test_b1.FeasibilityTests.test_recession_certificate_exact) ... ok
+test_tiny_gap_not_silently_expanded (test_b1.FeasibilityTests.test_tiny_gap_not_silently_expanded) ... ok
+test_zero_normal_tautology (test_b1.FeasibilityTests.test_zero_normal_tautology) ... ok
+test_almost_right_triangle_circle_is_uncertain (test_b1.GeometryTests.test_almost_right_triangle_circle_is_uncertain) ... ok
+test_circle_check_for_right_and_obtuse_triangle (test_b1.GeometryTests.test_circle_check_for_right_and_obtuse_triangle) ... ok
+test_mec_does_not_control_primary_verdict (test_b1.GeometryTests.test_mec_does_not_control_primary_verdict) ... ok
+test_near_parallel_active_boundaries_are_uncertain (test_b1.GeometryTests.test_near_parallel_active_boundaries_are_uncertain) ... ok
+test_rational_acute_triangle (test_b1.GeometryTests.test_rational_acute_triangle) ... ok
+test_realizable_equilateral_counterexample (test_b1.GeometryTests.test_realizable_equilateral_counterexample) ... ok
+test_rectangle_and_multiple_farthest_pairs (test_b1.GeometryTests.test_rectangle_and_multiple_farthest_pairs) ... ok
+test_redundant_near_parallel_does_not_spoil_box (test_b1.GeometryTests.test_redundant_near_parallel_does_not_spoil_box) ... ok
+test_single_point_and_segment_circles (test_b1.GeometryTests.test_single_point_and_segment_circles) ... ok
+
+----------------------------------------------------------------------
+Ran 27 tests in 0.716s
+
+OK
+
+B2
+test_bad_inputs (test_b2.DomainTests.test_bad_inputs) ... ok
+test_circle_clipping_shortens_reading_interval (test_b2.DomainTests.test_circle_clipping_shortens_reading_interval) ... ok
+test_external_tangent_source_set (test_b2.DomainTests.test_external_tangent_source_set) ... ok
+test_fixed_seed_reception_and_no_near (test_b2.DomainTests.test_fixed_seed_reception_and_no_near) ... ok
+test_inconsistent_and_external_first_point (test_b2.DomainTests.test_inconsistent_and_external_first_point) ... ok
+test_near_only_source_set_rejected (test_b2.DomainTests.test_near_only_source_set_rejected) ... ok
+test_projection_contains_all_sampled_sources (test_b2.DomainTests.test_projection_contains_all_sampled_sources) ... ok
+test_reception_boundary_guard (test_b2.DomainTests.test_reception_boundary_guard) ... ok
+test_safe_and_effective_are_different (test_b2.DomainTests.test_safe_and_effective_are_different) ... ok
+test_adaptive_bounds_cover_dense_independent_grid (test_b2.EvaluationTests.test_adaptive_bounds_cover_dense_independent_grid) ... ok
+test_budget_exhaustion_is_explicit (test_b2.EvaluationTests.test_budget_exhaustion_is_explicit) ... ok
+test_high_precision_disagreement_is_not_silent (test_b2.EvaluationTests.test_high_precision_disagreement_is_not_silent) ... ok
+test_mirror_symmetry (test_b2.EvaluationTests.test_mirror_symmetry) ... ok
+test_more_refinement_tightens_envelope (test_b2.EvaluationTests.test_more_refinement_tightens_envelope) ... ok
+test_primary_and_auxiliary_fields_separate (test_b2.EvaluationTests.test_primary_and_auxiliary_fields_separate) ... ok
+test_scaling_all_physical_lengths (test_b2.EvaluationTests.test_scaling_all_physical_lengths) ... ok
+test_translate_rotate_wrap_invariance (test_b2.EvaluationTests.test_translate_rotate_wrap_invariance) ... ok
+test_worst_sample_has_valid_physical_witness (test_b2.EvaluationTests.test_worst_sample_has_valid_physical_witness) ... ok
+test_circle_rectangle_segment_point (test_b2.GeometryTests.test_circle_rectangle_segment_point) ... ok
+test_degenerate_outer_source_endpoint (test_b2.GeometryTests.test_degenerate_outer_source_endpoint) ... ok
+test_float_vs_independent_precise (test_b2.GeometryTests.test_float_vs_independent_precise) ... ok
+test_high_precision_trigonometry (test_b2.GeometryTests.test_high_precision_trigonometry) ... ok
+test_mec_equilateral_not_half_diameter (test_b2.GeometryTests.test_mec_equilateral_not_half_diameter) ... ok
+test_precise_failure_baseline_unbounded (test_b2.GeometryTests.test_precise_failure_baseline_unbounded) ... ok
+test_b1_dependency_hashes_unchanged (test_b2.IntegrationTests.test_b1_dependency_hashes_unchanged) ... ok
+test_candidate_budget_and_no_candidate (test_b2.IntegrationTests.test_candidate_budget_and_no_candidate) ... ok
+test_deterministic_search_and_distinct_domains (test_b2.IntegrationTests.test_deterministic_search_and_distinct_domains) ... ok
+test_json_and_svg_round_trip (test_b2.IntegrationTests.test_json_and_svg_round_trip) ... ok
+test_twenty_meter_coverage_positive_case (test_b2.IntegrationTests.test_twenty_meter_coverage_positive_case) ... ok
+
+----------------------------------------------------------------------
+Ran 29 tests in 1.843s
+
+OK
+
+B3
+test_analytical_certificate (test_b3.CoverageTests.test_analytical_certificate) ... ok
+test_boundary_sector_midlines_and_random (test_b3.CoverageTests.test_boundary_sector_midlines_and_random) ... ok
+test_finite_grid_contains_all_first_wedge_sources (test_b3.CoverageTests.test_finite_grid_contains_all_first_wedge_sources) ... ok
+test_grid_step_rejected (test_b3.CoverageTests.test_grid_step_rejected) ... ok
+test_rotated_cover (test_b3.CoverageTests.test_rotated_cover) ... ok
+test_all_near_sixteen_stops_at_origin (test_b3.IntegrationTests.test_all_near_sixteen_stops_at_origin) ... ok
+test_no_fake_success_on_action_budget (test_b3.IntegrationTests.test_no_fake_success_on_action_budget) ... ok
+test_three_strategies_same_boundary_case (test_b3.IntegrationTests.test_three_strategies_same_boundary_case) ... ok
+test_accepted_false_keeps_state (test_b3.ProtocolTests.test_accepted_false_keeps_state) ... ok
+test_enter_remaining_budget_not_hardcoded (test_b3.ProtocolTests.test_enter_remaining_budget_not_hardcoded) ... ok
+test_http_error_and_missing_fields_abort (test_b3.ProtocolTests.test_http_error_and_missing_fields_abort) ... ok
+test_lost_response_retries_same_id_once_execution (test_b3.ProtocolTests.test_lost_response_retries_same_id_once_execution) ... ok
+test_no_new_action_after_retries_exhausted (test_b3.ProtocolTests.test_no_new_action_after_retries_exhausted) ... ok
+test_official_timing_example (test_b3.ProtocolTests.test_official_timing_example) ... ok
+test_repeat_location_fixed_quantized_error (test_b3.ProtocolTests.test_repeat_location_fixed_quantized_error) ... ok
+test_b1_all_observations_and_no_signal_excluded (test_b3.StateTests.test_b1_all_observations_and_no_signal_excluded) ... ok
+test_channel_order_and_detour (test_b3.StateTests.test_channel_order_and_detour) ... ok
+test_clear_does_not_remove_discovery_evidence (test_b3.StateTests.test_clear_does_not_remove_discovery_evidence) ... ok
+test_current_point_clearance_and_near (test_b3.StateTests.test_current_point_clearance_and_near) ... ok
+test_exact_site_evidence_not_count (test_b3.StateTests.test_exact_site_evidence_not_count) ... ok
+test_ten_does_not_finish_discovery_sixteen_does (test_b3.StateTests.test_ten_does_not_finish_discovery_sixteen_does) ... ok
+
+----------------------------------------------------------------------
+Ran 21 tests in 25.119s
+
+OK

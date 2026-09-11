@@ -1,0 +1,395 @@
+{
+  "scope": "official_rehearsal_not_formal",
+  "runs": [
+    {
+      "run_id": "run-001-A",
+      "strategy": "A",
+      "status": "completed",
+      "discovered_count": 13,
+      "cleared_count": 13,
+      "discovery_complete": true,
+      "true_source_count": 13,
+      "clear_fraction": 1.0,
+      "metrics": {
+        "movement_m": 32229.955696115638,
+        "measurements": 87,
+        "switches": 80,
+        "clear_attempts": 17,
+        "clear_successes": 13,
+        "clear_failures": 4,
+        "transport_retries": 0,
+        "b2_calls": 13,
+        "onroute_observations": 0,
+        "onroute_attempts": 0,
+        "grid_clear_attempts": 14,
+        "guaranteed_clear_failures": 0,
+        "discovery_measurements": 74,
+        "total_virtual_time_s": 7037.991143,
+        "mean_time_per_clear_s": 541.3839340769231,
+        "wall_time_s": 8.092999999999847
+      },
+      "audit": {
+        "accepted_actions": 106,
+        "unique_request_ids": true,
+        "enter_exit_complete": true,
+        "components_sum_s": 7037.991139223128,
+        "difference_s": 3.7768722904729657e-06
+      },
+      "raw_files": [
+        {
+          "path": "B3/结果/rehearsal_logs/run-001-A/result.json",
+          "sha256": "ced09bf4e1ed56662d579d6bfcace123b834347d7772e4312c61f34930f2b1a4"
+        },
+        {
+          "path": "B3/结果/rehearsal_logs/run-001-A/actions.jsonl",
+          "sha256": "324d39e2e64f3490e9ea885e247861a0f7d53b81e38d4a95099f8b008f8596f4"
+        }
+      ],
+      "provenance": {
+        "git_head": "376724842676dea27784469f291459b815ce4953",
+        "code_sha256_lf": {
+          "B3/code/b3_solver.py": "c5b0e51111151625af8beeb7d5ce916cad761573d2f698151a2b8f2fe125b530",
+          "B3/code/channel_manager.py": "79aa08ae269705127b4a685d99d57fb6f653b85d830f259a9d551dc74931e5ad",
+          "B3/code/coverage.py": "334fc16edb945e622cc822595e7359041c35fa2554d472e51ccef2e75e7c7880",
+          "B3/code/offline_environment.py": "b2199045bbaaf1cf8538dac425494cff2e84a08936899d66d750bc41026fc49d",
+          "B3/code/plot_results.py": "63973c536ca8a3eed395d81612c31f569a29050f6aa6f85a1eef9a8af79a3e25",
+          "B3/code/protocol_adapter.py": "3f3fe562aacc46d2277590eef3fdc17a2db7809708f17fb3b92b9ec5a4825af8",
+          "B3/code/reproduce.py": "c32892a2c95818208fd27f2c7206c8fd977d0d293f96bebb3d72ee9a8794587a",
+          "B3/code/run_b3.py": "88ede8a015c0018f3af97f5e0da3e34af19565f77fa49d17042418612cf741a4",
+          "B3/code/scheduler.py": "6cbf5a744d8ed07b3a887e0f0d253717107d274501fe87ecda33a4449a846f95",
+          "B3/code/source_track.py": "19e6e38ee9d6ba43c3c72b02abbeede1444ef8527402ba14e739755706eba09c",
+          "B1/code/b1_geometry.py": "2c5a85a9993ff5e534e644d5148d6a226e303b22828c8e7273819c4e4e622068",
+          "B2/code/b2_solver.py": "5e34111d9d5b8e48df5adcd4dfeaca971e719afc835f6a4432de0c9f760b1593",
+          "B2/code/domains.py": "c9ea86f9fd8c38f2a1079072b865458d086d315b5b89de3f9cc12732cfcfb69b",
+          "B2/code/geometry.py": "f6f4d70c7fed2c5d107c0a3c4141ea07db842e914809301baea87ea9aa4e3849"
+        }
+      },
+      "count_evidence": "用户转录官方结果页：案例含13个干扰源，其中全向13个、定向0个；/exit正常结束。"
+    },
+    {
+      "run_id": "run-002-B",
+      "strategy": "B",
+      "status": "completed",
+      "discovered_count": 13,
+      "cleared_count": 13,
+      "discovery_complete": true,
+      "true_source_count": 13,
+      "clear_fraction": 1.0,
+      "metrics": {
+        "movement_m": 35535.800502794606,
+        "measurements": 90,
+        "switches": 71,
+        "clear_attempts": 14,
+        "clear_successes": 13,
+        "clear_failures": 1,
+        "transport_retries": 0,
+        "b2_calls": 13,
+        "onroute_observations": 0,
+        "onroute_attempts": 0,
+        "grid_clear_attempts": 5,
+        "guaranteed_clear_failures": 0,
+        "discovery_measurements": 77,
+        "total_virtual_time_s": 7696.160102,
+        "mean_time_per_clear_s": 592.0123155384615,
+        "wall_time_s": 7.594000000000051
+      },
+      "audit": {
+        "accepted_actions": 106,
+        "unique_request_ids": true,
+        "enter_exit_complete": true,
+        "components_sum_s": 7696.160100558921,
+        "difference_s": 1.4410788935492747e-06
+      },
+      "raw_files": [
+        {
+          "path": "B3/结果/rehearsal_logs/run-002-B/result.json",
+          "sha256": "f0d49fcf5b4e18b4557ea3dedfa5b665684caa6ade8e0395652947271a81d799"
+        },
+        {
+          "path": "B3/结果/rehearsal_logs/run-002-B/actions.jsonl",
+          "sha256": "d797c7168a7c5d7929088e03c19e5afe189ca4723e2d621fba5d86bfb9373172"
+        }
+      ],
+      "provenance": {
+        "git_head": "376724842676dea27784469f291459b815ce4953",
+        "code_sha256_lf": {
+          "B3/code/b3_solver.py": "c5b0e51111151625af8beeb7d5ce916cad761573d2f698151a2b8f2fe125b530",
+          "B3/code/channel_manager.py": "79aa08ae269705127b4a685d99d57fb6f653b85d830f259a9d551dc74931e5ad",
+          "B3/code/coverage.py": "334fc16edb945e622cc822595e7359041c35fa2554d472e51ccef2e75e7c7880",
+          "B3/code/offline_environment.py": "b2199045bbaaf1cf8538dac425494cff2e84a08936899d66d750bc41026fc49d",
+          "B3/code/plot_results.py": "63973c536ca8a3eed395d81612c31f569a29050f6aa6f85a1eef9a8af79a3e25",
+          "B3/code/protocol_adapter.py": "3f3fe562aacc46d2277590eef3fdc17a2db7809708f17fb3b92b9ec5a4825af8",
+          "B3/code/reproduce.py": "9b27fce882b6f89b7968b2390f675125b2b8a4c278af14cac6e7b6b69140bf37",
+          "B3/code/run_b3.py": "88ede8a015c0018f3af97f5e0da3e34af19565f77fa49d17042418612cf741a4",
+          "B3/code/scheduler.py": "6cbf5a744d8ed07b3a887e0f0d253717107d274501fe87ecda33a4449a846f95",
+          "B3/code/source_track.py": "19e6e38ee9d6ba43c3c72b02abbeede1444ef8527402ba14e739755706eba09c",
+          "B1/code/b1_geometry.py": "2c5a85a9993ff5e534e644d5148d6a226e303b22828c8e7273819c4e4e622068",
+          "B2/code/b2_solver.py": "5e34111d9d5b8e48df5adcd4dfeaca971e719afc835f6a4432de0c9f760b1593",
+          "B2/code/domains.py": "c9ea86f9fd8c38f2a1079072b865458d086d315b5b89de3f9cc12732cfcfb69b",
+          "B2/code/geometry.py": "f6f4d70c7fed2c5d107c0a3c4141ea07db842e914809301baea87ea9aa4e3849"
+        }
+      },
+      "count_evidence": "用户确认第二轮结果页总源数仍为13。"
+    },
+    {
+      "run_id": "run-003-C",
+      "strategy": "C",
+      "status": "completed",
+      "discovered_count": 11,
+      "cleared_count": 11,
+      "discovery_complete": true,
+      "true_source_count": 11,
+      "clear_fraction": 1.0,
+      "metrics": {
+        "movement_m": 24365.47047242759,
+        "measurements": 111,
+        "switches": 109,
+        "clear_attempts": 11,
+        "clear_successes": 11,
+        "clear_failures": 0,
+        "transport_retries": 0,
+        "b2_calls": 7,
+        "onroute_observations": 10,
+        "onroute_attempts": 14,
+        "grid_clear_attempts": 2,
+        "guaranteed_clear_failures": 0,
+        "discovery_measurements": 90,
+        "total_virtual_time_s": 5592.094097,
+        "mean_time_per_clear_s": 508.37219063636365,
+        "wall_time_s": 5.95299999999952
+      },
+      "audit": {
+        "accepted_actions": 124,
+        "unique_request_ids": true,
+        "enter_exit_complete": true,
+        "components_sum_s": 5592.094094485518,
+        "difference_s": 2.5144818209810182e-06
+      },
+      "raw_files": [
+        {
+          "path": "B3/结果/rehearsal_logs/run-003-C/result.json",
+          "sha256": "0e26a80398c68d1f3909df612a2313218a0e4794c6987db7422c0ad7a995e6b4"
+        },
+        {
+          "path": "B3/结果/rehearsal_logs/run-003-C/actions.jsonl",
+          "sha256": "7f3d17f5b0a2b5a932b14a6bb8e4f71712ee7ff08eee2b407576cd2f8ddf32ae"
+        }
+      ],
+      "provenance": {
+        "git_head": "376724842676dea27784469f291459b815ce4953",
+        "code_sha256_lf": {
+          "B3/code/b3_solver.py": "c5b0e51111151625af8beeb7d5ce916cad761573d2f698151a2b8f2fe125b530",
+          "B3/code/channel_manager.py": "79aa08ae269705127b4a685d99d57fb6f653b85d830f259a9d551dc74931e5ad",
+          "B3/code/coverage.py": "334fc16edb945e622cc822595e7359041c35fa2554d472e51ccef2e75e7c7880",
+          "B3/code/offline_environment.py": "b2199045bbaaf1cf8538dac425494cff2e84a08936899d66d750bc41026fc49d",
+          "B3/code/plot_results.py": "63973c536ca8a3eed395d81612c31f569a29050f6aa6f85a1eef9a8af79a3e25",
+          "B3/code/protocol_adapter.py": "3f3fe562aacc46d2277590eef3fdc17a2db7809708f17fb3b92b9ec5a4825af8",
+          "B3/code/reproduce.py": "9b27fce882b6f89b7968b2390f675125b2b8a4c278af14cac6e7b6b69140bf37",
+          "B3/code/run_b3.py": "88ede8a015c0018f3af97f5e0da3e34af19565f77fa49d17042418612cf741a4",
+          "B3/code/scheduler.py": "6cbf5a744d8ed07b3a887e0f0d253717107d274501fe87ecda33a4449a846f95",
+          "B3/code/source_track.py": "19e6e38ee9d6ba43c3c72b02abbeede1444ef8527402ba14e739755706eba09c",
+          "B1/code/b1_geometry.py": "2c5a85a9993ff5e534e644d5148d6a226e303b22828c8e7273819c4e4e622068",
+          "B2/code/b2_solver.py": "5e34111d9d5b8e48df5adcd4dfeaca971e719afc835f6a4432de0c9f760b1593",
+          "B2/code/domains.py": "c9ea86f9fd8c38f2a1079072b865458d086d315b5b89de3f9cc12732cfcfb69b",
+          "B2/code/geometry.py": "f6f4d70c7fed2c5d107c0a3c4141ea07db842e914809301baea87ea9aa4e3849"
+        }
+      },
+      "count_evidence": "用户确认第三轮结果页为11个全向源。"
+    },
+    {
+      "run_id": "run-004-C",
+      "strategy": "C",
+      "status": "completed",
+      "discovered_count": 11,
+      "cleared_count": 11,
+      "discovery_complete": true,
+      "true_source_count": 11,
+      "clear_fraction": 1.0,
+      "metrics": {
+        "movement_m": 26176.736625095014,
+        "measurements": 111,
+        "switches": 109,
+        "clear_attempts": 11,
+        "clear_successes": 11,
+        "clear_failures": 0,
+        "transport_retries": 0,
+        "b2_calls": 7,
+        "onroute_observations": 15,
+        "onroute_attempts": 16,
+        "grid_clear_attempts": 2,
+        "guaranteed_clear_failures": 0,
+        "discovery_measurements": 88,
+        "total_virtual_time_s": 5954.347324,
+        "mean_time_per_clear_s": 541.3043021818182,
+        "wall_time_s": 5.484000000000378
+      },
+      "audit": {
+        "accepted_actions": 124,
+        "unique_request_ids": true,
+        "enter_exit_complete": true,
+        "components_sum_s": 5954.347325019003,
+        "difference_s": 1.0190024113398977e-06
+      },
+      "raw_files": [
+        {
+          "path": "B3/结果/rehearsal_logs/run-004-C/result.json",
+          "sha256": "5b00c085686a5f782150b63a5d6f99cbd2442dd21f0fcea9702a5ac7946637be"
+        },
+        {
+          "path": "B3/结果/rehearsal_logs/run-004-C/actions.jsonl",
+          "sha256": "fee8c3599bdeba4703f878616626e680ca0f5422fad230ccfec3a0ee1d46e26d"
+        }
+      ],
+      "provenance": {
+        "git_head": "376724842676dea27784469f291459b815ce4953",
+        "code_sha256_lf": {
+          "B3/code/b3_solver.py": "c5b0e51111151625af8beeb7d5ce916cad761573d2f698151a2b8f2fe125b530",
+          "B3/code/channel_manager.py": "79aa08ae269705127b4a685d99d57fb6f653b85d830f259a9d551dc74931e5ad",
+          "B3/code/coverage.py": "334fc16edb945e622cc822595e7359041c35fa2554d472e51ccef2e75e7c7880",
+          "B3/code/offline_environment.py": "b2199045bbaaf1cf8538dac425494cff2e84a08936899d66d750bc41026fc49d",
+          "B3/code/plot_results.py": "63973c536ca8a3eed395d81612c31f569a29050f6aa6f85a1eef9a8af79a3e25",
+          "B3/code/protocol_adapter.py": "3f3fe562aacc46d2277590eef3fdc17a2db7809708f17fb3b92b9ec5a4825af8",
+          "B3/code/reproduce.py": "9b27fce882b6f89b7968b2390f675125b2b8a4c278af14cac6e7b6b69140bf37",
+          "B3/code/run_b3.py": "88ede8a015c0018f3af97f5e0da3e34af19565f77fa49d17042418612cf741a4",
+          "B3/code/scheduler.py": "6cbf5a744d8ed07b3a887e0f0d253717107d274501fe87ecda33a4449a846f95",
+          "B3/code/source_track.py": "19e6e38ee9d6ba43c3c72b02abbeede1444ef8527402ba14e739755706eba09c",
+          "B1/code/b1_geometry.py": "2c5a85a9993ff5e534e644d5148d6a226e303b22828c8e7273819c4e4e622068",
+          "B2/code/b2_solver.py": "5e34111d9d5b8e48df5adcd4dfeaca971e719afc835f6a4432de0c9f760b1593",
+          "B2/code/domains.py": "c9ea86f9fd8c38f2a1079072b865458d086d315b5b89de3f9cc12732cfcfb69b",
+          "B2/code/geometry.py": "f6f4d70c7fed2c5d107c0a3c4141ea07db842e914809301baea87ea9aa4e3849"
+        }
+      },
+      "count_evidence": "用户确认第四轮结果页为11个全向源。"
+    },
+    {
+      "run_id": "run-005-C",
+      "strategy": "C",
+      "status": "completed",
+      "discovered_count": 15,
+      "cleared_count": 15,
+      "discovery_complete": true,
+      "true_source_count": 15,
+      "clear_fraction": 1.0,
+      "metrics": {
+        "movement_m": 29827.29997044895,
+        "measurements": 101,
+        "switches": 100,
+        "clear_attempts": 15,
+        "clear_successes": 15,
+        "clear_failures": 0,
+        "transport_retries": 0,
+        "b2_calls": 12,
+        "onroute_observations": 14,
+        "onroute_attempts": 16,
+        "grid_clear_attempts": 6,
+        "guaranteed_clear_failures": 0,
+        "discovery_measurements": 73,
+        "total_virtual_time_s": 6645.459993,
+        "mean_time_per_clear_s": 443.03066620000004,
+        "wall_time_s": 8.25
+      },
+      "audit": {
+        "accepted_actions": 118,
+        "unique_request_ids": true,
+        "enter_exit_complete": true,
+        "components_sum_s": 6645.45999408979,
+        "difference_s": 1.0897892934735864e-06
+      },
+      "raw_files": [
+        {
+          "path": "B3/结果/rehearsal_logs/run-005-C/result.json",
+          "sha256": "6d59b8490f1049786a169a2e3e0fe0ff171eb085c082044eb2618d2669d8bbea"
+        },
+        {
+          "path": "B3/结果/rehearsal_logs/run-005-C/actions.jsonl",
+          "sha256": "c3746fcce8cfb4d591e22959da8e333aedd687361a0078e232ed5c862765c6c1"
+        }
+      ],
+      "provenance": {
+        "git_head": "376724842676dea27784469f291459b815ce4953",
+        "code_sha256_lf": {
+          "B3/code/b3_solver.py": "c5b0e51111151625af8beeb7d5ce916cad761573d2f698151a2b8f2fe125b530",
+          "B3/code/channel_manager.py": "79aa08ae269705127b4a685d99d57fb6f653b85d830f259a9d551dc74931e5ad",
+          "B3/code/coverage.py": "334fc16edb945e622cc822595e7359041c35fa2554d472e51ccef2e75e7c7880",
+          "B3/code/offline_environment.py": "b2199045bbaaf1cf8538dac425494cff2e84a08936899d66d750bc41026fc49d",
+          "B3/code/plot_results.py": "63973c536ca8a3eed395d81612c31f569a29050f6aa6f85a1eef9a8af79a3e25",
+          "B3/code/protocol_adapter.py": "3f3fe562aacc46d2277590eef3fdc17a2db7809708f17fb3b92b9ec5a4825af8",
+          "B3/code/reproduce.py": "9b27fce882b6f89b7968b2390f675125b2b8a4c278af14cac6e7b6b69140bf37",
+          "B3/code/run_b3.py": "88ede8a015c0018f3af97f5e0da3e34af19565f77fa49d17042418612cf741a4",
+          "B3/code/scheduler.py": "6cbf5a744d8ed07b3a887e0f0d253717107d274501fe87ecda33a4449a846f95",
+          "B3/code/source_track.py": "19e6e38ee9d6ba43c3c72b02abbeede1444ef8527402ba14e739755706eba09c",
+          "B1/code/b1_geometry.py": "2c5a85a9993ff5e534e644d5148d6a226e303b22828c8e7273819c4e4e622068",
+          "B2/code/b2_solver.py": "5e34111d9d5b8e48df5adcd4dfeaca971e719afc835f6a4432de0c9f760b1593",
+          "B2/code/domains.py": "c9ea86f9fd8c38f2a1079072b865458d086d315b5b89de3f9cc12732cfcfb69b",
+          "B2/code/geometry.py": "f6f4d70c7fed2c5d107c0a3c4141ea07db842e914809301baea87ea9aa4e3849"
+        }
+      },
+      "count_evidence": "用户确认第五轮结果页为15个全向源。"
+    },
+    {
+      "run_id": "run-006-C",
+      "strategy": "C",
+      "status": "completed",
+      "discovered_count": 13,
+      "cleared_count": 13,
+      "discovery_complete": true,
+      "true_source_count": null,
+      "clear_fraction": null,
+      "metrics": {
+        "movement_m": 28880.37811908667,
+        "measurements": 111,
+        "switches": 109,
+        "clear_attempts": 15,
+        "clear_successes": 13,
+        "clear_failures": 2,
+        "transport_retries": 0,
+        "b2_calls": 11,
+        "onroute_observations": 11,
+        "onroute_attempts": 16,
+        "grid_clear_attempts": 6,
+        "guaranteed_clear_failures": 0,
+        "discovery_measurements": 84,
+        "total_virtual_time_s": 6511.075623,
+        "mean_time_per_clear_s": 500.851971,
+        "wall_time_s": 8.311999999999898
+      },
+      "audit": {
+        "accepted_actions": 128,
+        "unique_request_ids": true,
+        "enter_exit_complete": true,
+        "components_sum_s": 6511.0756238173335,
+        "difference_s": 8.173337846528739e-07
+      },
+      "raw_files": [
+        {
+          "path": "B3/结果/rehearsal_logs/run-006-C/result.json",
+          "sha256": "db82693e4f69197ffa0626b7f9ec0aebc2ea9f93ec322dc4f44d8ed36cffa9a5"
+        },
+        {
+          "path": "B3/结果/rehearsal_logs/run-006-C/actions.jsonl",
+          "sha256": "40eacce2090ec3511a9d26ab8d5ec0067345f2d8afb4becf25693cf772bdbfe4"
+        }
+      ],
+      "provenance": {
+        "git_head": "376724842676dea27784469f291459b815ce4953",
+        "code_sha256_lf": {
+          "B3/code/b3_solver.py": "c5b0e51111151625af8beeb7d5ce916cad761573d2f698151a2b8f2fe125b530",
+          "B3/code/channel_manager.py": "79aa08ae269705127b4a685d99d57fb6f653b85d830f259a9d551dc74931e5ad",
+          "B3/code/coverage.py": "334fc16edb945e622cc822595e7359041c35fa2554d472e51ccef2e75e7c7880",
+          "B3/code/offline_environment.py": "b2199045bbaaf1cf8538dac425494cff2e84a08936899d66d750bc41026fc49d",
+          "B3/code/plot_results.py": "63973c536ca8a3eed395d81612c31f569a29050f6aa6f85a1eef9a8af79a3e25",
+          "B3/code/protocol_adapter.py": "3f3fe562aacc46d2277590eef3fdc17a2db7809708f17fb3b92b9ec5a4825af8",
+          "B3/code/reproduce.py": "9b27fce882b6f89b7968b2390f675125b2b8a4c278af14cac6e7b6b69140bf37",
+          "B3/code/run_b3.py": "88ede8a015c0018f3af97f5e0da3e34af19565f77fa49d17042418612cf741a4",
+          "B3/code/scheduler.py": "6cbf5a744d8ed07b3a887e0f0d253717107d274501fe87ecda33a4449a846f95",
+          "B3/code/source_track.py": "19e6e38ee9d6ba43c3c72b02abbeede1444ef8527402ba14e739755706eba09c",
+          "B1/code/b1_geometry.py": "2c5a85a9993ff5e534e644d5148d6a226e303b22828c8e7273819c4e4e622068",
+          "B2/code/b2_solver.py": "5e34111d9d5b8e48df5adcd4dfeaca971e719afc835f6a4432de0c9f760b1593",
+          "B2/code/domains.py": "c9ea86f9fd8c38f2a1079072b865458d086d315b5b89de3f9cc12732cfcfb69b",
+          "B2/code/geometry.py": "f6f4d70c7fed2c5d107c0a3c4141ea07db842e914809301baea87ea9aa4e3849"
+        }
+      }
+    }
+  ],
+  "formal_runs": 0
+}

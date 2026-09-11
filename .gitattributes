@@ -6,3 +6,4 @@
 *.yaml text eol=lf
 *.yml text eol=lf
 *.svg text eol=lf
+.gitignore text eol=lf

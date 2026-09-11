@@ -1,0 +1,116 @@
+{
+  "files": [
+    {
+      "path": "B3/B3_Astra_执行指南.md",
+      "sha256_lf": "76d6e593bfc2d71b194d266fce89c611cfab39cc81e30dd97216969d782b38f1"
+    },
+    {
+      "path": "B3/code/b3_solver.py",
+      "sha256_lf": "c5b0e51111151625af8beeb7d5ce916cad761573d2f698151a2b8f2fe125b530"
+    },
+    {
+      "path": "B3/code/channel_manager.py",
+      "sha256_lf": "79aa08ae269705127b4a685d99d57fb6f653b85d830f259a9d551dc74931e5ad"
+    },
+    {
+      "path": "B3/code/coverage.py",
+      "sha256_lf": "334fc16edb945e622cc822595e7359041c35fa2554d472e51ccef2e75e7c7880"
+    },
+    {
+      "path": "B3/code/offline_environment.py",
+      "sha256_lf": "b2199045bbaaf1cf8538dac425494cff2e84a08936899d66d750bc41026fc49d"
+    },
+    {
+      "path": "B3/code/plot_results.py",
+      "sha256_lf": "63973c536ca8a3eed395d81612c31f569a29050f6aa6f85a1eef9a8af79a3e25"
+    },
+    {
+      "path": "B3/code/protocol_adapter.py",
+      "sha256_lf": "3f3fe562aacc46d2277590eef3fdc17a2db7809708f17fb3b92b9ec5a4825af8"
+    },
+    {
+      "path": "B3/code/reproduce.py",
+      "sha256_lf": "9b27fce882b6f89b7968b2390f675125b2b8a4c278af14cac6e7b6b69140bf37"
+    },
+    {
+      "path": "B3/code/run_b3.py",
+      "sha256_lf": "88ede8a015c0018f3af97f5e0da3e34af19565f77fa49d17042418612cf741a4"
+    },
+    {
+      "path": "B3/code/scheduler.py",
+      "sha256_lf": "6cbf5a744d8ed07b3a887e0f0d253717107d274501fe87ecda33a4449a846f95"
+    },
+    {
+      "path": "B3/code/source_track.py",
+      "sha256_lf": "19e6e38ee9d6ba43c3c72b02abbeede1444ef8527402ba14e739755706eba09c"
+    },
+    {
+      "path": "B3/dependency_manifest.json",
+      "sha256_lf": "86a03b8cdeb6d4e60f9a0fd4ac0b544f471ae01b8db0492d6df62aa6f7c91d18"
+    },
+    {
+      "path": "B3/examples/comparison_cases.json",
+      "sha256_lf": "31d274f259194dd71aee9cc09e14fa8bc2b440b3c8203c4f5604dbf1b62caaba"
+    },
+    {
+      "path": "B3/project_state.yaml",
+      "sha256_lf": "e33a49d845c1026ef5b2461b49222f5216ffcc52e609bc470f2a9f66ed3f6a28"
+    },
+    {
+      "path": "B3/README.md",
+      "sha256_lf": "a21c945de74b9e8af60af637bd402f935988ac6cf0996d50cc95ca4070d7ebac"
+    },
+    {
+      "path": "B3/source_versions.json",
+      "sha256_lf": "81ed7082085c21e61343106ca73e895bbc103b2ac73ae854e9685075b4ff5a39"
+    },
+    {
+      "path": "B3/tests/test_b3.py",
+      "sha256_lf": "c098b4b577de4a0c73f06013b1a6037bb09fe6c6c95b5b379b560263af916d37"
+    },
+    {
+      "path": "B3/建模方案.md",
+      "sha256_lf": "4166abb4b36bd5e87ae36833c6216db8e6d95345f247fd9cb14efc89c03f2318"
+    },
+    {
+      "path": "B3/结果/B3_test_log.txt",
+      "sha256_lf": "9049cefd3d190e170d673c3cdb2fa818672946be979e0216e74e5913d6485a15"
+    },
+    {
+      "path": "B3/结果/comparison.json",
+      "sha256_lf": "595d30970aaa56084f96c4d41682767c8225a50d0bbc0ab9d229dc8d276ef9a0"
+    },
+    {
+      "path": "B3/结果/figures/comparison.svg",
+      "sha256_lf": "6b5f8b7776565ec47d79faef25f739f691b6aaac51b9bc28a99b83c23543036e"
+    },
+    {
+      "path": "B3/结果/frozen_numbers.json",
+      "sha256_lf": "5cd2a187c6356ba9dd90499c0a152a923e239ee1b2d25a250aea733d091332b8"
+    },
+    {
+      "path": "B3/结果/official_rehearsal_summary.json",
+      "sha256_lf": "94c20b01dff91a03806913fb7cbea8e948fab060cf1c168d7e42c9a8598e63de"
+    },
+    {
+      "path": "B3/结果/skill_structure_check.txt",
+      "sha256_lf": "9df2b6058438d9d76eb4a8cdb086382c64092a0a3eedc4c1e3ecdffc72aa9e5a"
+    },
+    {
+      "path": "B3/结果/test_log.txt",
+      "sha256_lf": "1eeda82b26adf297734db7068105694fec28f699356c028162e7bce690ac0957"
+    },
+    {
+      "path": "B3/结果/validation_report.md",
+      "sha256_lf": "5ccdd148780cf7009b9262728ca4097df8ff921037eac09260c3cc3912a0120a"
+    },
+    {
+      "path": "B3/问题三_建模报告.txt",
+      "sha256_lf": "33d90cd82ab9b06f3b31a8733ed158ff718569b18395a7e673838f5d78ee778c"
+    },
+    {
+      "path": "B3/题意与协议审计.md",
+      "sha256_lf": "9bce61b80a3a2871c80b25dc354f4cf7a00a39e529998e51fb1522ce46c36660"
+    }
+  ]
+}
