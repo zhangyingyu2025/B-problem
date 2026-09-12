@@ -1,7 +1,10 @@
 {
   "goal": "stable all-clear approximately 220-225 seconds/source",
   "goal_complete": false,
-  "stage": "R implementation retained; obsolete trials archived in Git; cleanup verification",
+  "stage": "group B1 revision reviewed; observation-only R audit and task-completion geometry model ready; no new strategy executed",
+  "current_model_review": "B3/experimental/E13/B1修正版迁移与220建模.md",
+  "current_model_audit": "B3/结果/e13_model_transfer_audit.json",
+  "model_review_archive_sha256": "33c90b0e883968871e2f63ebff2dff5bf18d8814c7e6b4be2695cb90e19f2dcb",
   "taskbook": "E:\\Download\\Codex_B3_直推220_完整研究结论与执行任务.md",
   "taskbook_sha256": "aedf44a09fcc3a72dec7dc7470ecdeb1287a35f89d438326eca09edf886ed41e",
   "protected_files": {
@@ -52,6 +55,8 @@
   "new_official_runs": 0,
   "new_formal_runs": 0,
   "remaining": [
+    "implement certified clear-position sets and one-source measurement-completion cost as isolated next unit",
+    "validate physical refinements separately; silence lower disk has low observed hull activity",
     "improve online movement toward <=11.5km",
     "failure-oriented stress tests",
     "certified coverage deformation after gate",
