@@ -3,10 +3,22 @@
   "taskbook": "E:/Download/Codex_B4_完整建模与执行方案_目标350-380.md",
   "taskbook_sha256": "00bcb93f804f0f139490dab29c51c221fe0a77b8b4096e6296a1fe16829b4b41",
   "baseline_commit": "62f628d38fd1564dd3eee2f824ba5bef45d76db3",
-  "stage": "Phase A business-rule transport tests passed; next B/C certificates",
+  "stage": "Phase A/B passed; next SPF45 and G0",
   "phases": {
     "A": "31 tests passed",
-    "B": "pending",
+    "B": {
+      "tests_passed": 7,
+      "random_counterexamples_searched": 10000,
+      "certificate": {
+        "valid": true,
+        "vertices": 25,
+        "triangles": 36,
+        "max_edge_m": 977.8041910536318,
+        "minimum_boundary_margin_m": 0.4999999999997726,
+        "proof": "nonoverlapping oriented triangulation; exact edge and disk containment inequalities",
+        "numeric_domain": "exact rational arithmetic on stored binary vertex coordinates"
+      }
+    },
     "C": "pending",
     "D": "pending",
     "E": "pending",
