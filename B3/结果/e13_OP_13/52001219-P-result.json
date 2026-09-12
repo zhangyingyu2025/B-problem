@@ -1,0 +1,81 @@
+{
+  "seed": 52001219,
+  "strategy": "P",
+  "pattern": "random",
+  "N": 14,
+  "k0": 6,
+  "all_cleared": true,
+  "qualified_run": true,
+  "time_per_source_s": 267.9693304285714,
+  "metrics": {
+    "movement_m": 15452.853129741296,
+    "measurements": 97,
+    "switches": 91,
+    "clear_attempts": 19,
+    "clear_successes": 14,
+    "clear_failures": 5,
+    "transport_retries": 0,
+    "virtual_time_s": 3751.570626
+  },
+  "costs": {
+    "movement_s": 3090.5706259482586,
+    "measurement_s": 485.0,
+    "switch_s": 91.0,
+    "clear_success_s": 70.0,
+    "clear_failure_s": 15.0
+  },
+  "costs_by_reason": {
+    "E11:discovery": {
+      "movement_s": 746.0926594342379,
+      "measurement_s": 370.0,
+      "switch_s": 73.0,
+      "clear_success_s": 0.0,
+      "clear_failure_s": 0.0,
+      "actions": 74
+    },
+    "E11:joint_route_transit": {
+      "movement_s": 1000.1857410173778,
+      "measurement_s": 50.0,
+      "switch_s": 10.0,
+      "clear_success_s": 0.0,
+      "clear_failure_s": 0.0,
+      "actions": 10
+    },
+    "E11:joint_safe_supplement": {
+      "movement_s": 575.3335887365686,
+      "measurement_s": 40.0,
+      "switch_s": 7.0,
+      "clear_success_s": 0.0,
+      "clear_failure_s": 0.0,
+      "actions": 8
+    },
+    "E11_clear": {
+      "movement_s": 768.9586367600743,
+      "measurement_s": 0.0,
+      "switch_s": 0.0,
+      "clear_success_s": 70.0,
+      "clear_failure_s": 15.0,
+      "actions": 19
+    },
+    "E11:mec_center_recovery": {
+      "movement_s": 0.0,
+      "measurement_s": 25.0,
+      "switch_s": 1.0,
+      "clear_success_s": 0.0,
+      "clear_failure_s": 0.0,
+      "actions": 5
+    }
+  },
+  "wall_s": 0.3850105999999869,
+  "cleared": 14,
+  "rotation": 30,
+  "error": null,
+  "b1plus_updates": 37,
+  "b1plus_empty": 0,
+  "guaranteed_clear_failures": 0,
+  "recovery_phase_movement_m": 175.0000000000022,
+  "risky_clear_tasks": 10,
+  "supplement_count": 8,
+  "joint_supp": 8,
+  "action_log": "B3\\结果\\e13_OP_13\\52001219-P-actions.jsonl"
+}

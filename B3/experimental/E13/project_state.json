@@ -59,7 +59,11 @@
     "e13_JM_09",
     "e13_JM_10",
     "e13_MN_11",
-    "e13_MO_12"
+    "e13_MO_12",
+    "e13_OP_13",
+    "e13_OQ_14",
+    "e13_OR_15",
+    "e13_OR_16"
   ],
   "best_confirmed_candidate": "M; 100-case synthetic confirmation, not a final promotion",
   "coverage_deformation_enabled": false,

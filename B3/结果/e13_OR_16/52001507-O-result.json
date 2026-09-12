@@ -1,0 +1,81 @@
+{
+  "seed": 52001507,
+  "strategy": "O",
+  "pattern": "random",
+  "N": 15,
+  "k0": 5,
+  "all_cleared": true,
+  "qualified_run": true,
+  "time_per_source_s": 222.59638086666666,
+  "metrics": {
+    "movement_m": 13034.72856744272,
+    "measurements": 111,
+    "switches": 99,
+    "clear_attempts": 16,
+    "clear_successes": 15,
+    "clear_failures": 1,
+    "transport_retries": 0,
+    "virtual_time_s": 3338.945713
+  },
+  "costs": {
+    "movement_s": 2606.945713488545,
+    "measurement_s": 555.0,
+    "switch_s": 99.0,
+    "clear_success_s": 75.0,
+    "clear_failure_s": 3.0
+  },
+  "costs_by_reason": {
+    "E11:discovery": {
+      "movement_s": 654.364384146144,
+      "measurement_s": 375.0,
+      "switch_s": 74.0,
+      "clear_success_s": 0.0,
+      "clear_failure_s": 0.0,
+      "actions": 75
+    },
+    "E11:joint_route_transit": {
+      "movement_s": 897.0852500043055,
+      "measurement_s": 145.0,
+      "switch_s": 19.0,
+      "clear_success_s": 0.0,
+      "clear_failure_s": 0.0,
+      "actions": 29
+    },
+    "E11:joint_safe_supplement": {
+      "movement_s": 347.57564591958965,
+      "measurement_s": 30.0,
+      "switch_s": 5.0,
+      "clear_success_s": 0.0,
+      "clear_failure_s": 0.0,
+      "actions": 6
+    },
+    "E11_clear": {
+      "movement_s": 707.9204334185048,
+      "measurement_s": 0.0,
+      "switch_s": 0.0,
+      "clear_success_s": 75.0,
+      "clear_failure_s": 3.0,
+      "actions": 16
+    },
+    "E11:mec_center_recovery": {
+      "movement_s": 0.0,
+      "measurement_s": 5.0,
+      "switch_s": 1.0,
+      "clear_success_s": 0.0,
+      "clear_failure_s": 0.0,
+      "actions": 1
+    }
+  },
+  "wall_s": 0.8888508999998521,
+  "cleared": 15,
+  "rotation": 50,
+  "error": null,
+  "b1plus_updates": 51,
+  "b1plus_empty": 0,
+  "guaranteed_clear_failures": 0,
+  "recovery_phase_movement_m": 34.99999999999972,
+  "risky_clear_tasks": 8,
+  "supplement_count": 6,
+  "joint_supp": 6,
+  "action_log": "B3\\结果\\e13_OR_16\\52001507-O-actions.jsonl"
+}

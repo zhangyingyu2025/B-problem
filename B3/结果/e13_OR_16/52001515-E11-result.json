@@ -1,0 +1,81 @@
+{
+  "seed": 52001515,
+  "strategy": "E11",
+  "pattern": "random",
+  "N": 16,
+  "k0": 11,
+  "all_cleared": true,
+  "qualified_run": true,
+  "time_per_source_s": 201.962952125,
+  "metrics": {
+    "movement_m": 12312.036168440698,
+    "measurements": 117,
+    "switches": 101,
+    "clear_attempts": 17,
+    "clear_successes": 16,
+    "clear_failures": 1,
+    "transport_retries": 0,
+    "virtual_time_s": 3231.407234
+  },
+  "costs": {
+    "movement_s": 2462.4072336881395,
+    "measurement_s": 585.0,
+    "switch_s": 101.0,
+    "clear_success_s": 80.0,
+    "clear_failure_s": 3.0
+  },
+  "costs_by_reason": {
+    "E11:discovery": {
+      "movement_s": 483.5334168254722,
+      "measurement_s": 275.0,
+      "switch_s": 53.0,
+      "clear_success_s": 0.0,
+      "clear_failure_s": 0.0,
+      "actions": 55
+    },
+    "E11:joint_route_transit": {
+      "movement_s": 1224.384432100847,
+      "measurement_s": 280.0,
+      "switch_s": 42.0,
+      "clear_success_s": 0.0,
+      "clear_failure_s": 0.0,
+      "actions": 56
+    },
+    "E11_clear": {
+      "movement_s": 711.2713328112948,
+      "measurement_s": 0.0,
+      "switch_s": 0.0,
+      "clear_success_s": 80.0,
+      "clear_failure_s": 3.0,
+      "actions": 17
+    },
+    "E11:joint_safe_supplement": {
+      "movement_s": 43.21805195052664,
+      "measurement_s": 25.0,
+      "switch_s": 5.0,
+      "clear_success_s": 0.0,
+      "clear_failure_s": 0.0,
+      "actions": 5
+    },
+    "E11:mec_center_recovery": {
+      "movement_s": 0.0,
+      "measurement_s": 5.0,
+      "switch_s": 1.0,
+      "clear_success_s": 0.0,
+      "clear_failure_s": 0.0,
+      "actions": 1
+    }
+  },
+  "wall_s": 4.198283399999809,
+  "cleared": 16,
+  "rotation": 15,
+  "error": null,
+  "b1plus_updates": 0,
+  "b1plus_empty": 0,
+  "guaranteed_clear_failures": 0,
+  "recovery_phase_movement_m": 0,
+  "risky_clear_tasks": 0,
+  "supplement_count": 5,
+  "joint_supp": 5,
+  "action_log": "B3\\结果\\e13_OR_16\\52001515-E11-actions.jsonl"
+}

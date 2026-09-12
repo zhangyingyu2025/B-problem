@@ -1,0 +1,81 @@
+{
+  "seed": 52001532,
+  "strategy": "E11",
+  "pattern": "random",
+  "N": 12,
+  "k0": 9,
+  "all_cleared": true,
+  "qualified_run": true,
+  "time_per_source_s": 262.09907608333333,
+  "metrics": {
+    "movement_m": 12000.9445651129,
+    "measurements": 115,
+    "switches": 107,
+    "clear_attempts": 13,
+    "clear_successes": 12,
+    "clear_failures": 1,
+    "transport_retries": 0,
+    "virtual_time_s": 3145.188913
+  },
+  "costs": {
+    "movement_s": 2400.1889130225813,
+    "measurement_s": 575.0,
+    "switch_s": 107.0,
+    "clear_success_s": 60.0,
+    "clear_failure_s": 3.0
+  },
+  "costs_by_reason": {
+    "E11:discovery": {
+      "movement_s": 305.3637956670444,
+      "measurement_s": 375.0,
+      "switch_s": 74.0,
+      "clear_success_s": 0.0,
+      "clear_failure_s": 0.0,
+      "actions": 75
+    },
+    "E11:joint_route_transit": {
+      "movement_s": 1101.4202622138966,
+      "measurement_s": 180.0,
+      "switch_s": 29.0,
+      "clear_success_s": 0.0,
+      "clear_failure_s": 0.0,
+      "actions": 36
+    },
+    "E11:joint_safe_supplement": {
+      "movement_s": 105.68324387637833,
+      "measurement_s": 15.0,
+      "switch_s": 3.0,
+      "clear_success_s": 0.0,
+      "clear_failure_s": 0.0,
+      "actions": 3
+    },
+    "E11_clear": {
+      "movement_s": 887.7216112652615,
+      "measurement_s": 0.0,
+      "switch_s": 0.0,
+      "clear_success_s": 60.0,
+      "clear_failure_s": 3.0,
+      "actions": 13
+    },
+    "E11:mec_center_recovery": {
+      "movement_s": 0.0,
+      "measurement_s": 5.0,
+      "switch_s": 1.0,
+      "clear_success_s": 0.0,
+      "clear_failure_s": 0.0,
+      "actions": 1
+    }
+  },
+  "wall_s": 2.999698800000033,
+  "cleared": 12,
+  "rotation": 15,
+  "error": null,
+  "b1plus_updates": 0,
+  "b1plus_empty": 0,
+  "guaranteed_clear_failures": 0,
+  "recovery_phase_movement_m": 0,
+  "risky_clear_tasks": 0,
+  "supplement_count": 3,
+  "joint_supp": 3,
+  "action_log": "B3\\结果\\e13_OR_16\\52001532-E11-actions.jsonl"
+}

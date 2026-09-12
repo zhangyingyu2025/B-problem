@@ -1,0 +1,81 @@
+{
+  "seed": 52001522,
+  "strategy": "O",
+  "pattern": "random",
+  "N": 16,
+  "k0": 6,
+  "all_cleared": true,
+  "qualified_run": true,
+  "time_per_source_s": 211.56850875,
+  "metrics": {
+    "movement_m": 12910.480701608572,
+    "measurements": 121,
+    "switches": 115,
+    "clear_attempts": 17,
+    "clear_successes": 16,
+    "clear_failures": 1,
+    "transport_retries": 0,
+    "virtual_time_s": 3385.09614
+  },
+  "costs": {
+    "movement_s": 2582.0961403217148,
+    "measurement_s": 605.0,
+    "switch_s": 115.0,
+    "clear_success_s": 80.0,
+    "clear_failure_s": 3.0
+  },
+  "costs_by_reason": {
+    "E11:discovery": {
+      "movement_s": 893.7641348459058,
+      "measurement_s": 375.0,
+      "switch_s": 74.0,
+      "clear_success_s": 0.0,
+      "clear_failure_s": 0.0,
+      "actions": 75
+    },
+    "E11:joint_route_transit": {
+      "movement_s": 502.05785919037646,
+      "measurement_s": 180.0,
+      "switch_s": 32.0,
+      "clear_success_s": 0.0,
+      "clear_failure_s": 0.0,
+      "actions": 36
+    },
+    "E11:joint_safe_supplement": {
+      "movement_s": 571.2786835522628,
+      "measurement_s": 45.0,
+      "switch_s": 8.0,
+      "clear_success_s": 0.0,
+      "clear_failure_s": 0.0,
+      "actions": 9
+    },
+    "E11_clear": {
+      "movement_s": 614.9954627331697,
+      "measurement_s": 0.0,
+      "switch_s": 0.0,
+      "clear_success_s": 80.0,
+      "clear_failure_s": 3.0,
+      "actions": 17
+    },
+    "E11:mec_center_recovery": {
+      "movement_s": 0.0,
+      "measurement_s": 5.0,
+      "switch_s": 1.0,
+      "clear_success_s": 0.0,
+      "clear_failure_s": 0.0,
+      "actions": 1
+    }
+  },
+  "wall_s": 1.1756631000000652,
+  "cleared": 16,
+  "rotation": 20,
+  "error": null,
+  "b1plus_updates": 62,
+  "b1plus_empty": 0,
+  "guaranteed_clear_failures": 0,
+  "recovery_phase_movement_m": 35.0000000000006,
+  "risky_clear_tasks": 4,
+  "supplement_count": 9,
+  "joint_supp": 9,
+  "action_log": "B3\\结果\\e13_OR_16\\52001522-O-actions.jsonl"
+}

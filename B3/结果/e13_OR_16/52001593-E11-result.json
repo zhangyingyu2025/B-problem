@@ -1,0 +1,81 @@
+{
+  "seed": 52001593,
+  "strategy": "E11",
+  "pattern": "random",
+  "N": 10,
+  "k0": 5,
+  "all_cleared": true,
+  "qualified_run": true,
+  "time_per_source_s": 300.4295843,
+  "metrics": {
+    "movement_m": 11146.479215257226,
+    "measurements": 122,
+    "switches": 109,
+    "clear_attempts": 12,
+    "clear_successes": 10,
+    "clear_failures": 2,
+    "transport_retries": 0,
+    "virtual_time_s": 3004.295843
+  },
+  "costs": {
+    "movement_s": 2229.2958430514464,
+    "measurement_s": 610.0,
+    "switch_s": 109.0,
+    "clear_success_s": 50.0,
+    "clear_failure_s": 6.0
+  },
+  "costs_by_reason": {
+    "E11:discovery": {
+      "movement_s": 452.08423374568764,
+      "measurement_s": 465.0,
+      "switch_s": 91.0,
+      "clear_success_s": 0.0,
+      "clear_failure_s": 0.0,
+      "actions": 93
+    },
+    "E11:joint_route_transit": {
+      "movement_s": 681.0226350447664,
+      "measurement_s": 110.0,
+      "switch_s": 11.0,
+      "clear_success_s": 0.0,
+      "clear_failure_s": 0.0,
+      "actions": 22
+    },
+    "E11:joint_safe_supplement": {
+      "movement_s": 306.81090912176586,
+      "measurement_s": 25.0,
+      "switch_s": 5.0,
+      "clear_success_s": 0.0,
+      "clear_failure_s": 0.0,
+      "actions": 5
+    },
+    "E11_clear": {
+      "movement_s": 789.378065139226,
+      "measurement_s": 0.0,
+      "switch_s": 0.0,
+      "clear_success_s": 50.0,
+      "clear_failure_s": 6.0,
+      "actions": 12
+    },
+    "E11:mec_center_recovery": {
+      "movement_s": 0.0,
+      "measurement_s": 10.0,
+      "switch_s": 2.0,
+      "clear_success_s": 0.0,
+      "clear_failure_s": 0.0,
+      "actions": 2
+    }
+  },
+  "wall_s": 2.118771200000083,
+  "cleared": 10,
+  "rotation": 25,
+  "error": null,
+  "b1plus_updates": 0,
+  "b1plus_empty": 0,
+  "guaranteed_clear_failures": 0,
+  "recovery_phase_movement_m": 0,
+  "risky_clear_tasks": 0,
+  "supplement_count": 5,
+  "joint_supp": 5,
+  "action_log": "B3\\结果\\e13_OR_16\\52001593-E11-actions.jsonl"
+}

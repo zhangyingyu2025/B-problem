@@ -1,0 +1,81 @@
+{
+  "seed": 52001509,
+  "strategy": "O",
+  "pattern": "random",
+  "N": 10,
+  "k0": 5,
+  "all_cleared": true,
+  "qualified_run": true,
+  "time_per_source_s": 297.5226303,
+  "metrics": {
+    "movement_m": 10856.131516231915,
+    "measurements": 127,
+    "switches": 116,
+    "clear_attempts": 11,
+    "clear_successes": 10,
+    "clear_failures": 1,
+    "transport_retries": 0,
+    "virtual_time_s": 2975.226303
+  },
+  "costs": {
+    "movement_s": 2171.2263032463834,
+    "measurement_s": 635.0,
+    "switch_s": 116.0,
+    "clear_success_s": 50.0,
+    "clear_failure_s": 3.0
+  },
+  "costs_by_reason": {
+    "E11:discovery": {
+      "movement_s": 645.3421715449103,
+      "measurement_s": 500.0,
+      "switch_s": 98.0,
+      "clear_success_s": 0.0,
+      "clear_failure_s": 0.0,
+      "actions": 100
+    },
+    "E11:joint_route_transit": {
+      "movement_s": 428.10124092593384,
+      "measurement_s": 80.0,
+      "switch_s": 9.0,
+      "clear_success_s": 0.0,
+      "clear_failure_s": 0.0,
+      "actions": 16
+    },
+    "E11:joint_safe_supplement": {
+      "movement_s": 689.6679262184948,
+      "measurement_s": 50.0,
+      "switch_s": 9.0,
+      "clear_success_s": 0.0,
+      "clear_failure_s": 0.0,
+      "actions": 10
+    },
+    "E11_clear": {
+      "movement_s": 408.11496455704406,
+      "measurement_s": 0.0,
+      "switch_s": 0.0,
+      "clear_success_s": 50.0,
+      "clear_failure_s": 3.0,
+      "actions": 11
+    },
+    "E11:mec_center_recovery": {
+      "movement_s": 0.0,
+      "measurement_s": 5.0,
+      "switch_s": 0.0,
+      "clear_success_s": 0.0,
+      "clear_failure_s": 0.0,
+      "actions": 1
+    }
+  },
+  "wall_s": 0.5990814000001592,
+  "cleared": 10,
+  "rotation": 35,
+  "error": null,
+  "b1plus_updates": 37,
+  "b1plus_empty": 0,
+  "guaranteed_clear_failures": 0,
+  "recovery_phase_movement_m": 35.0,
+  "risky_clear_tasks": 2,
+  "supplement_count": 10,
+  "joint_supp": 10,
+  "action_log": "B3\\结果\\e13_OR_16\\52001509-O-actions.jsonl"
+}

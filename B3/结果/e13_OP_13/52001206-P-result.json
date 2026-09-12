@@ -1,0 +1,81 @@
+{
+  "seed": 52001206,
+  "strategy": "P",
+  "pattern": "random",
+  "N": 15,
+  "k0": 8,
+  "all_cleared": true,
+  "qualified_run": true,
+  "time_per_source_s": 233.62366493333332,
+  "metrics": {
+    "movement_m": 14336.774869245843,
+    "measurements": 93,
+    "switches": 88,
+    "clear_attempts": 18,
+    "clear_successes": 15,
+    "clear_failures": 3,
+    "transport_retries": 0,
+    "virtual_time_s": 3504.354974
+  },
+  "costs": {
+    "movement_s": 2867.354973849168,
+    "measurement_s": 465.0,
+    "switch_s": 88.0,
+    "clear_success_s": 75.0,
+    "clear_failure_s": 9.0
+  },
+  "costs_by_reason": {
+    "E11:discovery": {
+      "movement_s": 788.1782347291025,
+      "measurement_s": 350.0,
+      "switch_s": 68.0,
+      "clear_success_s": 0.0,
+      "clear_failure_s": 0.0,
+      "actions": 70
+    },
+    "E11:joint_route_transit": {
+      "movement_s": 798.9585851691788,
+      "measurement_s": 55.0,
+      "switch_s": 10.0,
+      "clear_success_s": 0.0,
+      "clear_failure_s": 0.0,
+      "actions": 11
+    },
+    "E11:joint_safe_supplement": {
+      "movement_s": 368.0313601031287,
+      "measurement_s": 45.0,
+      "switch_s": 9.0,
+      "clear_success_s": 0.0,
+      "clear_failure_s": 0.0,
+      "actions": 9
+    },
+    "E11_clear": {
+      "movement_s": 912.1867938477583,
+      "measurement_s": 0.0,
+      "switch_s": 0.0,
+      "clear_success_s": 75.0,
+      "clear_failure_s": 9.0,
+      "actions": 18
+    },
+    "E11:mec_center_recovery": {
+      "movement_s": 0.0,
+      "measurement_s": 15.0,
+      "switch_s": 1.0,
+      "clear_success_s": 0.0,
+      "clear_failure_s": 0.0,
+      "actions": 3
+    }
+  },
+  "wall_s": 0.4727100000000064,
+  "cleared": 15,
+  "rotation": 20,
+  "error": null,
+  "b1plus_updates": 38,
+  "b1plus_empty": 0,
+  "guaranteed_clear_failures": 0,
+  "recovery_phase_movement_m": 105.00000000000122,
+  "risky_clear_tasks": 6,
+  "supplement_count": 9,
+  "joint_supp": 9,
+  "action_log": "B3\\结果\\e13_OP_13\\52001206-P-actions.jsonl"
+}

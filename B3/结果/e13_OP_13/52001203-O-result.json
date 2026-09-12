@@ -1,0 +1,81 @@
+{
+  "seed": 52001203,
+  "strategy": "O",
+  "pattern": "random",
+  "N": 12,
+  "k0": 8,
+  "all_cleared": true,
+  "qualified_run": true,
+  "time_per_source_s": 231.56455658333334,
+  "metrics": {
+    "movement_m": 9933.873396596226,
+    "measurements": 123,
+    "switches": 111,
+    "clear_attempts": 14,
+    "clear_successes": 12,
+    "clear_failures": 2,
+    "transport_retries": 0,
+    "virtual_time_s": 2778.774679
+  },
+  "costs": {
+    "movement_s": 1986.774679319246,
+    "measurement_s": 615.0,
+    "switch_s": 111.0,
+    "clear_success_s": 60.0,
+    "clear_failure_s": 6.0
+  },
+  "costs_by_reason": {
+    "E11:discovery": {
+      "movement_s": 604.2832228684947,
+      "measurement_s": 380.0,
+      "switch_s": 74.0,
+      "clear_success_s": 0.0,
+      "clear_failure_s": 0.0,
+      "actions": 76
+    },
+    "E11:joint_route_transit": {
+      "movement_s": 1055.955488376295,
+      "measurement_s": 215.0,
+      "switch_s": 33.0,
+      "clear_success_s": 0.0,
+      "clear_failure_s": 0.0,
+      "actions": 43
+    },
+    "E11:joint_safe_supplement": {
+      "movement_s": 182.6906401409328,
+      "measurement_s": 10.0,
+      "switch_s": 2.0,
+      "clear_success_s": 0.0,
+      "clear_failure_s": 0.0,
+      "actions": 2
+    },
+    "E11_clear": {
+      "movement_s": 143.84532793352318,
+      "measurement_s": 0.0,
+      "switch_s": 0.0,
+      "clear_success_s": 60.0,
+      "clear_failure_s": 6.0,
+      "actions": 14
+    },
+    "E11:mec_center_recovery": {
+      "movement_s": 0.0,
+      "measurement_s": 10.0,
+      "switch_s": 2.0,
+      "clear_success_s": 0.0,
+      "clear_failure_s": 0.0,
+      "actions": 2
+    }
+  },
+  "wall_s": 0.8805969999998524,
+  "cleared": 12,
+  "rotation": 20,
+  "error": null,
+  "b1plus_updates": 59,
+  "b1plus_empty": 0,
+  "guaranteed_clear_failures": 0,
+  "recovery_phase_movement_m": 70.0000000000008,
+  "risky_clear_tasks": 5,
+  "supplement_count": 2,
+  "joint_supp": 2,
+  "action_log": "B3\\结果\\e13_OP_13\\52001203-O-actions.jsonl"
+}

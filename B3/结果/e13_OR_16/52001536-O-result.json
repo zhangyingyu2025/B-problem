@@ -1,0 +1,81 @@
+{
+  "seed": 52001536,
+  "strategy": "O",
+  "pattern": "random",
+  "N": 16,
+  "k0": 7,
+  "all_cleared": true,
+  "qualified_run": true,
+  "time_per_source_s": 226.1275199375,
+  "metrics": {
+    "movement_m": 14270.201594646074,
+    "measurements": 116,
+    "switches": 98,
+    "clear_attempts": 18,
+    "clear_successes": 16,
+    "clear_failures": 2,
+    "transport_retries": 0,
+    "virtual_time_s": 3618.040319
+  },
+  "costs": {
+    "movement_s": 2854.0403189292147,
+    "measurement_s": 580.0,
+    "switch_s": 98.0,
+    "clear_success_s": 80.0,
+    "clear_failure_s": 6.0
+  },
+  "costs_by_reason": {
+    "E11:discovery": {
+      "movement_s": 435.72134288204677,
+      "measurement_s": 330.0,
+      "switch_s": 65.0,
+      "clear_success_s": 0.0,
+      "clear_failure_s": 0.0,
+      "actions": 66
+    },
+    "E11:joint_route_transit": {
+      "movement_s": 1146.4221802150598,
+      "measurement_s": 200.0,
+      "switch_s": 26.0,
+      "clear_success_s": 0.0,
+      "clear_failure_s": 0.0,
+      "actions": 40
+    },
+    "E11:joint_safe_supplement": {
+      "movement_s": 474.56798124247666,
+      "measurement_s": 40.0,
+      "switch_s": 6.0,
+      "clear_success_s": 0.0,
+      "clear_failure_s": 0.0,
+      "actions": 8
+    },
+    "E11_clear": {
+      "movement_s": 797.3288145896316,
+      "measurement_s": 0.0,
+      "switch_s": 0.0,
+      "clear_success_s": 80.0,
+      "clear_failure_s": 6.0,
+      "actions": 18
+    },
+    "E11:mec_center_recovery": {
+      "movement_s": 0.0,
+      "measurement_s": 10.0,
+      "switch_s": 1.0,
+      "clear_success_s": 0.0,
+      "clear_failure_s": 0.0,
+      "actions": 2
+    }
+  },
+  "wall_s": 1.19903690000001,
+  "cleared": 16,
+  "rotation": 25,
+  "error": null,
+  "b1plus_updates": 66,
+  "b1plus_empty": 0,
+  "guaranteed_clear_failures": 0,
+  "recovery_phase_movement_m": 70.00000000000094,
+  "risky_clear_tasks": 9,
+  "supplement_count": 8,
+  "joint_supp": 8,
+  "action_log": "B3\\结果\\e13_OR_16\\52001536-O-actions.jsonl"
+}

@@ -1,0 +1,81 @@
+{
+  "seed": 52001210,
+  "strategy": "P",
+  "pattern": "random",
+  "N": 12,
+  "k0": 6,
+  "all_cleared": true,
+  "qualified_run": true,
+  "time_per_source_s": 258.18276341666666,
+  "metrics": {
+    "movement_m": 12120.965803760602,
+    "measurements": 102,
+    "switches": 98,
+    "clear_attempts": 14,
+    "clear_successes": 12,
+    "clear_failures": 2,
+    "transport_retries": 0,
+    "virtual_time_s": 3098.193161
+  },
+  "costs": {
+    "movement_s": 2424.1931607521205,
+    "measurement_s": 510.0,
+    "switch_s": 98.0,
+    "clear_success_s": 60.0,
+    "clear_failure_s": 6.0
+  },
+  "costs_by_reason": {
+    "E11:discovery": {
+      "movement_s": 700.6910361721248,
+      "measurement_s": 425.0,
+      "switch_s": 84.0,
+      "clear_success_s": 0.0,
+      "clear_failure_s": 0.0,
+      "actions": 85
+    },
+    "E11:joint_route_transit": {
+      "movement_s": 630.5709199968804,
+      "measurement_s": 35.0,
+      "switch_s": 7.0,
+      "clear_success_s": 0.0,
+      "clear_failure_s": 0.0,
+      "actions": 7
+    },
+    "E11:joint_safe_supplement": {
+      "movement_s": 517.1484827112341,
+      "measurement_s": 40.0,
+      "switch_s": 7.0,
+      "clear_success_s": 0.0,
+      "clear_failure_s": 0.0,
+      "actions": 8
+    },
+    "E11_clear": {
+      "movement_s": 575.7827218718811,
+      "measurement_s": 0.0,
+      "switch_s": 0.0,
+      "clear_success_s": 60.0,
+      "clear_failure_s": 6.0,
+      "actions": 14
+    },
+    "E11:mec_center_recovery": {
+      "movement_s": 0.0,
+      "measurement_s": 10.0,
+      "switch_s": 0.0,
+      "clear_success_s": 0.0,
+      "clear_failure_s": 0.0,
+      "actions": 2
+    }
+  },
+  "wall_s": 0.4134607999999389,
+  "cleared": 12,
+  "rotation": 40,
+  "error": null,
+  "b1plus_updates": 29,
+  "b1plus_empty": 0,
+  "guaranteed_clear_failures": 0,
+  "recovery_phase_movement_m": 70.00000000000021,
+  "risky_clear_tasks": 6,
+  "supplement_count": 8,
+  "joint_supp": 8,
+  "action_log": "B3\\结果\\e13_OP_13\\52001210-P-actions.jsonl"
+}

@@ -1,0 +1,81 @@
+{
+  "seed": 52001558,
+  "strategy": "O",
+  "pattern": "random",
+  "N": 10,
+  "k0": 4,
+  "all_cleared": true,
+  "qualified_run": true,
+  "time_per_source_s": 296.8501231,
+  "metrics": {
+    "movement_m": 10872.506152528855,
+    "measurements": 125,
+    "switches": 116,
+    "clear_attempts": 11,
+    "clear_successes": 10,
+    "clear_failures": 1,
+    "transport_retries": 0,
+    "virtual_time_s": 2968.501231
+  },
+  "costs": {
+    "movement_s": 2174.5012305057717,
+    "measurement_s": 625.0,
+    "switch_s": 116.0,
+    "clear_success_s": 50.0,
+    "clear_failure_s": 3.0
+  },
+  "costs_by_reason": {
+    "E11:discovery": {
+      "movement_s": 693.4837724050884,
+      "measurement_s": 500.0,
+      "switch_s": 99.0,
+      "clear_success_s": 0.0,
+      "clear_failure_s": 0.0,
+      "actions": 100
+    },
+    "E11:joint_route_transit": {
+      "movement_s": 659.1725578367883,
+      "measurement_s": 95.0,
+      "switch_s": 12.0,
+      "clear_success_s": 0.0,
+      "clear_failure_s": 0.0,
+      "actions": 19
+    },
+    "E11:joint_safe_supplement": {
+      "movement_s": 308.29441560612725,
+      "measurement_s": 25.0,
+      "switch_s": 4.0,
+      "clear_success_s": 0.0,
+      "clear_failure_s": 0.0,
+      "actions": 5
+    },
+    "E11_clear": {
+      "movement_s": 513.5504846577675,
+      "measurement_s": 0.0,
+      "switch_s": 0.0,
+      "clear_success_s": 50.0,
+      "clear_failure_s": 3.0,
+      "actions": 11
+    },
+    "E11:mec_center_recovery": {
+      "movement_s": 0.0,
+      "measurement_s": 5.0,
+      "switch_s": 1.0,
+      "clear_success_s": 0.0,
+      "clear_failure_s": 0.0,
+      "actions": 1
+    }
+  },
+  "wall_s": 0.6262027999998736,
+  "cleared": 10,
+  "rotation": 35,
+  "error": null,
+  "b1plus_updates": 35,
+  "b1plus_empty": 0,
+  "guaranteed_clear_failures": 0,
+  "recovery_phase_movement_m": 35.00000000000012,
+  "risky_clear_tasks": 5,
+  "supplement_count": 5,
+  "joint_supp": 5,
+  "action_log": "B3\\结果\\e13_OR_16\\52001558-O-actions.jsonl"
+}

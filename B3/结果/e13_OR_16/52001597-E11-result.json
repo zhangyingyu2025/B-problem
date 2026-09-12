@@ -1,0 +1,81 @@
+{
+  "seed": 52001597,
+  "strategy": "E11",
+  "pattern": "random",
+  "N": 14,
+  "k0": 5,
+  "all_cleared": true,
+  "qualified_run": true,
+  "time_per_source_s": 331.53134957142856,
+  "metrics": {
+    "movement_m": 19327.19446956125,
+    "measurements": 119,
+    "switches": 105,
+    "clear_attempts": 16,
+    "clear_successes": 14,
+    "clear_failures": 2,
+    "transport_retries": 0,
+    "virtual_time_s": 4641.438894
+  },
+  "costs": {
+    "movement_s": 3865.43889391225,
+    "measurement_s": 595.0,
+    "switch_s": 105.0,
+    "clear_success_s": 70.0,
+    "clear_failure_s": 6.0
+  },
+  "costs_by_reason": {
+    "E11:discovery": {
+      "movement_s": 826.6122034194057,
+      "measurement_s": 420.0,
+      "switch_s": 83.0,
+      "clear_success_s": 0.0,
+      "clear_failure_s": 0.0,
+      "actions": 84
+    },
+    "E11:joint_route_transit": {
+      "movement_s": 1021.8240298950329,
+      "measurement_s": 125.0,
+      "switch_s": 14.0,
+      "clear_success_s": 0.0,
+      "clear_failure_s": 0.0,
+      "actions": 25
+    },
+    "E11:joint_safe_supplement": {
+      "movement_s": 502.13995291161257,
+      "measurement_s": 40.0,
+      "switch_s": 8.0,
+      "clear_success_s": 0.0,
+      "clear_failure_s": 0.0,
+      "actions": 8
+    },
+    "E11_clear": {
+      "movement_s": 1514.8627076861983,
+      "measurement_s": 0.0,
+      "switch_s": 0.0,
+      "clear_success_s": 70.0,
+      "clear_failure_s": 6.0,
+      "actions": 16
+    },
+    "E11:mec_center_recovery": {
+      "movement_s": 0.0,
+      "measurement_s": 10.0,
+      "switch_s": 0.0,
+      "clear_success_s": 0.0,
+      "clear_failure_s": 0.0,
+      "actions": 2
+    }
+  },
+  "wall_s": 1.9714157000000796,
+  "cleared": 14,
+  "rotation": 45,
+  "error": null,
+  "b1plus_updates": 0,
+  "b1plus_empty": 0,
+  "guaranteed_clear_failures": 0,
+  "recovery_phase_movement_m": 0,
+  "risky_clear_tasks": 0,
+  "supplement_count": 8,
+  "joint_supp": 8,
+  "action_log": "B3\\结果\\e13_OR_16\\52001597-E11-actions.jsonl"
+}

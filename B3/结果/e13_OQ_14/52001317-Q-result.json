@@ -1,0 +1,81 @@
+{
+  "seed": 52001317,
+  "strategy": "Q",
+  "pattern": "random",
+  "N": 14,
+  "k0": 8,
+  "all_cleared": true,
+  "qualified_run": true,
+  "time_per_source_s": 244.56186135714285,
+  "metrics": {
+    "movement_m": 13229.330296730677,
+    "measurements": 118,
+    "switches": 112,
+    "clear_attempts": 16,
+    "clear_successes": 14,
+    "clear_failures": 2,
+    "transport_retries": 0,
+    "virtual_time_s": 3423.866059
+  },
+  "costs": {
+    "movement_s": 2645.8660593461345,
+    "measurement_s": 590.0,
+    "switch_s": 112.0,
+    "clear_success_s": 70.0,
+    "clear_failure_s": 6.0
+  },
+  "costs_by_reason": {
+    "E11:discovery": {
+      "movement_s": 735.1759744397878,
+      "measurement_s": 370.0,
+      "switch_s": 72.0,
+      "clear_success_s": 0.0,
+      "clear_failure_s": 0.0,
+      "actions": 74
+    },
+    "E11:joint_route_transit": {
+      "movement_s": 891.0207348733229,
+      "measurement_s": 185.0,
+      "switch_s": 33.0,
+      "clear_success_s": 0.0,
+      "clear_failure_s": 0.0,
+      "actions": 37
+    },
+    "E11:joint_safe_supplement": {
+      "movement_s": 285.49245566234555,
+      "measurement_s": 25.0,
+      "switch_s": 5.0,
+      "clear_success_s": 0.0,
+      "clear_failure_s": 0.0,
+      "actions": 5
+    },
+    "E11_clear": {
+      "movement_s": 734.1768943706792,
+      "measurement_s": 0.0,
+      "switch_s": 0.0,
+      "clear_success_s": 70.0,
+      "clear_failure_s": 6.0,
+      "actions": 16
+    },
+    "E11:mec_center_recovery": {
+      "movement_s": 0.0,
+      "measurement_s": 10.0,
+      "switch_s": 2.0,
+      "clear_success_s": 0.0,
+      "clear_failure_s": 0.0,
+      "actions": 2
+    }
+  },
+  "wall_s": 1.089989800000012,
+  "cleared": 14,
+  "rotation": 35,
+  "error": null,
+  "b1plus_updates": 58,
+  "b1plus_empty": 0,
+  "guaranteed_clear_failures": 0,
+  "recovery_phase_movement_m": 69.99999999999982,
+  "risky_clear_tasks": 6,
+  "supplement_count": 5,
+  "joint_supp": 5,
+  "action_log": "B3\\结果\\e13_OQ_14\\52001317-Q-actions.jsonl"
+}

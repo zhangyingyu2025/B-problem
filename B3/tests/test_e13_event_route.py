@@ -12,6 +12,19 @@ from protocol_adapter import Client
 
 
 class EventRouteTests(unittest.TestCase):
+    def test_owner_second_bearing_invalidates_old_supplement(self):
+        case = {'seed': 54000201, 'sources': [{'channel': 1, 'x': 400., 'y': 0., 'radius': 1200.}]}
+        client = Client(OfflineTransport(case, error_mode='zero'), 'offline-test')
+        client.enter()
+        engine = build_e13(client, 'R')
+        engine.measure((0., 0.), 1, None, 'test_initial')
+        engine.segment_points = lambda *args: [(.5, (500., 500.), 70.)]
+        self.assertFalse(advance(engine, ('supp', 1, (750., 120.)), []))
+        self.assertEqual(client.position, (500., 500.))
+        self.assertEqual(len(engine.tracks[1]['dirs']), 2)
+        self.assertEqual(sum(e.get('kind') == 'E13_owner_second_bearing' for e in client.events), 1)
+        client.exit()
+
     def test_new_clear_task_cancels_old_destination(self):
         case = {'seed': 54000200, 'sources': [{'channel': 1, 'x': 400., 'y': 0., 'radius': 1200.}]}
         client = Client(OfflineTransport(case, error_mode='zero'), 'offline-test')

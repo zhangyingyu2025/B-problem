@@ -1,0 +1,81 @@
+{
+  "seed": 52001543,
+  "strategy": "R",
+  "pattern": "random",
+  "N": 16,
+  "k0": 5,
+  "all_cleared": true,
+  "qualified_run": true,
+  "time_per_source_s": 216.564381875,
+  "metrics": {
+    "movement_m": 13500.150551324617,
+    "measurements": 114,
+    "switches": 103,
+    "clear_attempts": 20,
+    "clear_successes": 16,
+    "clear_failures": 4,
+    "transport_retries": 0,
+    "virtual_time_s": 3465.03011
+  },
+  "costs": {
+    "movement_s": 2700.030110264923,
+    "measurement_s": 570.0,
+    "switch_s": 103.0,
+    "clear_success_s": 80.0,
+    "clear_failure_s": 12.0
+  },
+  "costs_by_reason": {
+    "E11:discovery": {
+      "movement_s": 762.4007962853435,
+      "measurement_s": 370.0,
+      "switch_s": 73.0,
+      "clear_success_s": 0.0,
+      "clear_failure_s": 0.0,
+      "actions": 74
+    },
+    "E11:joint_route_transit": {
+      "movement_s": 929.285467298256,
+      "measurement_s": 175.0,
+      "switch_s": 27.0,
+      "clear_success_s": 0.0,
+      "clear_failure_s": 0.0,
+      "actions": 35
+    },
+    "E11_clear": {
+      "movement_s": 885.7298595129915,
+      "measurement_s": 0.0,
+      "switch_s": 0.0,
+      "clear_success_s": 80.0,
+      "clear_failure_s": 12.0,
+      "actions": 20
+    },
+    "E11:mec_center_recovery": {
+      "movement_s": 0.0,
+      "measurement_s": 20.0,
+      "switch_s": 2.0,
+      "clear_success_s": 0.0,
+      "clear_failure_s": 0.0,
+      "actions": 4
+    },
+    "E11:joint_safe_supplement": {
+      "movement_s": 122.61398716833196,
+      "measurement_s": 5.0,
+      "switch_s": 1.0,
+      "clear_success_s": 0.0,
+      "clear_failure_s": 0.0,
+      "actions": 1
+    }
+  },
+  "wall_s": 0.9163935000001402,
+  "cleared": 16,
+  "rotation": 45,
+  "error": null,
+  "b1plus_updates": 56,
+  "b1plus_empty": 0,
+  "guaranteed_clear_failures": 0,
+  "recovery_phase_movement_m": 140.00000000000045,
+  "risky_clear_tasks": 11,
+  "supplement_count": 1,
+  "joint_supp": 1,
+  "action_log": "B3\\结果\\e13_OR_16\\52001543-R-actions.jsonl"
+}

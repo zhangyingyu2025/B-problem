@@ -1,0 +1,81 @@
+{
+  "seed": 52001300,
+  "strategy": "Q",
+  "pattern": "random",
+  "N": 11,
+  "k0": 2,
+  "all_cleared": true,
+  "qualified_run": true,
+  "time_per_source_s": 307.572517,
+  "metrics": {
+    "movement_m": 12856.488434104589,
+    "measurements": 128,
+    "switches": 114,
+    "clear_attempts": 12,
+    "clear_successes": 11,
+    "clear_failures": 1,
+    "transport_retries": 0,
+    "virtual_time_s": 3383.297687
+  },
+  "costs": {
+    "movement_s": 2571.297686820917,
+    "measurement_s": 640.0,
+    "switch_s": 114.0,
+    "clear_success_s": 55.0,
+    "clear_failure_s": 3.0
+  },
+  "costs_by_reason": {
+    "E11:discovery": {
+      "movement_s": 970.7988729587353,
+      "measurement_s": 485.0,
+      "switch_s": 96.0,
+      "clear_success_s": 0.0,
+      "clear_failure_s": 0.0,
+      "actions": 97
+    },
+    "E11:joint_safe_supplement": {
+      "movement_s": 359.7921774188469,
+      "measurement_s": 35.0,
+      "switch_s": 6.0,
+      "clear_success_s": 0.0,
+      "clear_failure_s": 0.0,
+      "actions": 7
+    },
+    "E11_clear": {
+      "movement_s": 433.7968031520304,
+      "measurement_s": 0.0,
+      "switch_s": 0.0,
+      "clear_success_s": 55.0,
+      "clear_failure_s": 3.0,
+      "actions": 12
+    },
+    "E11:joint_route_transit": {
+      "movement_s": 806.9098332913048,
+      "measurement_s": 115.0,
+      "switch_s": 12.0,
+      "clear_success_s": 0.0,
+      "clear_failure_s": 0.0,
+      "actions": 23
+    },
+    "E11:mec_center_recovery": {
+      "movement_s": 0.0,
+      "measurement_s": 5.0,
+      "switch_s": 0.0,
+      "clear_success_s": 0.0,
+      "clear_failure_s": 0.0,
+      "actions": 1
+    }
+  },
+  "wall_s": 0.7694364000001315,
+  "cleared": 11,
+  "rotation": 55,
+  "error": null,
+  "b1plus_updates": 42,
+  "b1plus_empty": 0,
+  "guaranteed_clear_failures": 0,
+  "recovery_phase_movement_m": 35.000000000001585,
+  "risky_clear_tasks": 6,
+  "supplement_count": 7,
+  "joint_supp": 7,
+  "action_log": "B3\\结果\\e13_OQ_14\\52001300-Q-actions.jsonl"
+}

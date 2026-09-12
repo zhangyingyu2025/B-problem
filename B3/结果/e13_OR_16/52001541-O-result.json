@@ -1,0 +1,81 @@
+{
+  "seed": 52001541,
+  "strategy": "O",
+  "pattern": "random",
+  "N": 14,
+  "k0": 8,
+  "all_cleared": true,
+  "qualified_run": true,
+  "time_per_source_s": 227.7269545714286,
+  "metrics": {
+    "movement_m": 12135.886819520689,
+    "measurements": 117,
+    "switches": 100,
+    "clear_attempts": 16,
+    "clear_successes": 14,
+    "clear_failures": 2,
+    "transport_retries": 0,
+    "virtual_time_s": 3188.177364
+  },
+  "costs": {
+    "movement_s": 2427.1773639041385,
+    "measurement_s": 585.0,
+    "switch_s": 100.0,
+    "clear_success_s": 70.0,
+    "clear_failure_s": 6.0
+  },
+  "costs_by_reason": {
+    "E11:discovery": {
+      "movement_s": 470.05947295686866,
+      "measurement_s": 380.0,
+      "switch_s": 75.0,
+      "clear_success_s": 0.0,
+      "clear_failure_s": 0.0,
+      "actions": 76
+    },
+    "E11:joint_route_transit": {
+      "movement_s": 958.6250012984343,
+      "measurement_s": 165.0,
+      "switch_s": 20.0,
+      "clear_success_s": 0.0,
+      "clear_failure_s": 0.0,
+      "actions": 33
+    },
+    "E11_clear": {
+      "movement_s": 641.3541506348723,
+      "measurement_s": 0.0,
+      "switch_s": 0.0,
+      "clear_success_s": 70.0,
+      "clear_failure_s": 6.0,
+      "actions": 16
+    },
+    "E11:joint_safe_supplement": {
+      "movement_s": 357.13873901396346,
+      "measurement_s": 30.0,
+      "switch_s": 4.0,
+      "clear_success_s": 0.0,
+      "clear_failure_s": 0.0,
+      "actions": 6
+    },
+    "E11:mec_center_recovery": {
+      "movement_s": 0.0,
+      "measurement_s": 10.0,
+      "switch_s": 1.0,
+      "clear_success_s": 0.0,
+      "clear_failure_s": 0.0,
+      "actions": 2
+    }
+  },
+  "wall_s": 0.9231454999999187,
+  "cleared": 14,
+  "rotation": 40,
+  "error": null,
+  "b1plus_updates": 55,
+  "b1plus_empty": 0,
+  "guaranteed_clear_failures": 0,
+  "recovery_phase_movement_m": 70.00000000000063,
+  "risky_clear_tasks": 7,
+  "supplement_count": 6,
+  "joint_supp": 6,
+  "action_log": "B3\\结果\\e13_OR_16\\52001541-O-actions.jsonl"
+}
