@@ -1,0 +1,81 @@
+{
+  "seed": 52000812,
+  "strategy": "M",
+  "pattern": "random",
+  "N": 13,
+  "k0": 4,
+  "all_cleared": true,
+  "qualified_run": true,
+  "time_per_source_s": 250.5727066923077,
+  "metrics": {
+    "movement_m": 11962.225933493568,
+    "measurements": 134,
+    "switches": 124,
+    "clear_attempts": 15,
+    "clear_successes": 13,
+    "clear_failures": 2,
+    "transport_retries": 0,
+    "virtual_time_s": 3257.445187
+  },
+  "costs": {
+    "movement_s": 2392.445186698714,
+    "measurement_s": 670.0,
+    "switch_s": 124.0,
+    "clear_success_s": 65.0,
+    "clear_failure_s": 6.0
+  },
+  "costs_by_reason": {
+    "E11:discovery": {
+      "movement_s": 674.7264558021476,
+      "measurement_s": 495.0,
+      "switch_s": 97.0,
+      "clear_success_s": 0.0,
+      "clear_failure_s": 0.0,
+      "actions": 99
+    },
+    "E11:joint_route_transit": {
+      "movement_s": 621.1017548486786,
+      "measurement_s": 135.0,
+      "switch_s": 21.0,
+      "clear_success_s": 0.0,
+      "clear_failure_s": 0.0,
+      "actions": 27
+    },
+    "E11_clear": {
+      "movement_s": 624.9007123058014,
+      "measurement_s": 0.0,
+      "switch_s": 0.0,
+      "clear_success_s": 65.0,
+      "clear_failure_s": 6.0,
+      "actions": 15
+    },
+    "E11:joint_safe_supplement": {
+      "movement_s": 471.71626374208637,
+      "measurement_s": 30.0,
+      "switch_s": 6.0,
+      "clear_success_s": 0.0,
+      "clear_failure_s": 0.0,
+      "actions": 6
+    },
+    "E11:mec_center_recovery": {
+      "movement_s": 0.0,
+      "measurement_s": 10.0,
+      "switch_s": 0.0,
+      "clear_success_s": 0.0,
+      "clear_failure_s": 0.0,
+      "actions": 2
+    }
+  },
+  "wall_s": 0.8591811000000007,
+  "cleared": 13,
+  "rotation": 30,
+  "error": null,
+  "b1plus_updates": 48,
+  "b1plus_empty": 0,
+  "guaranteed_clear_failures": 0,
+  "recovery_phase_movement_m": 69.99999999999966,
+  "risky_clear_tasks": 10,
+  "supplement_count": 6,
+  "joint_supp": 6,
+  "action_log": "B3\\结果\\e13_JM_09\\52000812-M-actions.jsonl"
+}

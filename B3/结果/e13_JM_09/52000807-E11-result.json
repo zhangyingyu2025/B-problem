@@ -1,0 +1,81 @@
+{
+  "seed": 52000807,
+  "strategy": "E11",
+  "pattern": "random",
+  "N": 15,
+  "k0": 10,
+  "all_cleared": true,
+  "qualified_run": true,
+  "time_per_source_s": 234.8087314,
+  "metrics": {
+    "movement_m": 14130.654857051355,
+    "measurements": 104,
+    "switches": 98,
+    "clear_attempts": 16,
+    "clear_successes": 15,
+    "clear_failures": 1,
+    "transport_retries": 0,
+    "virtual_time_s": 3522.130971
+  },
+  "costs": {
+    "movement_s": 2826.1309714102713,
+    "measurement_s": 520.0,
+    "switch_s": 98.0,
+    "clear_success_s": 75.0,
+    "clear_failure_s": 3.0
+  },
+  "costs_by_reason": {
+    "E11:discovery": {
+      "movement_s": 483.2396713909206,
+      "measurement_s": 315.0,
+      "switch_s": 61.0,
+      "clear_success_s": 0.0,
+      "clear_failure_s": 0.0,
+      "actions": 63
+    },
+    "E11:joint_route_transit": {
+      "movement_s": 560.5472514079199,
+      "measurement_s": 180.0,
+      "switch_s": 33.0,
+      "clear_success_s": 0.0,
+      "clear_failure_s": 0.0,
+      "actions": 36
+    },
+    "E11_clear": {
+      "movement_s": 1530.1611991540428,
+      "measurement_s": 0.0,
+      "switch_s": 0.0,
+      "clear_success_s": 75.0,
+      "clear_failure_s": 3.0,
+      "actions": 16
+    },
+    "E11:joint_safe_supplement": {
+      "movement_s": 252.18284945738756,
+      "measurement_s": 20.0,
+      "switch_s": 4.0,
+      "clear_success_s": 0.0,
+      "clear_failure_s": 0.0,
+      "actions": 4
+    },
+    "E11:mec_center_recovery": {
+      "movement_s": 0.0,
+      "measurement_s": 5.0,
+      "switch_s": 0.0,
+      "clear_success_s": 0.0,
+      "clear_failure_s": 0.0,
+      "actions": 1
+    }
+  },
+  "wall_s": 2.808143599999994,
+  "cleared": 15,
+  "rotation": 40,
+  "error": null,
+  "b1plus_updates": 0,
+  "b1plus_empty": 0,
+  "guaranteed_clear_failures": 0,
+  "recovery_phase_movement_m": 0,
+  "risky_clear_tasks": 0,
+  "supplement_count": 4,
+  "joint_supp": 4,
+  "action_log": "B3\\结果\\e13_JM_09\\52000807-E11-actions.jsonl"
+}

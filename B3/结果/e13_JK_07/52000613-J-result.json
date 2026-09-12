@@ -1,0 +1,73 @@
+{
+  "seed": 52000613,
+  "strategy": "J",
+  "pattern": "random",
+  "N": 10,
+  "k0": 4,
+  "all_cleared": true,
+  "qualified_run": true,
+  "time_per_source_s": 289.557316,
+  "metrics": {
+    "movement_m": 10197.865801141079,
+    "measurements": 136,
+    "switches": 126,
+    "clear_attempts": 10,
+    "clear_successes": 10,
+    "clear_failures": 0,
+    "transport_retries": 0,
+    "virtual_time_s": 2895.57316
+  },
+  "costs": {
+    "movement_s": 2039.5731602282158,
+    "measurement_s": 680.0,
+    "switch_s": 126.0,
+    "clear_success_s": 50.0,
+    "clear_failure_s": 0.0
+  },
+  "costs_by_reason": {
+    "E11:discovery": {
+      "movement_s": 438.1450780652251,
+      "measurement_s": 530.0,
+      "switch_s": 105.0,
+      "clear_success_s": 0.0,
+      "clear_failure_s": 0.0,
+      "actions": 106
+    },
+    "E11:joint_route_transit": {
+      "movement_s": 873.2409249585517,
+      "measurement_s": 130.0,
+      "switch_s": 17.0,
+      "clear_success_s": 0.0,
+      "clear_failure_s": 0.0,
+      "actions": 26
+    },
+    "E11_clear": {
+      "movement_s": 499.13897384484176,
+      "measurement_s": 0.0,
+      "switch_s": 0.0,
+      "clear_success_s": 50.0,
+      "clear_failure_s": 0.0,
+      "actions": 10
+    },
+    "E11:joint_safe_supplement": {
+      "movement_s": 229.0481833595972,
+      "measurement_s": 20.0,
+      "switch_s": 4.0,
+      "clear_success_s": 0.0,
+      "clear_failure_s": 0.0,
+      "actions": 4
+    }
+  },
+  "wall_s": 0.7091909999999189,
+  "cleared": 10,
+  "rotation": 0,
+  "error": null,
+  "b1plus_updates": 40,
+  "b1plus_empty": 0,
+  "guaranteed_clear_failures": 0,
+  "recovery_phase_movement_m": 6.536993168992922e-13,
+  "risky_clear_tasks": 2,
+  "supplement_count": 4,
+  "joint_supp": 4,
+  "action_log": "B3\\结果\\e13_JK_07\\52000613-J-actions.jsonl"
+}

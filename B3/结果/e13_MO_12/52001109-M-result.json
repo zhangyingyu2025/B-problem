@@ -1,0 +1,81 @@
+{
+  "seed": 52001109,
+  "strategy": "M",
+  "pattern": "random",
+  "N": 16,
+  "k0": 9,
+  "all_cleared": true,
+  "qualified_run": true,
+  "time_per_source_s": 222.5784281875,
+  "metrics": {
+    "movement_m": 14481.2742566631,
+    "measurements": 99,
+    "switches": 84,
+    "clear_attempts": 18,
+    "clear_successes": 16,
+    "clear_failures": 2,
+    "transport_retries": 0,
+    "virtual_time_s": 3561.254851
+  },
+  "costs": {
+    "movement_s": 2896.2548513326196,
+    "measurement_s": 495.0,
+    "switch_s": 84.0,
+    "clear_success_s": 80.0,
+    "clear_failure_s": 6.0
+  },
+  "costs_by_reason": {
+    "E11:discovery": {
+      "movement_s": 659.6972946318472,
+      "measurement_s": 295.0,
+      "switch_s": 57.0,
+      "clear_success_s": 0.0,
+      "clear_failure_s": 0.0,
+      "actions": 59
+    },
+    "E11:joint_route_transit": {
+      "movement_s": 747.5798604560705,
+      "measurement_s": 155.0,
+      "switch_s": 22.0,
+      "clear_success_s": 0.0,
+      "clear_failure_s": 0.0,
+      "actions": 31
+    },
+    "E11_clear": {
+      "movement_s": 855.6661846912036,
+      "measurement_s": 0.0,
+      "switch_s": 0.0,
+      "clear_success_s": 80.0,
+      "clear_failure_s": 6.0,
+      "actions": 18
+    },
+    "E11:joint_safe_supplement": {
+      "movement_s": 633.3115115534981,
+      "measurement_s": 35.0,
+      "switch_s": 5.0,
+      "clear_success_s": 0.0,
+      "clear_failure_s": 0.0,
+      "actions": 7
+    },
+    "E11:mec_center_recovery": {
+      "movement_s": 0.0,
+      "measurement_s": 10.0,
+      "switch_s": 0.0,
+      "clear_success_s": 0.0,
+      "clear_failure_s": 0.0,
+      "actions": 2
+    }
+  },
+  "wall_s": 1.1157247000001007,
+  "cleared": 16,
+  "rotation": 55,
+  "error": null,
+  "b1plus_updates": 56,
+  "b1plus_empty": 0,
+  "guaranteed_clear_failures": 0,
+  "recovery_phase_movement_m": 70.00000000000165,
+  "risky_clear_tasks": 6,
+  "supplement_count": 7,
+  "joint_supp": 7,
+  "action_log": "B3\\结果\\e13_MO_12\\52001109-M-actions.jsonl"
+}

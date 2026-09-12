@@ -1,0 +1,87 @@
+{
+  "seed": 52000119,
+  "strategy": "B",
+  "pattern": "random",
+  "N": 13,
+  "k0": 7,
+  "all_cleared": true,
+  "qualified_run": true,
+  "time_per_source_s": 305.9477873076923,
+  "metrics": {
+    "movement_m": 14306.606173043765,
+    "measurements": 177,
+    "switches": 166,
+    "clear_attempts": 13,
+    "clear_successes": 13,
+    "clear_failures": 0,
+    "transport_retries": 0,
+    "virtual_time_s": 3977.321235
+  },
+  "costs": {
+    "movement_s": 2861.3212346087516,
+    "measurement_s": 885.0,
+    "switch_s": 166.0,
+    "clear_success_s": 65.0,
+    "clear_failure_s": 0.0
+  },
+  "costs_by_reason": {
+    "E11:discovery": {
+      "movement_s": 623.3925580568884,
+      "measurement_s": 420.0,
+      "switch_s": 83.0,
+      "clear_success_s": 0.0,
+      "clear_failure_s": 0.0,
+      "actions": 84
+    },
+    "E11:joint_route_transit": {
+      "movement_s": 899.4898952861577,
+      "measurement_s": 350.0,
+      "switch_s": 63.0,
+      "clear_success_s": 0.0,
+      "clear_failure_s": 0.0,
+      "actions": 70
+    },
+    "E11:E13_observe": {
+      "movement_s": 9.039598196163288,
+      "measurement_s": 70.0,
+      "switch_s": 14.0,
+      "clear_success_s": 0.0,
+      "clear_failure_s": 0.0,
+      "actions": 14
+    },
+    "E11:E13_supp": {
+      "movement_s": 517.7546403038073,
+      "measurement_s": 35.0,
+      "switch_s": 5.0,
+      "clear_success_s": 0.0,
+      "clear_failure_s": 0.0,
+      "actions": 7
+    },
+    "E11_clear": {
+      "movement_s": 719.4231157515369,
+      "measurement_s": 0.0,
+      "switch_s": 0.0,
+      "clear_success_s": 65.0,
+      "clear_failure_s": 0.0,
+      "actions": 13
+    },
+    "E11:E13_localize_before_clear": {
+      "movement_s": 92.22142701419966,
+      "measurement_s": 10.0,
+      "switch_s": 1.0,
+      "clear_success_s": 0.0,
+      "clear_failure_s": 0.0,
+      "actions": 2
+    }
+  },
+  "wall_s": 2.476594700001442,
+  "cleared": 13,
+  "rotation": 25,
+  "error": null,
+  "b1plus_updates": 106,
+  "b1plus_empty": 0,
+  "guaranteed_clear_failures": 0,
+  "supplement_count": 21,
+  "joint_supp": 21,
+  "action_log": "B3\\结果\\e13_AB_02\\52000119-B-actions.jsonl"
+}

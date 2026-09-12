@@ -1,0 +1,81 @@
+{
+  "seed": 52000510,
+  "strategy": "J",
+  "pattern": "random",
+  "N": 12,
+  "k0": 10,
+  "all_cleared": true,
+  "qualified_run": true,
+  "time_per_source_s": 254.28568916666666,
+  "metrics": {
+    "movement_m": 11282.141350104903,
+    "measurements": 123,
+    "switches": 114,
+    "clear_attempts": 14,
+    "clear_successes": 12,
+    "clear_failures": 2,
+    "transport_retries": 0,
+    "virtual_time_s": 3051.42827
+  },
+  "costs": {
+    "movement_s": 2256.428270020981,
+    "measurement_s": 615.0,
+    "switch_s": 114.0,
+    "clear_success_s": 60.0,
+    "clear_failure_s": 6.0
+  },
+  "costs_by_reason": {
+    "E11:discovery": {
+      "movement_s": 434.1361797619236,
+      "measurement_s": 385.0,
+      "switch_s": 75.0,
+      "clear_success_s": 0.0,
+      "clear_failure_s": 0.0,
+      "actions": 77
+    },
+    "E11:joint_route_transit": {
+      "movement_s": 970.0178298851906,
+      "measurement_s": 205.0,
+      "switch_s": 34.0,
+      "clear_success_s": 0.0,
+      "clear_failure_s": 0.0,
+      "actions": 41
+    },
+    "E11:joint_safe_supplement": {
+      "movement_s": 255.75303509614338,
+      "measurement_s": 15.0,
+      "switch_s": 3.0,
+      "clear_success_s": 0.0,
+      "clear_failure_s": 0.0,
+      "actions": 3
+    },
+    "E11_clear": {
+      "movement_s": 596.5212252777233,
+      "measurement_s": 0.0,
+      "switch_s": 0.0,
+      "clear_success_s": 60.0,
+      "clear_failure_s": 6.0,
+      "actions": 14
+    },
+    "E11:mec_center_recovery": {
+      "movement_s": 0.0,
+      "measurement_s": 10.0,
+      "switch_s": 2.0,
+      "clear_success_s": 0.0,
+      "clear_failure_s": 0.0,
+      "actions": 2
+    }
+  },
+  "wall_s": 1.2914314999998169,
+  "cleared": 12,
+  "rotation": 30,
+  "error": null,
+  "b1plus_updates": 58,
+  "b1plus_empty": 0,
+  "guaranteed_clear_failures": 0,
+  "recovery_phase_movement_m": 2626.5787660931155,
+  "risky_clear_tasks": 6,
+  "supplement_count": 3,
+  "joint_supp": 3,
+  "action_log": "B3\\结果\\e13_AJ_06\\52000510-J-actions.jsonl"
+}

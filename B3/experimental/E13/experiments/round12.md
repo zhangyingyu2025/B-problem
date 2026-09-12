@@ -1,0 +1,3 @@
+# Round 12: use full B1+ reception geometry for broad-track measurements
+
+Fresh random seeds 52001100–52001119, E11/M/O paired, fixed_field, four workers and 120 second guard. O differs from M only in joint supplement-point generation: permit the perpendicular B1+ point for MEC radius above 500 if every vertex of the conservative polygon is within 1000-1e-6 m of that point. By convexity this certifies reception for every feasible source; the 500 cutoff is not a physical constraint. No change to risky-clear threshold, actual clear policy, event trigger, finish or coverage. Compare all-clear, movement and tail metrics; preserve all trials.

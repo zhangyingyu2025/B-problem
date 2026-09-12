@@ -1,0 +1,81 @@
+{
+  "seed": 52001000,
+  "strategy": "E11",
+  "pattern": "random",
+  "N": 12,
+  "k0": 6,
+  "all_cleared": true,
+  "qualified_run": true,
+  "time_per_source_s": 315.49203174999997,
+  "metrics": {
+    "movement_m": 15359.521906109723,
+    "measurements": 108,
+    "switches": 99,
+    "clear_attempts": 17,
+    "clear_successes": 12,
+    "clear_failures": 5,
+    "transport_retries": 0,
+    "virtual_time_s": 3785.904381
+  },
+  "costs": {
+    "movement_s": 3071.904381221944,
+    "measurement_s": 540.0,
+    "switch_s": 99.0,
+    "clear_success_s": 60.0,
+    "clear_failure_s": 15.0
+  },
+  "costs_by_reason": {
+    "E11:discovery": {
+      "movement_s": 922.945647025072,
+      "measurement_s": 420.0,
+      "switch_s": 83.0,
+      "clear_success_s": 0.0,
+      "clear_failure_s": 0.0,
+      "actions": 84
+    },
+    "E11:joint_route_transit": {
+      "movement_s": 732.2305040093004,
+      "measurement_s": 95.0,
+      "switch_s": 12.0,
+      "clear_success_s": 0.0,
+      "clear_failure_s": 0.0,
+      "actions": 19
+    },
+    "E11_clear": {
+      "movement_s": 1196.5444992251075,
+      "measurement_s": 0.0,
+      "switch_s": 0.0,
+      "clear_success_s": 60.0,
+      "clear_failure_s": 15.0,
+      "actions": 17
+    },
+    "E11:mec_center_recovery": {
+      "movement_s": 0.0,
+      "measurement_s": 5.0,
+      "switch_s": 0.0,
+      "clear_success_s": 0.0,
+      "clear_failure_s": 0.0,
+      "actions": 1
+    },
+    "E11:joint_safe_supplement": {
+      "movement_s": 220.18373096246413,
+      "measurement_s": 20.0,
+      "switch_s": 4.0,
+      "clear_success_s": 0.0,
+      "clear_failure_s": 0.0,
+      "actions": 4
+    }
+  },
+  "wall_s": 1.6002888999998959,
+  "cleared": 12,
+  "rotation": 0,
+  "error": null,
+  "b1plus_updates": 0,
+  "b1plus_empty": 0,
+  "guaranteed_clear_failures": 0,
+  "recovery_phase_movement_m": 0,
+  "risky_clear_tasks": 0,
+  "supplement_count": 4,
+  "joint_supp": 4,
+  "action_log": "B3\\结果\\e13_MN_11\\52001000-E11-actions.jsonl"
+}

@@ -1,0 +1,81 @@
+{
+  "seed": 52000912,
+  "strategy": "J",
+  "pattern": "random",
+  "N": 15,
+  "k0": 12,
+  "all_cleared": true,
+  "qualified_run": true,
+  "time_per_source_s": 216.2606674,
+  "metrics": {
+    "movement_m": 11819.550055826803,
+    "measurements": 135,
+    "switches": 124,
+    "clear_attempts": 17,
+    "clear_successes": 15,
+    "clear_failures": 2,
+    "transport_retries": 0,
+    "virtual_time_s": 3243.910011
+  },
+  "costs": {
+    "movement_s": 2363.910011165362,
+    "measurement_s": 675.0,
+    "switch_s": 124.0,
+    "clear_success_s": 75.0,
+    "clear_failure_s": 6.0
+  },
+  "costs_by_reason": {
+    "E11:discovery": {
+      "movement_s": 321.5716240655868,
+      "measurement_s": 300.0,
+      "switch_s": 59.0,
+      "clear_success_s": 0.0,
+      "clear_failure_s": 0.0,
+      "actions": 60
+    },
+    "E11:joint_route_transit": {
+      "movement_s": 1115.1603773883326,
+      "measurement_s": 350.0,
+      "switch_s": 62.0,
+      "clear_success_s": 0.0,
+      "clear_failure_s": 0.0,
+      "actions": 70
+    },
+    "E11:joint_safe_supplement": {
+      "movement_s": 76.76874756850698,
+      "measurement_s": 15.0,
+      "switch_s": 3.0,
+      "clear_success_s": 0.0,
+      "clear_failure_s": 0.0,
+      "actions": 3
+    },
+    "E11_clear": {
+      "movement_s": 850.4092621429352,
+      "measurement_s": 0.0,
+      "switch_s": 0.0,
+      "clear_success_s": 75.0,
+      "clear_failure_s": 6.0,
+      "actions": 17
+    },
+    "E11:mec_center_recovery": {
+      "movement_s": 0.0,
+      "measurement_s": 10.0,
+      "switch_s": 0.0,
+      "clear_success_s": 0.0,
+      "clear_failure_s": 0.0,
+      "actions": 2
+    }
+  },
+  "wall_s": 2.2084308999999394,
+  "cleared": 15,
+  "rotation": 0,
+  "error": null,
+  "b1plus_updates": 90,
+  "b1plus_empty": 0,
+  "guaranteed_clear_failures": 0,
+  "recovery_phase_movement_m": 70.00000000000026,
+  "risky_clear_tasks": 4,
+  "supplement_count": 3,
+  "joint_supp": 3,
+  "action_log": "B3\\结果\\e13_JM_10\\52000912-J-actions.jsonl"
+}

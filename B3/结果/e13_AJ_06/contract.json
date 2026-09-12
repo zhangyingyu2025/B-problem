@@ -1,0 +1,21 @@
+{
+  "start": 52000500,
+  "count": 20,
+  "variants": [
+    "A",
+    "J"
+  ],
+  "pattern": "random",
+  "hashes": {
+    "B3\\experimental\\E13\\b1plus.py": "2019bb0710651b2976a42bb30915b345de6492fc24e52aea41ee110d21097178",
+    "B3\\experimental\\E13\\beam_router.py": "280f415791003a1dcb78ba1cb98686e4b430127e787ba5e2a3b0b64f5870df0a",
+    "B3\\experimental\\E13\\clear_risk.py": "bbce9852f8e9586a2dbb2d1ddab2866fb8383abd70ef53035699546e833a1d9e",
+    "B3\\experimental\\E13\\coverage_certificate.py": "3dc0c29e019109ffb2d9594b674b83ac380b68afaf897a35f64ab3606442637b",
+    "B3\\experimental\\E13\\future_route.py": "d3233c6524376650a950594ab315c7b37fc15086753709ce4b82fdb879696fb4",
+    "B3\\experimental\\E13\\macro_route.py": "c476c8bdef7c66632d6cc59b5366339d985bbf648c6f27efd6f4c864781e598e",
+    "B3\\experimental\\E13\\skeleton_route.py": "12075022b021b76bc16cda4cb7826711ecf0b7765fb19ed79c43d4eecea5fc72",
+    "B3\\experimental\\E13\\solver.py": "e93633b095971ebe6e4ea84ef6c91194c8eeddeeb00c6fbb2599603c03db64dd",
+    "B3\\experimental\\E13\\experiments\\regret_benchmark.py": "bce03802701aa49458def246f50620425f0102c223ad294b176d73b4688cf0ce",
+    "B3\\experimental\\E13\\experiments\\run_batch.py": "f1d37cc2ed2844adfb66defd38e2bba37d1f1ee659b7d018256065c39d7a30e6"
+  }
+}
