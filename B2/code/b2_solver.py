@@ -102,113 +102,222 @@ def evaluate_candidate(problem, point, max_intervals=192, abs_tolerance_m=1.0,
                     worst_diameter=None,worst_mec_radius=None)
 
 
+
+def _stage_record(step, good, previous=None):
+    best=good[0]
+    upper=best['worst_diameter']['envelope_upper_m']
+    lower=best['worst_diameter']['sample_lower_m']
+    record={"step_m":step,"best_point_local_m":list(best['point_local_m']),
+            "best_upper_m":upper,"best_lower_m":lower,"candidate_count":len(good)}
+    if previous is not None:
+        prev_upper=previous['best_upper_m'];prev_point=previous['best_point_local_m']
+        record['relative_best_upper_change']=abs(upper-prev_upper)/max(1e-12,abs(prev_upper))
+        record['best_point_shift_m']=math.dist(best['point_local_m'],prev_point)
+    return record
+
+
 def solve_b2(observation, error_deg=1.0, *, options=None, physical=None):
+    """Solve B2 with separate inner-reading and outer-placement refinement.
+
+    The default placement search now uses a multi-start 50/25/12.5/6.25 m
+    hierarchy.  Multiple competing basins on both lobes are retained at every
+    level.  `outer_convergence` explicitly reports whether the best objective
+    and best point stabilized under mesh refinement; a non-stable search is
+    returned as ``needs_refinement`` rather than silently freezing a grid
+    artefact.  Explicit `candidate_points_local` keeps the finite-candidate
+    semantics used by earlier tests and reproducibility scripts.
+    """
     options={} if options is None else dict(options)
     physical={} if physical is None else dict(physical)
     allowed={'grid_step_m','refinement_levels','max_candidates','max_intervals','final_intervals',
-             'abs_tolerance_m','rel_tolerance','near_optimal_fraction','candidate_points_local'}
+             'abs_tolerance_m','rel_tolerance','near_optimal_fraction','candidate_points_local',
+             'placement_steps_m','outer_keep_per_lobe','outer_rel_tolerance',
+             'outer_abs_tolerance_m','outer_point_tolerance_m','inner_recheck_intervals'}
     if set(options)-allowed: raise ValueError('unknown options: '+str(sorted(set(options)-allowed)))
     problem=Problem(observation,error_deg,**physical)
-    step=finite(options.get('grid_step_m',problem.rmin/10),'grid_step_m')
     eta=finite(options.get('near_optimal_fraction',0.05),'near_optimal_fraction')
-    if step<=0 or not 0<=eta<=1: raise ValueError('invalid grid step or near-optimal fraction')
+    if not 0<=eta<=1: raise ValueError('invalid near-optimal fraction')
     def integer(name,default,minimum):
         x=options.get(name,default)
         if isinstance(x,bool) or not isinstance(x,int) or x<minimum: raise ValueError(name+' invalid')
         return x
-    levels=integer('refinement_levels',2,0);budget=integer('max_candidates',180,1)
-    intervals=integer('max_intervals',192,4);final_intervals=integer('final_intervals',768,4)
+    intervals=integer('max_intervals',96,4);final_intervals=integer('final_intervals',768,4)
     atol=finite(options.get('abs_tolerance_m',1.0),'abs_tolerance_m')
     rtol=finite(options.get('rel_tolerance',0.002),'rel_tolerance')
     if atol<=0 or rtol<0: raise ValueError('invalid tolerances')
-    result={"schema_version":1,"status":problem.status,"observation":observation,
+    outer_keep=integer('outer_keep_per_lobe',8,1)
+    outer_rtol=finite(options.get('outer_rel_tolerance',0.02),'outer_rel_tolerance')
+    outer_atol=finite(options.get('outer_abs_tolerance_m',1.0),'outer_abs_tolerance_m')
+    outer_ptol=finite(options.get('outer_point_tolerance_m',12.5),'outer_point_tolerance_m')
+    if outer_rtol<0 or outer_atol<0 or outer_ptol<0: raise ValueError('invalid outer convergence tolerance')
+    recheck_intervals=integer('inner_recheck_intervals',min(3072,max(1024,2*final_intervals)),4)
+
+    supplied=options.get('candidate_points_local')
+    if supplied is None:
+        requested_levels=integer('refinement_levels',3,0)
+        if 'placement_steps_m' in options:
+            raw_steps=options['placement_steps_m']
+        else:
+            base=finite(options.get('grid_step_m',50.0),'grid_step_m')
+            raw_steps=[base/(2**i) for i in range(requested_levels+1)]
+        if not isinstance(raw_steps,(list,tuple)) or not raw_steps: raise ValueError('placement_steps_m must be nonempty')
+        steps=[finite(v,'placement step') for v in raw_steps]
+        if any(v<=0 for v in steps) or any(steps[i+1]>=steps[i] for i in range(len(steps)-1)):
+            raise ValueError('placement_steps_m must be strictly decreasing positive values')
+        budget=integer('max_candidates',2500,1)
+        legacy_step=steps[0];levels=len(steps)-1
+    else:
+        # Explicit finite-candidate mode remains backward compatible.
+        legacy_step=finite(options.get('grid_step_m',problem.rmin/10),'grid_step_m')
+        levels=integer('refinement_levels',0,0);budget=integer('max_candidates',180,1)
+        steps=[]
+
+    result={"schema_version":2,"status":problem.status,"observation":observation,
             "error_deg":error_deg,"physical_parameters":{"domain_center":problem.domain_center,
                 "domain_radius":problem.radius,"min_range":problem.rmin,"max_range":problem.rmax,
                 "near_range":problem.near,"angle_margin_deg":problem.margin},
             "objective_priority":["worst localization diameter","movement for numerical ties only"],
             "auxiliary_metric":"worst minimum enclosing circle radius; not a replacement primary metric",
             "domains":problem.domain_descriptions(),"candidates":[],"recommended":None,
-            "search":{"grid_step_m":step,"refinement_levels":levels,"max_candidates":budget,
+            "search":{"mode":"finite_candidates" if supplied is not None else "multistart_mesh_convergence",
+                      "placement_steps_m":steps,"grid_step_m":legacy_step,
+                      "refinement_levels":levels,"max_candidates":budget,
                       "max_intervals":intervals,"final_intervals":final_intervals,
-                      "abs_tolerance_m":atol,"rel_tolerance":rtol,"near_optimal_fraction":eta},
-            "limitations":["not a global continuous placement optimum",
+                      "inner_recheck_intervals":recheck_intervals,
+                      "abs_tolerance_m":atol,"rel_tolerance":rtol,"near_optimal_fraction":eta,
+                      "outer_keep_per_lobe":outer_keep,"outer_rel_tolerance":outer_rtol,
+                      "outer_abs_tolerance_m":outer_atol,"outer_point_tolerance_m":outer_ptol},
+            "outer_convergence":{"status":"not_applicable" if supplied is not None else "not_run","stages":[]},
+            "inner_convergence":{"status":"not_run"},
+            "limitations":["not a rigorous continuous-placement global optimum certificate",
                            "H outer approximation includes the first near disk",
                            "float envelopes and pointwise Decimal rechecks are not interval certificates",
                            "full C_safe boundary is implicit, not computed"]}
     if problem.status!='ready': return result
     evaluated={};truncated=False
     def valid(item): return item.get('worst_diameter') is not None and 'worst_diameter' in item
-    def rank(item):
-        # R_min is reported independently and never silently replaces D.
-        return (item['worst_diameter']['envelope_upper_m'],item['movement_m'],item['point_local_m'])
-    def add(p):
+    def rank(item): return (item['worst_diameter']['envelope_upper_m'],item['movement_m'],item['point_local_m'])
+    def add(p, max_int=intervals):
         nonlocal truncated
-        p=tuple(float(v) for v in p)
-        key=tuple(round(v,10) for v in p)
-        if key in evaluated or not problem.effective_domain(p): return
-        if len(evaluated)>=budget: truncated=True;return
-        evaluated[key]=evaluate_candidate(problem,p,intervals,atol,rtol,False)
-    supplied=options.get('candidate_points_local')
+        p=tuple(float(v) for v in p);key=tuple(round(v,10) for v in p)
+        if key in evaluated or not problem.effective_domain(p): return False
+        if len(evaluated)>=budget: truncated=True;return False
+        evaluated[key]=evaluate_candidate(problem,p,max_int,atol,rtol,False)
+        return True
+
     if supplied is not None:
         if not isinstance(supplied,list) or not supplied: raise ValueError('candidate_points_local must be a nonempty list')
         for p in supplied:
             if not isinstance(p,(list,tuple)) or len(p)!=2: raise ValueError('invalid candidate point')
-            p=tuple(finite(v,'candidate coordinate') for v in p)
-            add(p)
+            add(tuple(finite(v,'candidate coordinate') for v in p))
+        # Preserve the old explicit-candidate local-refinement behavior.
+        for level in range(levels):
+            good=sorted((v for v in evaluated.values() if valid(v)),key=rank)
+            leaders=[]
+            for sign in (-1,1): leaders += [v for v in good if v['point_local_m'][1]*sign>0][:2]
+            local_step=legacy_step/(2**(level+1))
+            for leader in leaders:
+                a,b=leader['point_local_m']
+                for dx in (-local_step,0,local_step):
+                    for dy in (-local_step,0,local_step): add((a+dx,b+dy))
     else:
-        if math.ceil(problem.rmin/step)>1000: raise ValueError('grid too fine; use refinement or explicit candidates')
-        count=math.ceil(problem.rmin/step)
-        # Both sides evaluated before moving to the next a/b position.
-        for i in range(1,count+1):
+        # Global first mesh.  Candidate coordinates are intentionally bounded
+        # by C_cert's |p|<r_min property, so no arbitrary spatial clipping is introduced.
+        step=steps[0];count=math.ceil(problem.rmin/step)
+        for i in range(0,count+1):
+            a=i*step
             for j in range(1,count+1):
-                for sign in (-1,1): add((i*step,sign*j*step))
+                b=j*step
+                add((a,-b));add((a,b))
                 if truncated: break
             if truncated: break
-    for level in range(levels):
         good=sorted((v for v in evaluated.values() if valid(v)),key=rank)
-        leaders=[]
-        # Preserve both lobes; D0 clipping may break their symmetry.
-        for sign in (-1,1): leaders += [v for v in good if v['point_local_m'][1]*sign>0][:2]
-        local_step=step/(2**(level+1))
-        for leader in leaders:
-            a,b=leader['point_local_m']
-            for dx in (-local_step,0,local_step):
-                for dy in (-local_step,0,local_step): add((a+dx,b+dy))
+        if good: result['outer_convergence']['stages'].append(_stage_record(step,good))
+
+        # Multi-basin refinement: retain several leaders on each lobe plus any
+        # candidate whose sampled lower bound still overlaps the incumbent upper.
+        for step in steps[1:]:
+            good=sorted((v for v in evaluated.values() if valid(v)),key=rank)
+            if not good: break
+            best_upper=good[0]['worst_diameter']['envelope_upper_m']
+            retain=[]
+            for sign in (-1,1):
+                lobe=[v for v in good if v['point_local_m'][1]*sign>0]
+                overlap=[v for v in lobe if v['worst_diameter']['sample_lower_m']<=best_upper+max(outer_atol,outer_rtol*best_upper)]
+                pool=overlap[:2*outer_keep] if overlap else lobe[:outer_keep]
+                seen=set()
+                for v in lobe[:outer_keep]+pool:
+                    key=tuple(v['point_local_m'])
+                    if key not in seen: retain.append(v);seen.add(key)
+            # The previous mesh spacing is twice this step in the default hierarchy.
+            # A 5x5 patch spans +/- one previous cell and can move to adjacent basins.
+            for leader in retain:
+                a,b=leader['point_local_m']
+                for ia in range(-2,3):
+                    for ib in range(-2,3): add((a+ia*step,b+ib*step))
+            good=sorted((v for v in evaluated.values() if valid(v)),key=rank)
+            prev=result['outer_convergence']['stages'][-1] if result['outer_convergence']['stages'] else None
+            if good: result['outer_convergence']['stages'].append(_stage_record(step,good,prev))
+
     good=sorted((v for v in evaluated.values() if valid(v)),key=rank)
     if not good:
         result.update(status='no_candidate_in_search',candidates=list(evaluated.values()))
         return result
-    # Re-evaluate leading candidates at the final budget. Check the eventual
-    # winner even if its refined score changes the ordering.
+
+    # Re-evaluate leading candidates with the final inner-reading budget.
     checked=set()
-    for item in good[:min(6,len(good))]:
+    for item in good[:min(10,len(good))]:
         key=tuple(round(v,10) for v in item['point_local_m'])
-        evaluated[key]=evaluate_candidate(problem,item['point_local_m'],final_intervals,atol,rtol,True)
-        checked.add(key)
+        evaluated[key]=evaluate_candidate(problem,item['point_local_m'],final_intervals,atol,rtol,True);checked.add(key)
     while True:
         good=sorted((v for v in evaluated.values() if valid(v)),key=rank)
-        if not good: break
         best=good[0];key=tuple(round(v,10) for v in best['point_local_m'])
         if key in checked: break
-        evaluated[key]=evaluate_candidate(problem,best['point_local_m'],final_intervals,atol,rtol,True)
-        checked.add(key)
-    result['candidates']=list(evaluated.values())
-    result['search']['evaluated_candidates']=len(evaluated)
+        evaluated[key]=evaluate_candidate(problem,best['point_local_m'],final_intervals,atol,rtol,True);checked.add(key)
+
+    # One independent inner-resolution recheck at the eventual winner separates
+    # reading-envelope error from placement-grid error.
+    good=sorted((v for v in evaluated.values() if valid(v)),key=rank)
+    best=good[0]
+    inner_hi=evaluate_candidate(problem,best['point_local_m'],recheck_intervals,atol,rtol,True)
+    if valid(inner_hi):
+        base_u=best['worst_diameter']['envelope_upper_m'];hi_u=inner_hi['worst_diameter']['envelope_upper_m']
+        change=abs(hi_u-base_u);tol=max(atol,rtol*inner_hi['worst_diameter']['sample_lower_m'])
+        result['inner_convergence']={"status":"stable" if change<=tol else "needs_refinement",
+            "base_intervals":final_intervals,"recheck_intervals":recheck_intervals,
+            "base_upper_m":base_u,"recheck_upper_m":hi_u,"absolute_change_m":change,"tolerance_m":tol}
+        key=tuple(round(v,10) for v in best['point_local_m']);evaluated[key]=inner_hi
+    else:
+        result['inner_convergence']={"status":"numerically_uncertain","recheck_intervals":recheck_intervals}
+
+    good=sorted((v for v in evaluated.values() if valid(v)),key=rank)
+    result['candidates']=list(evaluated.values());result['search']['evaluated_candidates']=len(evaluated)
     result['search']['candidate_budget_reached']=truncated
-    if not good:
-        result['status']='numerically_uncertain';return result
     best=good[0];best_upper=best['worst_diameter']['envelope_upper_m']
-    # Treat only a sub-micrometre numeric tie as a distance tie; do not use a
-    # wide near-optimal band to trade primary precision for travel distance.
     tied=[v for v in good if v['worst_diameter']['envelope_upper_m']<=best_upper+1e-7
           and v['high_precision_check']['status']=='passed']
     if tied: best=min(tied,key=lambda v:(v['movement_m'],v['point_local_m']))
-    best_upper=best['worst_diameter']['envelope_upper_m']
-    result['recommended']=best
+    best_upper=best['worst_diameter']['envelope_upper_m'];result['recommended']=best
     result['preferred_candidates_local_m']=[v['point_local_m'] for v in good
         if v['worst_diameter']['envelope_upper_m']<=(1+eta)*best_upper]
     result['unresolved_competitors_local_m']=[v['point_local_m'] for v in good
         if v['worst_diameter']['sample_lower_m']<=best_upper and v is not best]
     result['preferred_region_semantics']='finite candidates within eta of best evaluated upper score; not a certificate of true eta-optimality'
-    result['status']='completed_with_numerical_bounds'
+
+    if supplied is None:
+        stages=result['outer_convergence']['stages']
+        if len(stages)>=2:
+            last=stages[-1];rel=last.get('relative_best_upper_change',math.inf);shift=last.get('best_point_shift_m',math.inf)
+            obj_tol=max(outer_atol,outer_rtol*max(1e-12,last['best_upper_m']))
+            abs_obj=abs(last['best_upper_m']-stages[-2]['best_upper_m'])
+            stable=(abs_obj<=obj_tol and shift<=max(outer_ptol,last['step_m']*2) and not truncated)
+            result['outer_convergence'].update({"status":"stable" if stable else "needs_refinement",
+                "last_absolute_objective_change_m":abs_obj,"last_relative_objective_change":rel,
+                "last_best_point_shift_m":shift,"objective_tolerance_m":obj_tol,
+                "point_tolerance_m":max(outer_ptol,last['step_m']*2)})
+        else:
+            result['outer_convergence']['status']='needs_refinement'
+    result['status']=('needs_refinement' if supplied is None and
+                      (result['outer_convergence']['status']!='stable' or result['inner_convergence']['status']!='stable')
+                      else 'completed_with_numerical_bounds')
     return result

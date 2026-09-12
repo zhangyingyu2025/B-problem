@@ -217,6 +217,22 @@ class IntegrationTests(unittest.TestCase):
         self.assertEqual(len(a['domains']),5) # K plus four different placement domains
         self.assertTrue(a['preferred_candidates_local_m'])
 
+    def test_default_search_reports_separate_outer_and_inner_convergence(self):
+        r=solve_b2({'x':0,'y':0,'svd_deg':0})
+        self.assertEqual(r['status'],'completed_with_numerical_bounds')
+        self.assertEqual(r['outer_convergence']['status'],'stable')
+        self.assertEqual(r['inner_convergence']['status'],'stable')
+        self.assertEqual([s['step_m'] for s in r['outer_convergence']['stages']],[50.0,25.0,12.5,6.25])
+        self.assertLessEqual(r['outer_convergence']['last_best_point_shift_m'],12.5+1e-9)
+        self.assertLess(r['outer_convergence']['last_relative_objective_change'],0.02)
+
+    def test_refined_default_beats_previous_25m_central_grid_winner(self):
+        p=problem()
+        old=evaluate_candidate(p,(775,-625),768,1.0,0.002,False)
+        new=solve_b2({'x':0,'y':0,'svd_deg':0})
+        self.assertLess(new['recommended']['worst_diameter']['envelope_upper_m'],
+                        old['worst_diameter']['envelope_upper_m']-0.2)
+
     def test_candidate_budget_and_no_candidate(self):
         a=solve_b2({'x':0,'y':0,'svd_deg':0},options={'max_candidates':2,'refinement_levels':0})
         self.assertEqual(len(a['candidates']),2)
