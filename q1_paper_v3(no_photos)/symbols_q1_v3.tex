@@ -1,0 +1,92 @@
+% !TeX program = xelatex
+% ============================================================
+% 符号说明（问题一独立文件，按 CUMCM-LaTeX-Template 组织）
+%
+% 本文件只列出问题一已经使用的符号。
+% 后续完成问题二、问题三后，在 \bottomrule 之前增加对应符号，
+% 再将 \section{符号说明} 及其表格并入总论文。
+% ============================================================
+
+\PassOptionsToPackage{quiet}{xeCJK}
+\documentclass[withoutpreface,notoc]{cumcmthesis}
+
+\RenewDocumentCommand{\textbf}{m}{{\heiti #1}}
+
+\usepackage{amsmath,amssymb,bm}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{booktabs}
+\usepackage{etoolbox}
+\usepackage{enumitem}
+
+\BeforeBeginEnvironment{tabular}{\zihao{-5}}
+\BeforeBeginEnvironment{tabularx}{\zihao{-5}}
+
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}
+\newcolumntype{C}{>{\centering\arraybackslash}X}
+
+\newcommand{\bs}{\boldsymbol{S}}
+\newcommand{\bp}{\boldsymbol{p}}
+\newcommand{\bu}{\boldsymbol{u}}
+\newcommand{\ba}{\boldsymbol{a}}
+\newcommand{\bA}{\boldsymbol{A}}
+\newcommand{\bB}{\boldsymbol{B}}
+\newcommand{\bC}{\boldsymbol{C}}
+\newcommand{\bO}{\boldsymbol{O}}
+\newcommand{\Ball}{\mathcal{B}}
+\newcommand{\T}{\mathrm{T}}
+\newcommand{\R}{\mathbb{R}}
+\DeclareMathOperator{\diam}{diam}
+\DeclareMathOperator{\conv}{conv}
+
+\title{符号说明}
+
+\begin{document}
+\maketitle
+
+\section{符号说明}
+
+为方便阅读，本文使用的问题一主要符号及其说明如\cref{tab:符号说明}所示。
+跨问题复用的符号只在本表中定义一次；问题二、问题三的专用变量待模型确定后统一补充。
+
+\begin{table}[H]
+  \centering
+  \caption{问题一主要符号及其含义}
+  \label{tab:符号说明}
+  \begin{tabularx}{\textwidth}{>{\centering\arraybackslash}p{0.17\textwidth}
+                                L
+                                >{\centering\arraybackslash}p{0.18\textwidth}}
+    \toprule
+    符号 & 含义 & 单位或类型 \\
+    \midrule
+    $n$ & 同一干扰源的有效示向度观测数 & 个 \\
+    $\bs_i=(x_i,y_i)$ & 第 $i$ 个检测点的平面坐标 & m \\
+    $\theta_i$ & 第 $i$ 个检测点测得的示向度 & 度 \\
+    $\alpha$ & 测向误差半角，本题取 $\alpha=1^\circ$ & 度 \\
+    $\bp=(x,y)$ & 干扰源候选位置 & m \\
+    $\bu_i^-,\bu_i^+$ & 第 $i$ 个前向楔形的下、上边界单位方向向量 & 无量纲 \\
+    $W_i$ & 第 $i$ 个观测形成的闭前向楔形 & 点集 \\
+    $\ba_k,b_k$ & 第 $k$ 条半平面约束的系数向量与右端常数 & 无量纲 \\
+    $P$ & 全部前向楔形的交会定位区域 & 点集 \\
+    $V(P)$ & $P$ 的逆时针凸包顶点序列 & 点集 \\
+    $D$ & 有界定位区域的直径 & m \\
+    $\bA,\bB$ & 一组最远点，满足 $\|\bA-\bB\|_2=D$ & 点 \\
+    $\bC$ & 最远点对的中点，$\bC=(\bA+\bB)/2$ & 点 \\
+    $\Ball(o,r)$ & 以 $o$ 为圆心、$r$ 为半径的闭圆盘 & 点集 \\
+    $R_{\min}$ & 定位区域顶点集的最小覆盖圆半径 & m \\
+    $\bO$ & 目标圆域的中心，取为坐标原点 & 点 \\
+    $\delta_i$ & 检测点 $\bs_i$ 到定位区域 $P$ 的最短距离 & m \\
+    $P_{\mathrm{phys}}$ & 加入目标圆域、接收范围和过近条件后的补充修正区域 & 点集 \\
+    \bottomrule
+  \end{tabularx}
+\end{table}
+
+% ============================================================
+% 合并到总论文时：
+%   1. 保留 \section{符号说明} 及 table 环境；
+%   2. 在 \bottomrule 之前按问题分组增加新符号；
+%   3. 同名符号只保留一次，并在含义中说明适用范围；
+%   4. 不把本文件的 \maketitle 复制到总论文正文中。
+% ============================================================
+
+\end{document}

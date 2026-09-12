@@ -1,0 +1,265 @@
+% !TeX program = xelatex
+% ============================================================
+% 2026 高教社杯全国大学生数学建模竞赛 B 题
+% 问题一：有界测向误差下的交会定位区域
+%
+% 本文件按 CUMCM-LaTeX-Template/template.tex 的写法组织，
+% 保留模板标题、交叉引用、定理环境、图表和 Step 求解结构。
+% 本文件不含摘要、目录、参考文献、附录和后续问题。
+%
+% 两个图位对应的文件为：
+%   figures/F-Q1-01.pdf
+%   figures/F-Q1-02.pdf
+% ============================================================
+
+\PassOptionsToPackage{quiet}{xeCJK}
+\documentclass[withoutpreface,notoc]{cumcmthesis}
+
+% 与模板一致：正文中的加粗文字使用黑体。
+\RenewDocumentCommand{\textbf}{m}{{\heiti #1}}
+
+% 补充模板未显式列出的排版能力；模板已经加载的宏包不会重复加载。
+\usepackage{amsmath,amssymb,bm}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{booktabs}
+\usepackage{etoolbox}
+\usepackage{enumitem}
+\usepackage{graphicx}
+
+% 表格使用模板约定的小五号字。
+\BeforeBeginEnvironment{tabular}{\zihao{-5}}
+\BeforeBeginEnvironment{tabularx}{\zihao{-5}}
+
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}
+\newcolumntype{C}{>{\centering\arraybackslash}X}
+
+% 常用记号。
+\newcommand{\bs}{\boldsymbol{S}}
+\newcommand{\bp}{\boldsymbol{p}}
+\newcommand{\bq}{\boldsymbol{q}}
+\newcommand{\bd}{\boldsymbol{d}}
+\newcommand{\bu}{\boldsymbol{u}}
+\newcommand{\bv}{\boldsymbol{v}}
+\newcommand{\ba}{\boldsymbol{a}}
+\newcommand{\bb}{\boldsymbol{b}}
+\newcommand{\bA}{\boldsymbol{A}}
+\newcommand{\bB}{\boldsymbol{B}}
+\newcommand{\bC}{\boldsymbol{C}}
+\newcommand{\bO}{\boldsymbol{O}}
+\newcommand{\bzero}{\boldsymbol{0}}
+\newcommand{\Ball}{\mathcal{B}}
+\newcommand{\T}{\mathrm{T}}
+\newcommand{\R}{\mathbb{R}}
+\DeclareMathOperator{\diam}{diam}
+\DeclareMathOperator{\conv}{conv}
+\DeclareMathOperator{\dist}{dist}
+
+% 有图时直接插入 PDF，无图时显示固定高度的图位。
+% 这样可以在正式配图尚未完成时检查版式和页数。
+\newcommand{\FigureSlot}[4]{%
+  \begin{figure}[htbp]
+    \centering
+    \IfFileExists{figures/#2}{%
+      \includegraphics[width=#1,height=0.140\textheight,keepaspectratio]{figures/#2}%
+    }{%
+      \fbox{%
+        \begin{minipage}[c][0.080\textheight][c]{0.80\textwidth}
+          \centering
+          \textbf{图位：#3}\\[0.25em]
+          将 PDF 命名为 \texttt{#2}，放入 \texttt{figures/} 目录。
+        \end{minipage}%
+      }%
+    }%
+    \caption{#3}
+    \label{#4}
+  \end{figure}
+}
+
+\setlist[itemize]{leftmargin=2em,itemsep=0.08em,topsep=0.18em}
+\setlist[enumerate]{leftmargin=2em,itemsep=0.08em,topsep=0.18em}
+
+\begin{document}
+
+% 论文总标题由总文档统一生成；第一问文件只提供问题一的章节正文。
+
+\section{问题一的模型建立与求解}
+
+\subsection{问题分析}
+
+每个检测点的示向度误差绝对值不超过 $1^\circ$。因此，干扰源不能简单等同于两条中心
+示向线的交点，而应位于以检测点为顶点、以实测示向度为角平分线、半角为
+$\alpha=1^\circ$ 的前向楔形内。对同一干扰源的全部前向楔形求交，得到题目要求的
+纯测向交会区域 $P$。由于每个楔形都是两个闭半平面的交，$P$ 是闭凸集。求解时必须
+先判断 $P$ 是否为空、是否有界；只有在 $P$ 为非空有界凸多边形时，区域直径才有
+有限值。随后还需判断是否存在直径等于 $D$ 的覆盖圆。目标圆域、接收距离不超过
+$1500$ m 和 $5$ m 过近条件作为物理审计条件，不替代纯测向交会区域。
+
+\subsection{模型假设}
+
+本文假设：同一干扰源的示向度观测已正确关联；检测点坐标准确，各点与干扰源近似共面，
+示向度误差绝对值不超过 $1^\circ$；暂不考虑地形遮挡、多径传播和接收机内部延迟；
+目标圆域以坐标原点 $\bO$ 为圆心，该假设只影响物理约束审计。
+
+\subsection{前向楔形与半平面模型}
+
+记第 $i$ 个检测点为 $\bs_i=(x_i,y_i)$，其示向度为 $\theta_i$。在
+$\alpha=1^\circ$ 的误差半角下，第 $i$ 个前向楔形的下、上边界单位方向向量为
+\begin{equation}
+  \bu_i^-=
+  \begin{bmatrix}
+    \cos(\theta_i-\alpha)\\
+    \sin(\theta_i-\alpha)
+  \end{bmatrix},
+  \qquad
+  \bu_i^+=
+  \begin{bmatrix}
+    \cos(\theta_i+\alpha)\\
+    \sin(\theta_i+\alpha)
+  \end{bmatrix}.
+  \label{eq:boundary-vectors}
+\end{equation}
+
+对二维向量 $\ba,\bb$，定义叉积 $[\ba,\bb]=a_xb_y-a_yb_x$。候选位置
+$\bp=(x,y)$ 属于第 $i$ 个前向楔形，当且仅当
+\begin{equation}
+  [\bu_i^-,\bp-\bs_i]\ge 0,
+  \qquad
+  [\bu_i^+,\bp-\bs_i]\le 0.
+  \label{eq:wedge}
+\end{equation}
+
+式\cref{eq:wedge}直接用单位向量判断点与楔形边界的相对位置，不需要计算
+$\tan\theta_i$，因此不会在 $90^\circ$、$270^\circ$ 等特殊角度或角度跨越
+$0^\circ$ 时出现数值奇异。将叉积展开后，每条示向度观测给出两个半平面约束
+$\ba_k^\T\bp\le b_k$。全部 $2n$ 个约束的交集为
+\begin{equation}
+  P=\bigcap_{k=1}^{2n}\left\{\bp\in\R^2:\ba_k^\T\bp\le b_k\right\}.
+  \label{eq:intersection}
+\end{equation}
+
+式\cref{eq:intersection}是问题一的核心模型。若约束互相矛盾，则
+$P=\varnothing$；若方向约束不能限制区域远端，则 $P$ 无界；这两种情况下均不能
+输出有限的区域直径。其几何含义和直径判定如\cref{fig:q1-main}所示。
+
+\FigureSlot{0.82\textwidth}{F-Q1-01.pdf}
+  {两站前向楔形交会区域、直径与同直径圆判定}{fig:q1-main}
+
+\subsection{区域状态、顶点与直径}
+
+用二维增量法判断\cref{eq:intersection}的可行性：若候选点违反新约束，则把候选点
+限制在新边界直线上，并将已有约束化为关于该直线参数的一维区间；区间交为空时
+$P$ 不可行。确认 $P$ 非空后，用衰退锥 $C_P=\{\bd:\bA\bd\le\bzero\}$ 判断
+有界性：
+\begin{equation}
+  C_P=\{\bd:\bA\bd\le\bzero\},
+  \qquad
+   P\ \text{有界}\Longleftrightarrow C_P=\{\bzero\}.
+  \label{eq:bounded}
+\end{equation}
+
+只需检查 $d_x=\pm1$ 和 $d_y=\pm1$ 四类归一化方向；任意非零衰退方向按正比例
+缩放后必属于其中一类，因此该判定是完备的。区域有界时，枚举非平行边界线的交点，
+删除不满足约束的交点，再用 Andrew 单调链算法得到逆时针凸包顶点
+$V(P)=\{\bv_0,\bv_1,\ldots,\bv_{h-1}\}$。由凸集的极值性质，区域直径满足
+\begin{equation}
+  D=\diam(P)
+  =\max_{\bp,\bq\in P}\|\bp-\bq\|_2
+  =\max_{0\le i,j<h}\|\bv_i-\bv_j\|_2.
+  \label{eq:diameter}
+\end{equation}
+
+由紧凸多边形的极值性质，可用旋转卡壳算法在 $O(h)$ 时间内求出一组最远点
+$\bA,\bB$，再用全部顶点对的 $O(h^2)$ 枚举复核。两种算法结果一致时才进入
+覆盖判定。
+
+\subsection{同直径圆覆盖判定}
+
+设最远点对满足 $D=\|\bA-\bB\|_2$。若半径为 $D/2$、圆心为 $o$ 的圆盘覆盖
+$P$，则三角不等式给出
+$D=\|\bA-\bB\|_2\le\|\bA-o\|_2+\|o-\bB\|_2\le D$。两端相等要求每一步都取
+等号，因此 $\bA,o,\bB$ 共线，且唯一可能的圆心为最远点对的中点
+$\bC=(\bA+\bB)/2$。
+
+所以只需检查所有凸包顶点是否落在以 $\bA\bB$ 为直径的圆盘中：
+\begin{equation}
+  (\bv-\bA)^\T(\bv-\bB)\le 0,
+  \qquad \forall \bv\in V(P).
+  \label{eq:cover-dot}
+\end{equation}
+
+式\cref{eq:cover-dot}成立时，存在直径为 $D$ 的覆盖圆；否则不存在。区域直径和
+最小覆盖圆直径不是同一个概念，\cref{fig:q1-counterexample}给出了不能省略该判定
+的反例。
+
+\FigureSlot{0.76\textwidth}{F-Q1-02.pdf}
+  {等边三角形区域直径与最小覆盖圆直径的差异}{fig:q1-counterexample}
+
+\subsection{模型求解与物理约束审计}
+
+主模型的求解按以下步骤进行：
+\begin{description}
+  \item[Step 1：] 读取坐标和示向度，按式\cref{eq:boundary-vectors}构造楔形边界。
+  \item[Step 2：] 按式\cref{eq:wedge}和式\cref{eq:intersection}形成半平面约束，
+        判断区域的可行性和有界性。
+  \item[Step 3：] 筛选边界交点，提取逆时针凸包 $V(P)$。
+  \item[Step 4：] 求区域直径并进行顶点对复核，按式\cref{eq:cover-dot}判断
+        同直径圆是否存在。
+  \item[Step 5：] 审计物理约束并完成误差半角灵敏度分析。
+\end{description}
+
+物理约束审计包括
+\begin{equation}
+  \max_{\bv\in V(P)}\|\bv\|_2\le 1800,
+  \qquad
+  \max_{\bv\in V(P)}\|\bv-\bs_i\|_2\le 1500,
+  \qquad
+  \min_{\bp\in P}\|\bp-\bs_i\|_2>5.
+  \label{eq:audit}
+\end{equation}
+
+前两项可在凸多边形顶点上检查，第三项需要计算点到多边形的最短距离。若三项均不活跃，
+则保留 $P$；否则在 $P$ 上叠加目标圆域和接收圆盘裁剪，并排除过近圆盘内部。该修正
+区域只作为补充审计结果，不替代式\cref{eq:intersection}的纯测向交会多边形。
+
+\subsection{算例结果与检验}
+
+题面没有提供现场坐标和示向度，因此使用合成算例检验模型，以下结果不表示实际干扰源
+位置。取
+$\bs_1=(-100,-100)$、$\bs_2=(100,-100)$，示向度分别为 $45^\circ$ 和
+$135^\circ$。旋转卡壳与顶点对枚举给出一致结果
+\begin{equation}
+  D=100(\tan46^\circ-\tan44^\circ)
+  =6.984153898\ \mathrm{m}.
+  \label{eq:two-station-diameter}
+\end{equation}
+
+最远点对的中点圆半径为 $D/2=3.492076949$ m。逐点检查后，
+$P\subseteq\Ball(\bC,D/2)$ 成立，因此该算例存在同直径覆盖圆。
+
+再取边长为 $36$ m 的等边三角形作为反例。其区域直径为 $36$ m，但最小覆盖圆
+直径为 $24\sqrt{3}\approx41.56921938$ m。以任意一条边为直径的圆都不能覆盖
+第三个顶点，说明同直径圆判定是独立必要步骤。
+
+数值检验中，$3\times4$ 矩形直径的计算误差为 $0$，旋转平移后的直径变化为
+$2.49\times10^{-14}$ m，固定随机种子的 $120$ 组凸包上两种算法结果一致。
+
+表\cref{tab:sensitivity}给出误差半角对双站算例直径的影响。随着 $\alpha$ 由
+$0.50^\circ$ 增至 $1.50^\circ$，楔形按集合包含关系扩张，区域直径严格增大，
+与测向误差界的几何含义一致。
+
+\begin{table}[H]
+  \centering
+  \renewcommand{\arraystretch}{1.05}
+  \caption{误差半角对双站算例区域直径的影响}
+  \label{tab:sensitivity}
+  \begin{tabular}{lccccc}
+    \toprule
+    误差半角 $/^\circ$ & 0.50 & 0.75 & 1.00 & 1.25 & 1.50\\
+    \midrule
+    区域直径 / m & 3.491 & 5.237 & 6.984 & 8.732 & 10.482\\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\end{document}
