@@ -12,7 +12,7 @@
     },
     {
       "path": "B2/code/b2_solver.py",
-      "sha256": "25a17430acdb3e3d8c4cfc8da165054c098406af894053d5604bb61edf8b72a4"
+      "sha256": "761a36fb4c0377fc485aca0bf603fa964eafc677fef744a61d3ed10b5ec61f3b"
     },
     {
       "path": "B2/code/domains.py",
@@ -24,11 +24,31 @@
     },
     {
       "path": "B2/code/reproduce.py",
-      "sha256": "403deadb07371b142d05584170bfe10024e13ed5ec608daf27104b3f6dd4a857"
+      "sha256": "139fcf5a01820ee4f761b5f72b929f7a216c2f9af92ad9b816fa2e7c6d37baad"
     },
     {
       "path": "B2/code/run_b2.py",
       "sha256": "777b954179f5fc15fb4501d83a6e9dbc38ed72e608fda015fcfeb61df50ad860"
+    },
+    {
+      "path": "B2/continuous_proof/.gitignore",
+      "sha256": "6feaded4e28ea86e001a6751b4e3d960e8b7c31b9616ff9936b79297086e809b"
+    },
+    {
+      "path": "B2/continuous_proof/certificate.json",
+      "sha256": "2fa8f35490e6cfa8ff87f09f219336511b88012116a646298c50af503c67125d"
+    },
+    {
+      "path": "B2/continuous_proof/README.md",
+      "sha256": "fea988fc01222ef4110a891a164f6cb617088eb358771ea7dfaa0b2960967094"
+    },
+    {
+      "path": "B2/continuous_proof/test_verify_central.py",
+      "sha256": "552500a894ed7197cafba14e8e344d5486f4ac78b11491a8841ad27bb9c8e20b"
+    },
+    {
+      "path": "B2/continuous_proof/verify_central.py",
+      "sha256": "e4aa23bc1e76ee8758ae1b9ae7227300db6b9ebfe801630557623bf680b98c51"
     },
     {
       "path": "B2/examples/central_synthetic.json",
@@ -48,7 +68,7 @@
     },
     {
       "path": "B2/README.md",
-      "sha256": "2277d39dbe5939ceabf756839509ed1bc8248e548df41c97fa60b0d82ba8885d"
+      "sha256": "7fbb6c893123e31f9929fcbde10ea22c7afd1de0741e9612d056f218a29c6a8d"
     },
     {
       "path": "B2/reference/citation_ledger.csv",
@@ -60,7 +80,7 @@
     },
     {
       "path": "B2/tests/test_b2.py",
-      "sha256": "0e074791104946390f3eacf9c31907e8d603c83dc68bbcb7a2f126de5aa10db4"
+      "sha256": "553328467fb772c4e37cb9115b182ce0e3aca1c7f0d8128b8f2e57460c1b1dfc"
     },
     {
       "path": "B2/审题与数据审计.md",
@@ -68,7 +88,7 @@
     },
     {
       "path": "B2/建模方案.md",
-      "sha256": "90eb797aeb9e34267f66753bdc357d4588b27c3c4e95b51b4e3bcd8f9c110049"
+      "sha256": "92ac9cc3e29dedef4a6fdf9b6c0944b45e4cf4453a3b931bc64331cd49ebc098"
     },
     {
       "path": "B2/探索/check_feasibility.py",
@@ -76,23 +96,23 @@
     },
     {
       "path": "B2/结果/central_synthetic.json",
-      "sha256": "6896ed477d58bfd20b7681ca3d90b53503c179386d08b82d11ea95c27dcb7199"
+      "sha256": "03d7c080a3901a08cf29a3f5a55955732f6628215c505ff46561875e93ced1b7"
     },
     {
       "path": "B2/结果/central_synthetic.svg",
-      "sha256": "402b2af00dc0d5c5aa6ebe5ec5d89fd995f5c7d24c139baaae3609d841f189a3"
+      "sha256": "5cb9b7553fbddc3069c9ba115101486d2f5b0fe208935607ab96a4a5958a8c3f"
     },
     {
       "path": "B2/结果/edge_synthetic.json",
-      "sha256": "610e0e0e921b4ca5c25fb58302fa7a32b67cf879e2e94278c1195769a1829795"
+      "sha256": "56785b6bee789e24ce6aaaf14afa04f74c29cbd5b3c74f15bd0413085785ece3"
     },
     {
       "path": "B2/结果/edge_synthetic.svg",
-      "sha256": "bdc2778bb793491158af1161032b2a26d44e64c1802faf12b356a15b5d7fb864"
+      "sha256": "2129c55605eebf2945211007462940944265bfb1d5cf19fcb1f1b6e064cbc17d"
     },
     {
       "path": "B2/结果/frozen_numbers.json",
-      "sha256": "464cd951db9c42cd05aa7171511460f57d517bdb7bce7b203f495f86b2337da2"
+      "sha256": "bfbedb92d73a405c61d53098de4f64bdbcb6b6438193a2b18501f5d9807ddd12"
     },
     {
       "path": "B2/结果/G2可行性核验.json",
@@ -100,7 +120,7 @@
     },
     {
       "path": "B2/结果/G2核验说明.md",
-      "sha256": "514657a7fbf1c91439c9c41b7295e5a44423470cac9355d404182746f07f6932"
+      "sha256": "e14dc7149fef42acb27d114ab2d3738a73877e302e1a2a24a5e9c3450e9a62f3"
     },
     {
       "path": "B2/结果/G2运行日志.txt",
@@ -108,7 +128,7 @@
     },
     {
       "path": "B2/结果/inconsistent_synthetic.json",
-      "sha256": "77225647511976b6f4f0070171c1329270ca900eb42597f5c9350975f5bd94ce"
+      "sha256": "95a4d56b25eb54bcb3877c67f311110bc8de4911610953e4ab4c0a7461e04e66"
     },
     {
       "path": "B2/结果/inconsistent_synthetic.svg",
@@ -116,27 +136,27 @@
     },
     {
       "path": "B2/结果/robustness_results.json",
-      "sha256": "16919936528e983357b52d19b1c7857f2e22cbe6d66f7601eabcbc6c0a8707b0"
+      "sha256": "038ccda46472a19e73ea0683c48fa7b625803eb0872d45fc3eec9f0abe3581d9"
     },
     {
       "path": "B2/结果/test_log.txt",
-      "sha256": "5596db6954ec8d7f98f5370faad2c986ffd809b80bb1c6cc1a8c269020e79cb7"
+      "sha256": "c37de936a717036ab16255fbdca5d80f692175e73ecccb11ed2aa2f4e4d79dc7"
     },
     {
       "path": "B2/结果/validation_report.md",
-      "sha256": "60ba5892cc98b154a0605dc0e1f0a237f081d73cabefc675287b8cb14e21de35"
+      "sha256": "da9de766d6463650c1b069ec356325ea721af1d7a37b50a9cab062237a4c0944"
     },
     {
       "path": "B2/结果/wrap_synthetic.json",
-      "sha256": "d35ae549c2521d5c841b3f18e3800100a92eea63b7d215262d2c9b377e5f959a"
+      "sha256": "f8f141e33a4ac3dbf87775ba0c3fd4fd7484d187913b94b9dc7ec3f22e53e49b"
     },
     {
       "path": "B2/结果/wrap_synthetic.svg",
-      "sha256": "402b2af00dc0d5c5aa6ebe5ec5d89fd995f5c7d24c139baaae3609d841f189a3"
+      "sha256": "5cb9b7553fbddc3069c9ba115101486d2f5b0fe208935607ab96a4a5958a8c3f"
     },
     {
       "path": "B2/问题二_建模报告.txt",
-      "sha256": "4bc01533b46db32c261091f09bdf22bf450e54a65b7ddf57ea6cca09f419434b"
+      "sha256": "c6c06b3aadb017c5440f8fdddc4bed2fbec9f25cad57c8d08932612a3fe97e3d"
     }
   ]
 }

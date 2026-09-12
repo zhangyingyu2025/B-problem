@@ -65,7 +65,7 @@ def verify_manifest(path: Path) -> int:
 
 def run_tests() -> list[str]:
     logs=[]
-    for folder in (B1 / 'tests', BASE / 'tests'):
+    for folder in (B1 / 'tests', BASE / 'tests', BASE / 'continuous_proof'):
         proc=subprocess.run(
             [sys.executable,'-X','utf8','-m','unittest','discover','-s',str(folder),'-v'],
             cwd=ROOT,capture_output=True,encoding='utf-8'
@@ -155,7 +155,10 @@ def main():
             'forward':'unbounded pure angular intersection',
             'lateral':'target (1500,0), R=1500, s2=(0,600) loses signal'
         },
-        'scope':'synthetic offline validation; no simulator; no rigorous interval certificate'
+        'scope':(
+            'synthetic offline validation; no simulator; dense checks are not certificates; '
+            'the central C0 continuous proof is separate and scope-limited'
+        )
     })
     save('frozen_numbers.json',{
         'scope':'validated synthetic examples of a conservative numerical strategy',

@@ -28,7 +28,7 @@ test_redundant_near_parallel_does_not_spoil_box (test_b1.GeometryTests.test_redu
 test_single_point_and_segment_circles (test_b1.GeometryTests.test_single_point_and_segment_circles) ... ok
 
 ----------------------------------------------------------------------
-Ran 27 tests in 0.557s
+Ran 27 tests in 0.567s
 
 OK
 
@@ -61,11 +61,32 @@ test_b1_dependency_hashes_unchanged (test_b2.IntegrationTests.test_b1_dependency
 test_candidate_budget_and_no_candidate (test_b2.IntegrationTests.test_candidate_budget_and_no_candidate) ... ok
 test_default_search_escapes_coarse_grid_trap (test_b2.IntegrationTests.test_default_search_escapes_coarse_grid_trap)
 Regression: default search must not stay at the old coarse-grid point. ... ok
+test_default_search_reports_separate_outer_and_inner_convergence (test_b2.IntegrationTests.test_default_search_reports_separate_outer_and_inner_convergence)
+The merged solver must expose both placement and reading stability. ... ok
 test_deterministic_search_and_distinct_domains (test_b2.IntegrationTests.test_deterministic_search_and_distinct_domains) ... ok
 test_json_and_svg_round_trip (test_b2.IntegrationTests.test_json_and_svg_round_trip) ... ok
 test_twenty_meter_coverage_positive_case (test_b2.IntegrationTests.test_twenty_meter_coverage_positive_case) ... ok
 
 ----------------------------------------------------------------------
-Ran 30 tests in 16.209s
+Ran 31 tests in 22.365s
+
+OK
+
+B2/continuous_proof
+test_generated_certificate_schema_and_boundary (test_verify_central.CertificateTests.test_generated_certificate_schema_and_boundary) ... ok
+test_scope_does_not_overclaim_full_C_safe (test_verify_central.CertificateTests.test_scope_does_not_overclaim_full_C_safe) ... ok
+test_basic_arithmetic_contains_exact_endpoints (test_verify_central.IntervalTests.test_basic_arithmetic_contains_exact_endpoints) ... ok
+test_trig_interval_contains_float_samples (test_verify_central.IntervalTests.test_trig_interval_contains_float_samples) ... ok
+test_active_endpoint_belongs_to_physical_K (test_verify_central.ReductionTests.test_active_endpoint_belongs_to_physical_K) ... ok
+test_beta_domain_has_analytic_margins (test_verify_central.ReductionTests.test_beta_domain_has_analytic_margins) ... ok
+test_box_budget_is_explicit (test_verify_central.ReductionTests.test_box_budget_is_explicit) ... ok
+test_candidate_mirror_has_same_leading_metrics (test_verify_central.ReductionTests.test_candidate_mirror_has_same_leading_metrics) ... ok
+test_declared_beta_interval_covers_sampled_domain (test_verify_central.ReductionTests.test_declared_beta_interval_covers_sampled_domain) ... ok
+test_diameter_bound_rejects_non_monotone_radius (test_verify_central.ReductionTests.test_diameter_bound_rejects_non_monotone_radius) ... ok
+test_radius_formula_recovers_opposite_vertex (test_verify_central.ReductionTests.test_radius_formula_recovers_opposite_vertex) ... ok
+test_radius_increases_with_R_A (test_verify_central.ReductionTests.test_radius_increases_with_R_A) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 0.123s
 
 OK

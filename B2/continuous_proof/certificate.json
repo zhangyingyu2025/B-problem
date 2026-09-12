@@ -1,0 +1,96 @@
+{
+  "schema_version": 2,
+  "case": "central_synthetic",
+  "scope": {
+    "source_model": "K=D0 intersect W1 intersect {5<r1<=1500} for the central instance",
+    "placement_domain": "complete central-case C0: lower branch is certified, upper branch follows by exact reflection",
+    "not_certified": [
+      "the full C_safe outside the stated C0 domain",
+      "non-central transformed physical instances",
+      "formal proof-assistant arithmetic for the floating upper bound"
+    ]
+  },
+  "reduction": {
+    "active_source_endpoint": {
+      "name": "A",
+      "coordinates_m": [
+        "1499.771542734586858735517338",
+        "-26.17860965592526922912846777"
+      ],
+      "norm_m": "1500",
+      "inside_D0": true,
+      "first_range_m": "1500",
+      "range_condition": "5 < 1500 <= 1500",
+      "wedge_position": "lower boundary ray of W1",
+      "belongs_to_K": true,
+      "role": "active physical source for theta_A=beta-alpha"
+    },
+    "beta_domain": {
+      "declared_interval_deg": [
+        "3",
+        "41"
+      ],
+      "actual_lower_deg": "3.1",
+      "numerical_upper_deg": "40.810314895779",
+      "lower_reason": "Let b_code=-L tan(alpha)-(L-a)tan(3.1deg) and b_exact=-L sin(alpha)-(L cos(alpha)-a)tan(3.1deg). b_code-b_exact=-L(1-cos(alpha))(tan(3.1deg)-tan(alpha))<0. Thus b<b_code implies b<b_exact and beta>3.1deg; the outward interval starts at 3deg",
+      "upper_reason": "|p|<=1000 gives 1500*sin(beta+alpha)<=1000. The interval certificate proves sin(41.811deg)>2/3, hence beta<=asin(2/3)-1deg<40.811deg<41deg",
+      "upper_sine_lower": "0.6666755790823902197371023562456368418578598946069678426369734770880056704230763092315113872865571281",
+      "upper_sine_margin": "0.000008912415723553070435689545637",
+      "chord_radius_margin_m": "124.409269471356404990634839934105053257145539995004840191531394107008505634614463847267080929835692",
+      "declared_interval_contains_domain": true
+    },
+    "radius_formula": "r_C=(1500 sin(beta-alpha)+R_A sin(2alpha))/sin(beta-3alpha)",
+    "radius_monotone_in_R_A": true,
+    "outer_dimension_after_reduction": 1
+  },
+  "branch_symmetry": {
+    "status": "closed_by_exact_reflection",
+    "reflection": "(x,y)->(x,-y)",
+    "argument": "D0, W1, K, T and C0 are invariant in the central instance; the source wedge and its error interval mirror to the reflected branch without changing diameter",
+    "mirrored_feasible_candidate_m": [
+      798.3022225759216,
+      602.2570542802663
+    ]
+  },
+  "interval_arithmetic": {
+    "decimal_precision": 100,
+    "padding": "1E-55",
+    "rounding": "ROUND_FLOOR for lower endpoints and ROUND_CEILING for upper endpoints",
+    "trigonometric_bound": "65-digit midpoint from decimal_unit plus a Lipschitz radius using the high-precision Decimal pi constant",
+    "certificate_grade": "numerical outward intervals; not a proof-assistant formalization"
+  },
+  "certification": {
+    "status": "closed",
+    "target_r_C_m": "1623.49551",
+    "processed_boxes": 158341,
+    "pruned_boxes": 79171,
+    "pending_boxes": 0,
+    "unclosed": []
+  },
+  "lower_bound": {
+    "r_C_lower_m": "1623.49551",
+    "diameter_lower_m": "134.9744782842085825414342071949531037381699677184740883775362081117117074455558866668156459397951072",
+    "semantics": "J_K(p) is at least this diameter for every p in the complete central-case C0"
+  },
+  "candidate": {
+    "point_local_m": [
+      798.3022225759216,
+      -602.2570542802663
+    ],
+    "movement_m": 999.999999,
+    "inner_solver_status": "tolerance_reached_float",
+    "diameter_upper_m": 134.97448751394995,
+    "high_precision_check": "passed",
+    "upper_bound_semantics": "adaptive float envelope on H; numerical, not an interval certificate"
+  },
+  "bracket": {
+    "global_lower_m": 134.97447828420857,
+    "feasible_upper_m": 134.97448751394995,
+    "width_m": 9.229741367458566e-06
+  },
+  "conclusion": {
+    "continuous_global_infimum_bracketed_on_stated_scope": true,
+    "exact_global_optimum_equality_proved": false,
+    "reason": "the continuous lower endpoint is certified to the shown bracket; the feasible upper endpoint is an adaptive float envelope, so exact equality is not claimed"
+  }
+}

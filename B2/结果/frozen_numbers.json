@@ -23,7 +23,7 @@
         67.90461430690758
       ],
       "clearance_20m_assessment": "counterexample_observation_found",
-      "candidate_count": 718,
+      "candidate_count": 814,
       "source_result": "B2/结果/central_synthetic.json"
     },
     "edge_synthetic": {
@@ -47,7 +47,7 @@
         8.491802024055879
       ],
       "clearance_20m_assessment": "supported_by_conservative_float_upper",
-      "candidate_count": 840,
+      "candidate_count": 1096,
       "source_result": "B2/结果/edge_synthetic.json"
     },
     "inconsistent_synthetic": {
@@ -74,7 +74,7 @@
         67.90461430690758
       ],
       "clearance_20m_assessment": "counterexample_observation_found",
-      "candidate_count": 718,
+      "candidate_count": 814,
       "source_result": "B2/结果/wrap_synthetic.json"
     }
   }

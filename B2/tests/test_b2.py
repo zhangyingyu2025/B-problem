@@ -235,6 +235,43 @@ class IntegrationTests(unittest.TestCase):
             len(result['unresolved_competitors_local_m'])
         )
 
+    def test_default_search_reports_separate_outer_and_inner_convergence(self):
+        """The merged solver must expose both placement and reading stability."""
+        result=solve_b2({'x':0,'y':0,'svd_deg':0})
+        self.assertEqual(result['status'],'completed_with_numerical_bounds')
+        self.assertEqual(
+            result['search']['mode'],'multistart_mesh_convergence'
+        )
+        self.assertEqual(
+            result['search']['placement_steps_m'],
+            [50.0,25.0,12.5,6.25]
+        )
+        self.assertEqual(result['outer_convergence']['status'],'stable')
+        self.assertEqual(result['inner_convergence']['status'],'stable')
+        self.assertEqual(
+            [stage['step_m'] for stage in result['outer_convergence']['stages']],
+            [50.0,25.0,12.5,6.25]
+        )
+        self.assertEqual(
+            result['inner_convergence']['base_intervals'],768
+        )
+        self.assertEqual(
+            result['inner_convergence']['recheck_intervals'],1536
+        )
+        self.assertEqual(
+            tuple(result['inner_convergence']['audited_point_local_m']),
+            result['recommended']['point_local_m']
+        )
+        self.assertTrue(
+            result['inner_convergence']['ranking_unchanged_after_recheck']
+        )
+        self.assertLessEqual(
+            result['outer_convergence']['last_best_point_shift_m'],6.25*2
+        )
+        self.assertLess(
+            result['recommended']['worst_diameter']['envelope_upper_m'],136.0
+        )
+
     def test_candidate_budget_and_no_candidate(self):
         a=solve_b2({'x':0,'y':0,'svd_deg':0},options={'max_candidates':2,'refinement_levels':0})
         self.assertEqual(len(a['candidates']),2)

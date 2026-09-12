@@ -50,5 +50,5 @@
     "forward": "unbounded pure angular intersection",
     "lateral": "target (1500,0), R=1500, s2=(0,600) loses signal"
   },
-  "scope": "synthetic offline validation; no simulator; no rigorous interval certificate"
+  "scope": "synthetic offline validation; no simulator; dense checks are not certificates; the central C0 continuous proof is separate and scope-limited"
 }
