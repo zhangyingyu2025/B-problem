@@ -3,7 +3,7 @@
   "taskbook": "E:/Download/Codex_B4_完整建模与执行方案_目标350-380.md",
   "taskbook_sha256": "00bcb93f804f0f139490dab29c51c221fe0a77b8b4096e6296a1fe16829b4b41",
   "baseline_commit": "62f628d38fd1564dd3eee2f824ba5bef45d76db3",
-  "stage": "Phase A/B passed; next SPF45 and G0",
+  "stage": "Phase A/B/C passed; implementing safe geometry and G0",
   "phases": {
     "A": "31 tests passed",
     "B": {
@@ -19,7 +19,16 @@
         "numeric_domain": "exact rational arithmetic on stored binary vertex coordinates"
       }
     },
-    "C": "pending",
+    "C": {
+      "tests_passed": 5,
+      "random_groups": 100000,
+      "deterministic_groups": 1350,
+      "margin": {
+        "factor": 1.3,
+        "strict_limit": 1.3893167409179945,
+        "ratio_margin": 0.08931674091799446
+      }
+    },
     "D": "pending",
     "E": "pending",
     "F": "pending"
