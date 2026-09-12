@@ -1,0 +1,18 @@
+{
+  "protected_files_verified": 41,
+  "equivalence_pairs_reverified_from_raw_events": 100,
+  "equivalence_groups": {
+    "random/fixed_field": 20,
+    "boundary/endpoints": 20,
+    "cluster/fixed_field": 20,
+    "origin/fixed_field": 20,
+    "random/endpoints": 20
+  },
+  "development_runs_verified": 800,
+  "paired_rows_recomputed": 600,
+  "development_six_exact_pairs": 95,
+  "unique_worst_cases_with_action_tables": 10,
+  "total_time_summary_rows": 66,
+  "new_strategy_runs": 0,
+  "scope": "Saved E12 evidence only; unrelated E13 artifacts untouched."
+}
