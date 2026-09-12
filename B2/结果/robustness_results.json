@@ -1,0 +1,54 @@
+{
+  "status": "passed_with_documented_float_limits",
+  "seed": 20260911,
+  "checks": [
+    {
+      "case": "central_synthetic",
+      "reference_digits": 65,
+      "requested_angle_count": 257,
+      "dense_angle_count": 256,
+      "boundary_empty_angles_deg": [
+        144.0181143769759
+      ],
+      "dense_max_diameter_m": 134.9746199215814,
+      "dense_max_mec_radius_m": 67.4873099607907,
+      "inside_adaptive_envelopes": true,
+      "is_global_certificate": false,
+      "boundary_empty_semantics": "float-derived closed endpoint is empty under exact re-encoding; interior samples remain bounded and excluded point has zero limiting diameter"
+    },
+    {
+      "case": "edge_synthetic",
+      "reference_digits": 65,
+      "requested_angle_count": 258,
+      "dense_angle_count": 257,
+      "boundary_empty_angles_deg": [
+        140.1340691961444
+      ],
+      "dense_max_diameter_m": 16.009338695665676,
+      "dense_max_mec_radius_m": 8.004669347832838,
+      "inside_adaptive_envelopes": true,
+      "is_global_certificate": false,
+      "boundary_empty_semantics": "float-derived closed endpoint is empty under exact re-encoding; interior samples remain bounded and excluded point has zero limiting diameter"
+    },
+    {
+      "case": "wrap_synthetic",
+      "reference_digits": 65,
+      "requested_angle_count": 257,
+      "dense_angle_count": 256,
+      "boundary_empty_angles_deg": [
+        144.0181143769759
+      ],
+      "dense_max_diameter_m": 134.9746199215814,
+      "dense_max_mec_radius_m": 67.4873099607907,
+      "inside_adaptive_envelopes": true,
+      "is_global_certificate": false,
+      "boundary_empty_semantics": "float-derived closed endpoint is empty under exact re-encoding; interior samples remain bounded and excluded point has zero limiting diameter"
+    }
+  ],
+  "b1_dependency_hash_count": 3,
+  "baseline_failures": {
+    "forward": "unbounded pure angular intersection",
+    "lateral": "target (1500,0), R=1500, s2=(0,600) loses signal"
+  },
+  "scope": "synthetic offline validation; no simulator; no rigorous interval certificate"
+}

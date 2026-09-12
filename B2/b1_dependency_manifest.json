@@ -1,0 +1,18 @@
+{
+  "algorithm": "sha256-canonical-text-lf-v1",
+  "scope": "B1 files B2 depends on; text files are hashed after LF line-ending normalization so Git/Windows CRLF conversion does not cause false failures; official raw problem files are not required",
+  "files": [
+    {
+      "path": "B1/code/b1_geometry.py",
+      "sha256": "2c5a85a9993ff5e534e644d5148d6a226e303b22828c8e7273819c4e4e622068"
+    },
+    {
+      "path": "B1/tests/test_b1.py",
+      "sha256": "870520bea25e4aa99a0fa32bf5b1450932a92d0ab230485524915b3f8747eb20"
+    },
+    {
+      "path": "B1/结果/frozen_numbers.json",
+      "sha256": "ea4724dda8a7d4050527a7a2e090b869b16c6e4b11efc8c7d784ee8a884fdc90"
+    }
+  ]
+}

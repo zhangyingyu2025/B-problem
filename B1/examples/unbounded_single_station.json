@@ -1,0 +1,13 @@
+{
+  "case_id": "unbounded_single_station",
+  "data_kind": "synthetic",
+  "description": "A single wedge crossing angle zero remains unbounded.",
+  "error_deg": 1.0,
+  "observations": [
+    {
+      "x": 0,
+      "y": 0,
+      "svd_deg": 359.5
+    }
+  ]
+}

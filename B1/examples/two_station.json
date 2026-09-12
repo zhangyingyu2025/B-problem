@@ -1,0 +1,18 @@
+{
+  "case_id": "two_station",
+  "data_kind": "synthetic",
+  "description": "Two crossing bearing wedges; no simulator measurements.",
+  "error_deg": 1.0,
+  "observations": [
+    {
+      "x": -100,
+      "y": -100,
+      "svd_deg": 45
+    },
+    {
+      "x": 100,
+      "y": -100,
+      "svd_deg": 135
+    }
+  ]
+}

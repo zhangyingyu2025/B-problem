@@ -1,0 +1,73 @@
+{
+  "status": "unbounded",
+  "algebraic_status": "unbounded",
+  "feasible_point": [
+    0.0,
+    0.0
+  ],
+  "feasible_point_exact": [
+    "0",
+    "0"
+  ],
+  "recession_direction": [
+    1.0,
+    0.0
+  ],
+  "recession_direction_exact": [
+    "1",
+    "0"
+  ],
+  "recession_checks": [
+    {
+      "axis": "x",
+      "value": 1,
+      "feasible": true
+    }
+  ],
+  "vertices": [],
+  "diameter_m": null,
+  "farthest_pair": null,
+  "farthest_pair_indices": null,
+  "diameter_circle": null,
+  "minimum_enclosing_circle": null,
+  "circle_crosscheck_passed": null,
+  "diagnostics": [],
+  "numeric_policy": {
+    "coefficients": "exact rational arithmetic on input binary floats",
+    "absolute_output_tolerance_m": 1e-08,
+    "relative_output_tolerance": 1e-12,
+    "active_parallel_sine_guard": 1e-10
+  },
+  "halfplanes": [
+    [
+      -0.026176948307873153,
+      -0.9996573249755573,
+      0.0
+    ],
+    [
+      -0.008726535498373935,
+      0.9999619230641713,
+      0.0
+    ]
+  ],
+  "schema_version": 1,
+  "region_definition": "intersection_of_closed_bearing_wedges",
+  "units": {
+    "coordinates": "m",
+    "bearings": "degree_ccw_from_east"
+  },
+  "error_deg": 1.0,
+  "observations": [
+    {
+      "x": 0.0,
+      "y": 0.0,
+      "svd_deg": 359.5
+    }
+  ],
+  "input_count": 1,
+  "unique_count": 1,
+  "duplicate_indices": [],
+  "case_id": "unbounded_single_station",
+  "data_kind": "synthetic",
+  "input_sha256": "4d331e836a4772216adc2ddb99816f079d76c83f232333163bc84e7ee016b885"
+}

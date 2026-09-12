@@ -1,0 +1,122 @@
+{
+  "stage": "G2_feasibility_only",
+  "data_type": "synthetic",
+  "python": "3.13.5",
+  "seed": 20260911,
+  "input_sha256": {
+    "B2/探索/check_feasibility.py": "339713305d6b998c26b3fb2e9440c357d08981c4cb0086d0c749c556027d4c3a",
+    "B1/code/b1_geometry.py": "9a02afb440d97c5fd7af9b2b0267084313fb0e47f264646c835189ef095c7496",
+    "B2/b1_dependency_manifest.json": "20ed2f2b9c4c0afea0e48eb5492f3db6459c149f30b128ecf0c3a1f5679c58c6"
+  },
+  "candidate_results": [
+    {
+      "second_point_m": [
+        500,
+        600
+      ],
+      "movement_m": 781.0249675906655,
+      "sample_count": 45,
+      "sample_lower_bound_m": 199.44617339005785,
+      "sample_witness": {
+        "target_m": [
+          1499.771542734587,
+          26.178609655925268
+        ],
+        "second_error_deg": 1
+      },
+      "analytic_envelope_upper_bound_float_m": 1691.8429242113937,
+      "observation_interval_deg": [
+        -130.8055710922652,
+        -28.847954001483057
+      ]
+    },
+    {
+      "second_point_m": [
+        800,
+        550
+      ],
+      "movement_m": 970.8243919473799,
+      "sample_count": 45,
+      "sample_lower_bound_m": 142.8956314849745,
+      "sample_witness": {
+        "target_m": [
+          1499.771542734587,
+          26.178609655925268
+        ],
+        "second_error_deg": 1
+      },
+      "analytic_envelope_upper_bound_float_m": 1632.3393692265522,
+      "observation_interval_deg": [
+        -146.4914770123316,
+        -35.80789736788149
+      ]
+    },
+    {
+      "second_point_m": [
+        900,
+        400
+      ],
+      "movement_m": 984.8857801796105,
+      "sample_count": 45,
+      "sample_lower_bound_m": 154.79773702328555,
+      "sample_witness": {
+        "target_m": [
+          1499.771542734587,
+          26.178609655925268
+        ],
+        "second_error_deg": 1
+      },
+      "analytic_envelope_upper_bound_float_m": 1645.075758170145,
+      "observation_interval_deg": [
+        -157.03751102542182,
+        -30.924103364100773
+      ]
+    },
+    {
+      "second_point_m": [
+        950,
+        300
+      ],
+      "movement_m": 996.2429422585637,
+      "sample_count": 45,
+      "sample_lower_bound_m": 182.02819835583776,
+      "sample_witness": {
+        "target_m": [
+          1499.771542734587,
+          26.178609655925268
+        ],
+        "second_error_deg": 1
+      },
+      "analytic_envelope_upper_bound_float_m": 1673.7668587379799,
+      "observation_interval_deg": [
+        -163.47443162627712,
+        -25.466409578317325
+      ]
+    }
+  ],
+  "lateral_signal_failure": {
+    "target_m": [
+      1500,
+      0
+    ],
+    "radius_m": 1500,
+    "second_point_m": [
+      0,
+      600
+    ],
+    "second_range_m": 1615.5494421403512
+  },
+  "forward_unbounded_failure": {
+    "status": "unbounded",
+    "diameter_m": null
+  },
+  "dependency_hash_checks": {
+    "b1_dependencies": 3
+  },
+  "limitations": [
+    "No continuous optimality claim",
+    "Sample maxima are lower bounds",
+    "Float upper bounds are not interval arithmetic certificates",
+    "Triangle envelope ignores the 1800 m domain for a conservative bound"
+  ]
+}

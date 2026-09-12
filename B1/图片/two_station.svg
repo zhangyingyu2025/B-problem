@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="680" viewBox="0 0 1000 680">
+<rect width="1000" height="680" fill="#f8fafc"/>
+<g font-family="Segoe UI,Arial,sans-serif" fill="#152333">
+<text x="40" y="45" font-size="25" font-weight="600">B1 two_station (synthetic)</text>
+<text x="40" y="75" font-size="15">Synthetic validation case | Coordinates in metres | Equal x/y scale</text>
+<rect x="45" y="105" width="600" height="505" rx="8" fill="white" stroke="#d7dfe7"/>
+<polygon points="153.450091,356.689070 345.000000,541.666667 536.549909,356.689070 345.000000,158.333333" fill="#dbeafe" fill-opacity="0.75" stroke="#1d4ed8" stroke-width="2"/>
+<circle cx="345.000000" cy="350.000000" r="191.666667" fill="none" stroke="#047857" stroke-width="2" />
+<path d="M341.0,350.0h8 M345.0,346.0v8" stroke="#047857"/>
+<circle cx="345.000000" cy="350.000000" r="191.666667" fill="none" stroke="#be123c" stroke-width="2" stroke-dasharray="7 5"/>
+<path d="M341.0,350.0h8 M345.0,346.0v8" stroke="#be123c"/>
+<polyline points="345.000000,541.666667 345.000000,158.333333" fill="none" stroke="#be123c" stroke-width="2"/>
+<circle cx="153.450091" cy="356.689070" r="4" fill="#1d4ed8"/><text x="161.450091" y="348.689070" font-size="13">V0</text>
+<circle cx="345.000000" cy="541.666667" r="4" fill="#1d4ed8"/><text x="353.000000" y="533.666667" font-size="13">V1</text>
+<circle cx="536.549909" cy="356.689070" r="4" fill="#1d4ed8"/><text x="544.549909" y="348.689070" font-size="13">V2</text>
+<circle cx="345.000000" cy="158.333333" r="4" fill="#1d4ed8"/><text x="353.000000" y="150.333333" font-size="13">V3</text>
+<line x1="675" x2="700" y1="140" y2="140" stroke="#1d4ed8" stroke-width="3"/><text x="710" y="145" font-size="14">Feasible polygon</text>
+<line x1="675" x2="700" y1="180" y2="180" stroke="#be123c" stroke-width="3"/><text x="710" y="185" font-size="14">Farthest-pair midpoint circle</text>
+<line x1="675" x2="700" y1="220" y2="220" stroke="#047857" stroke-width="3"/><text x="710" y="225" font-size="14">Minimum enclosing circle</text>
+<text x="675" y="290" font-size="14">Status: bounded</text>
+<text x="675" y="321" font-size="14">Vertices: 4</text>
+<text x="675" y="352" font-size="14">Diameter: 6.9841539 m</text>
+<text x="675" y="383" font-size="14">Radius D/2: 3.4920769 m</text>
+<text x="675" y="414" font-size="14">Same-diameter cover: TRUE</text>
+<text x="675" y="445" font-size="14">Min. cover diameter: 6.9841539 m</text>
+<text x="675" y="476" font-size="14">Independent check: True</text>
+<text x="45" y="640" font-size="14">Blue vertices satisfy all bearing half-planes. The drawing window does not constrain the solver.</text>
+</g></svg>

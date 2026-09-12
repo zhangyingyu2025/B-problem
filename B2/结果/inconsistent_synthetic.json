@@ -1,0 +1,84 @@
+{
+  "schema_version": 1,
+  "status": "inconsistent_observation",
+  "observation": {
+    "x": 4000,
+    "y": 0,
+    "svd_deg": 0
+  },
+  "error_deg": 1,
+  "physical_parameters": {
+    "domain_center": [
+      0.0,
+      0.0
+    ],
+    "domain_radius": 1800.0,
+    "min_range": 1000.0,
+    "max_range": 1500.0,
+    "near_range": 5.0,
+    "angle_margin_deg": 0.1
+  },
+  "objective_priority": [
+    "worst localization diameter",
+    "movement for numerical ties only"
+  ],
+  "auxiliary_metric": "worst minimum enclosing circle radius; not a replacement primary metric",
+  "domains": {
+    "physical_source_K": {
+      "definition": "D0 ∩ W1 ∩ {5 < r1 <= 1500}; use configured radii",
+      "status": "inconsistent_observation"
+    },
+    "guaranteed_reception_C_safe": {
+      "definition": "intersection over G in K of B(G,max(r_min,r1(G)))",
+      "representation": "implicit exact mathematical definition; full boundary not computed",
+      "may_return_near": true
+    },
+    "analytic_safe_C_cert": {
+      "definition": "B(s1,r_min) ∩ B(s1+r_min*u_minus,r_min) ∩ B(s1+r_min*u_plus,r_min)",
+      "relation": "sufficient subset of C_safe; inward numeric guard used for search"
+    },
+    "effective_direction_C0": {
+      "definition": "C_cert with dist(p,T)>near and angular separation >3alpha+margin",
+      "implemented_subset": "C0_sub: abs(b)>L*tan(alpha)+(L-a)*tan(3alpha+margin) and abs(b)*cos(alpha)-a*sin(alpha)>near",
+      "guarantees": "normal second reading and bounded angular intersection",
+      "complete_domain": false
+    },
+    "preferred_detection_region": {
+      "representation": "finite evaluated candidates; no continuous near-optimal-region certificate",
+      "metric": "worst diameter over conservative one-dimensional H reading interval"
+    }
+  },
+  "candidates": [],
+  "recommended": null,
+  "search": {
+    "grid_step_m": 100.0,
+    "refinement_levels": 7,
+    "max_candidates": 1200,
+    "max_intervals": 192,
+    "final_intervals": 768,
+    "abs_tolerance_m": 1.0,
+    "rel_tolerance": 0.002,
+    "near_optimal_fraction": 0.05
+  },
+  "limitations": [
+    "not a global continuous placement optimum",
+    "H outer approximation includes the first near disk",
+    "float envelopes and pointwise Decimal rechecks are not interval certificates",
+    "full C_safe boundary is implicit, not computed"
+  ],
+  "data_kind": "synthetic",
+  "provenance": {
+    "input_name": "inconsistent_synthetic.json",
+    "input_sha256": "ab213851d5ee5fda43e61c59bd1423bf8bf5b5f63c3ac52bece99e083b22e01d",
+    "python": "3.12.14",
+    "search_randomness": "none; deterministic",
+    "code_sha256": {
+      "b2_solver.py": "25a17430acdb3e3d8c4cfc8da165054c098406af894053d5604bb61edf8b72a4",
+      "domains.py": "c9ea86f9fd8c38f2a1079072b865458d086d315b5b89de3f9cc12732cfcfb69b",
+      "geometry.py": "f6f4d70c7fed2c5d107c0a3c4141ea07db842e914809301baea87ea9aa4e3849",
+      "reproduce.py": "403deadb07371b142d05584170bfe10024e13ed5ec608daf27104b3f6dd4a857",
+      "run_b2.py": "777b954179f5fc15fb4501d83a6e9dbc38ed72e608fda015fcfeb61df50ad860"
+    },
+    "b1_dependency_sha256": "2c5a85a9993ff5e534e644d5148d6a226e303b22828c8e7273819c4e4e622068"
+  }
+}

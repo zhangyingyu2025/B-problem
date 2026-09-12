@@ -1,0 +1,142 @@
+{
+  "algorithm": "sha256-canonical-text-lf-v1",
+  "scope": "B2 repository artifacts; text files are hashed after LF line-ending normalization; optional PNG previews excluded",
+  "files": [
+    {
+      "path": "B2/.gitignore",
+      "sha256": "ac2de72f51a815d5d4c3b2c16f8aa800a4c817c4b4f5e054218e300c661b47fa"
+    },
+    {
+      "path": "B2/b1_dependency_manifest.json",
+      "sha256": "f0f23506ad9c647bf732eafe759d31e4a39b5e1755fd85033a2b607f96f98416"
+    },
+    {
+      "path": "B2/code/b2_solver.py",
+      "sha256": "25a17430acdb3e3d8c4cfc8da165054c098406af894053d5604bb61edf8b72a4"
+    },
+    {
+      "path": "B2/code/domains.py",
+      "sha256": "c9ea86f9fd8c38f2a1079072b865458d086d315b5b89de3f9cc12732cfcfb69b"
+    },
+    {
+      "path": "B2/code/geometry.py",
+      "sha256": "f6f4d70c7fed2c5d107c0a3c4141ea07db842e914809301baea87ea9aa4e3849"
+    },
+    {
+      "path": "B2/code/reproduce.py",
+      "sha256": "403deadb07371b142d05584170bfe10024e13ed5ec608daf27104b3f6dd4a857"
+    },
+    {
+      "path": "B2/code/run_b2.py",
+      "sha256": "777b954179f5fc15fb4501d83a6e9dbc38ed72e608fda015fcfeb61df50ad860"
+    },
+    {
+      "path": "B2/examples/central_synthetic.json",
+      "sha256": "7f48b667a161a4c1d9342ac2309b1044231fdcd61860d27be33e38f9730fa47a"
+    },
+    {
+      "path": "B2/examples/edge_synthetic.json",
+      "sha256": "f367e4a4e9cf0c9199515ae3f8b0f011c510aecd2feb1b0cdef1ee43a0fdb0b8"
+    },
+    {
+      "path": "B2/examples/inconsistent_synthetic.json",
+      "sha256": "ab213851d5ee5fda43e61c59bd1423bf8bf5b5f63c3ac52bece99e083b22e01d"
+    },
+    {
+      "path": "B2/examples/wrap_synthetic.json",
+      "sha256": "61e0e8cfa3a552a3bc0d6a5e1ad4f03190bb752a2abc85b9e63e0a737e81b583"
+    },
+    {
+      "path": "B2/README.md",
+      "sha256": "2277d39dbe5939ceabf756839509ed1bc8248e548df41c97fa60b0d82ba8885d"
+    },
+    {
+      "path": "B2/reference/citation_ledger.csv",
+      "sha256": "dc604ac6d842025a39492df77a7088800cbba87aae10014d121744970e7fcd2f"
+    },
+    {
+      "path": "B2/reference/literature_map.md",
+      "sha256": "b8859d97b9923c0bdb6d4c71b02a9d9082489c22fa7045d59027f835109560bb"
+    },
+    {
+      "path": "B2/tests/test_b2.py",
+      "sha256": "0e074791104946390f3eacf9c31907e8d603c83dc68bbcb7a2f126de5aa10db4"
+    },
+    {
+      "path": "B2/审题与数据审计.md",
+      "sha256": "5a8d53155b62ac941771dfe37ada8d77fa281e3d121360aa03a3d59d782a64a7"
+    },
+    {
+      "path": "B2/建模方案.md",
+      "sha256": "90eb797aeb9e34267f66753bdc357d4588b27c3c4e95b51b4e3bcd8f9c110049"
+    },
+    {
+      "path": "B2/探索/check_feasibility.py",
+      "sha256": "339713305d6b998c26b3fb2e9440c357d08981c4cb0086d0c749c556027d4c3a"
+    },
+    {
+      "path": "B2/结果/central_synthetic.json",
+      "sha256": "6896ed477d58bfd20b7681ca3d90b53503c179386d08b82d11ea95c27dcb7199"
+    },
+    {
+      "path": "B2/结果/central_synthetic.svg",
+      "sha256": "402b2af00dc0d5c5aa6ebe5ec5d89fd995f5c7d24c139baaae3609d841f189a3"
+    },
+    {
+      "path": "B2/结果/edge_synthetic.json",
+      "sha256": "610e0e0e921b4ca5c25fb58302fa7a32b67cf879e2e94278c1195769a1829795"
+    },
+    {
+      "path": "B2/结果/edge_synthetic.svg",
+      "sha256": "bdc2778bb793491158af1161032b2a26d44e64c1802faf12b356a15b5d7fb864"
+    },
+    {
+      "path": "B2/结果/frozen_numbers.json",
+      "sha256": "464cd951db9c42cd05aa7171511460f57d517bdb7bce7b203f495f86b2337da2"
+    },
+    {
+      "path": "B2/结果/G2可行性核验.json",
+      "sha256": "dd85d39db266b84980b5095aa496c97448be5f0278238793aaf24ff5fe45c223"
+    },
+    {
+      "path": "B2/结果/G2核验说明.md",
+      "sha256": "514657a7fbf1c91439c9c41b7295e5a44423470cac9355d404182746f07f6932"
+    },
+    {
+      "path": "B2/结果/G2运行日志.txt",
+      "sha256": "dd85d39db266b84980b5095aa496c97448be5f0278238793aaf24ff5fe45c223"
+    },
+    {
+      "path": "B2/结果/inconsistent_synthetic.json",
+      "sha256": "77225647511976b6f4f0070171c1329270ca900eb42597f5c9350975f5bd94ce"
+    },
+    {
+      "path": "B2/结果/inconsistent_synthetic.svg",
+      "sha256": "8ebf292379ac03ef78f9465b1bd3f9eeeb3f3967fd85cb0b73d3320fccd1a6a2"
+    },
+    {
+      "path": "B2/结果/robustness_results.json",
+      "sha256": "16919936528e983357b52d19b1c7857f2e22cbe6d66f7601eabcbc6c0a8707b0"
+    },
+    {
+      "path": "B2/结果/test_log.txt",
+      "sha256": "5596db6954ec8d7f98f5370faad2c986ffd809b80bb1c6cc1a8c269020e79cb7"
+    },
+    {
+      "path": "B2/结果/validation_report.md",
+      "sha256": "60ba5892cc98b154a0605dc0e1f0a237f081d73cabefc675287b8cb14e21de35"
+    },
+    {
+      "path": "B2/结果/wrap_synthetic.json",
+      "sha256": "d35ae549c2521d5c841b3f18e3800100a92eea63b7d215262d2c9b377e5f959a"
+    },
+    {
+      "path": "B2/结果/wrap_synthetic.svg",
+      "sha256": "402b2af00dc0d5c5aa6ebe5ec5d89fd995f5c7d24c139baaae3609d841f189a3"
+    },
+    {
+      "path": "B2/问题二_建模报告.txt",
+      "sha256": "4bc01533b46db32c261091f09bdf22bf450e54a65b7ddf57ea6cca09f419434b"
+    }
+  ]
+}

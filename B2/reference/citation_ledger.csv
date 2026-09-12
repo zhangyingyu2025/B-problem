@@ -1,0 +1,9 @@
+claim_id,claim_text,claim_type,source_key,source_url,source_version,location,scope,verification_status,checked_on,notes
+B2-01,角误差有界且同地重复误差固定,problem_fact,B-PDF,CUMCM2026Problems/CUMCM2026Problems/B题/B题.pdf,local_sha256_manifest,第2页附录2(1),本题,verified_primary,2026-09-11,未假定概率分布
+B2-02,接收半径固定未知且在1000至1500米内,problem_fact,B-PDF,CUMCM2026Problems/CUMCM2026Problems/B题/B题.pdf,local_sha256_manifest,第3页附录2(2),本题,verified_primary,2026-09-11,第一次收到信号进一步约束R
+B2-03,第二检测点可以超出目标区域且存在near状态,problem_fact,B-ATT1,CUMCM2026Problems/CUMCM2026Problems/B题/附件/附件1.docx,local_sha256_manifest,2.2检测,本题,verified_primary,2026-09-11,near不提供角度
+B2-04,有界角误差楔形交集可用最坏直径评价,method,TI2013,https://tokekar.com/pubs/tokekar2013asensor.pdf,author_2013_pdf,III_A_B_page3,方形环境多传感器布置,verified_primary,2026-09-11,不移植静态网格最优性
+B2-05,双站定位几何同时受距离和夹角影响,method,TEKDAS_ISLER,https://www-users.cse.umn.edu/~isler/pub/tase10.pdf,author_manuscript,printed_page1_Fig1_IIA,三角定位几何代理指标,verified_primary,2026-09-11,指标不同于B1精确直径
+B2-06,测向测距RSS的传感器布置可统一参数优化,alternative,ZCL2012,https://arxiv.org/abs/1210.7397v1,arxiv_v1_2012_10_28,abstract_and_fulltext,备选布置理论,verified_primary,2026-09-11,不作为本题鲁棒最优的证据
+B2-07,C_cert保证第二次接收,derivation,OWN_B2,求解/计划/B2建模方案.md,2026-09-11,section3,首次正常读数且全向,proved_and_sanity_checked,2026-09-11,保守子域不是完整最优域
+B2-08,有限采样最大值不是连续最坏值上界,mathematical_fact,OWN_B2,求解/计划/B2建模方案.md,2026-09-11,section5,下确界上确界比较,derived,2026-09-11,需区分K与外包络T

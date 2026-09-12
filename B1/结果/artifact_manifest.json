@@ -1,0 +1,110 @@
+{
+  "files": [
+    {
+      "path": "求解/问题一/code/b1_geometry.py",
+      "sha256": "2c5a85a9993ff5e534e644d5148d6a226e303b22828c8e7273819c4e4e622068"
+    },
+    {
+      "path": "求解/问题一/code/reproduce.py",
+      "sha256": "1c46cfa93f46380af697bac53c06e2b8e141d3636461b214c335f336a162dfaf"
+    },
+    {
+      "path": "求解/问题一/code/run_b1.py",
+      "sha256": "b991324234b1c9927324c11b7b9c6abb57a2950f20d19d64af1aebd9312f1cbb"
+    },
+    {
+      "path": "求解/问题一/examples/empty_outward_rays.json",
+      "sha256": "acac2d89144c603cba38815a8bdf7a1e4da2732645444877a04aa99eeba6be44"
+    },
+    {
+      "path": "求解/问题一/examples/equilateral_counterexample.json",
+      "sha256": "19a4cdb3ca7687a23fbed33c01e4a0092941e3bb80f084375793b676083d3399"
+    },
+    {
+      "path": "求解/问题一/examples/two_station.json",
+      "sha256": "df3ffd4af2fdfde4461fed466e3a09ac7fa43a805f3eff8cdbdfe5ce4f2faf36"
+    },
+    {
+      "path": "求解/问题一/examples/unbounded_single_station.json",
+      "sha256": "4d331e836a4772216adc2ddb99816f079d76c83f232333163bc84e7ee016b885"
+    },
+    {
+      "path": "求解/问题一/input_manifest.json",
+      "sha256": "4a8d25bd6ef8be74d4950b24b546eab0078abff1422946a90391c00e1ccd5a90"
+    },
+    {
+      "path": "求解/问题一/README.md",
+      "sha256": "39a80619acb0c74d49c8618b80651be2fb5ef5b9aca6431fc6a4601bcb0e080b"
+    },
+    {
+      "path": "求解/问题一/tests/test_b1.py",
+      "sha256": "870520bea25e4aa99a0fa32bf5b1450932a92d0ab230485524915b3f8747eb20"
+    },
+    {
+      "path": "求解/问题一/图片/empty_outward_rays.svg",
+      "sha256": "9858f1dd80b4913874b94040e8f67a64bee4e180dcc5b70c9818e7ec718593ef"
+    },
+    {
+      "path": "求解/问题一/图片/equilateral_counterexample.svg",
+      "sha256": "86b1d68587c117f9bdded7ab0a4da332c0579872ff38cb372037b5168d505aab"
+    },
+    {
+      "path": "求解/问题一/图片/two_station.svg",
+      "sha256": "53c8fe4c9f59e5a5ac6668c74818ee4c9df51dd3f952a0dddfca728555840aca"
+    },
+    {
+      "path": "求解/问题一/图片/unbounded_single_station.svg",
+      "sha256": "0a350b2242fc9e746cfcd0aed304cffb3258fda7716221addc055300545fc807"
+    },
+    {
+      "path": "求解/问题一/实施计划与决策.md",
+      "sha256": "8bc78f70fa17b18cd8ec9e30f3f3590df1ab047514137cf2036540dfc61ed39d"
+    },
+    {
+      "path": "求解/问题一/数据审计.md",
+      "sha256": "bcdacb41110e900c70b50b9217e6e84e91d28fa690df9a509edd8416440fb4ad"
+    },
+    {
+      "path": "求解/问题一/模型与算法说明.md",
+      "sha256": "c15169439d0f50e378179bfd0c48e269335e503d5c6389bec90fc111755e2e77"
+    },
+    {
+      "path": "求解/问题一/结果/empty_outward_rays.json",
+      "sha256": "4f5f79dee8c059c36007b45ebb67cd5eb636c61e05a1b3b3ea9fa621abacfa12"
+    },
+    {
+      "path": "求解/问题一/结果/equilateral_counterexample.json",
+      "sha256": "c23745965e854811706c50182070254d8bd64587b15ae5dd959d832d284b98db"
+    },
+    {
+      "path": "求解/问题一/结果/frozen_numbers.json",
+      "sha256": "d188c8e107d639896770e6262bd11e576d630e441e692eed116b4377f87d4d29"
+    },
+    {
+      "path": "求解/问题一/结果/skill_structure_check.txt",
+      "sha256": "3c300f3050cd51252b95f89384e3553beeab20e2f8b3ebc462cd9192da1f5ead"
+    },
+    {
+      "path": "求解/问题一/结果/test_log.txt",
+      "sha256": "b661041d81302de7d831c37af17db66ea22e4f6eff129fb0fe2b85a086152f0e"
+    },
+    {
+      "path": "求解/问题一/结果/two_station.json",
+      "sha256": "fd8e48361501c4d3e462ada99577eaf7c408b2ef50428c6b22a97d764dc9a970"
+    },
+    {
+      "path": "求解/问题一/结果/unbounded_single_station.json",
+      "sha256": "32694cedac687920d124b138bc4e3878e1c2c72131bbafa400ae8d0adc776541"
+    },
+    {
+      "path": "求解/问题一/结果/validation_report.md",
+      "sha256": "351b541922c9eaeaf3ec3ddafa039f66067d219b3e468624fb0170fc7c60ab3c"
+    },
+    {
+      "path": "求解/问题一/结果/validation_results.json",
+      "sha256": "7f30bba0d3e67d821271fc87d52445dbc18676b7c1719855f167ad38a4ac3ab3"
+    }
+  ],
+  "runtime": "3.12.1 (tags/v3.12.1:2305ca5, Dec  7 2023, 22:03:25) [MSC v.1937 64 bit (AMD64)]",
+  "dependency_policy": "Python standard library only"
+}

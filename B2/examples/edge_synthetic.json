@@ -1,0 +1,5 @@
+{
+  "data_kind": "synthetic",
+  "description": "人工构造：靠近目标圆域东边缘，首次指向东侧",
+  "observation": {"x": 1500, "y": 0, "svd_deg": 0}
+}

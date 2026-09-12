@@ -1,0 +1,23 @@
+{
+  "case_id": "equilateral_counterexample",
+  "data_kind": "synthetic",
+  "description": "Realizable equilateral triangle of side 36 m; same-diameter circle cannot cover.",
+  "error_deg": 1.0,
+  "observations": [
+    {
+      "x": -900,
+      "y": 0,
+      "svd_deg": 1
+    },
+    {
+      "x": 486,
+      "y": -779.4228634059947,
+      "svd_deg": 121
+    },
+    {
+      "x": 468,
+      "y": 810.5997779422345,
+      "svd_deg": 241
+    }
+  ]
+}

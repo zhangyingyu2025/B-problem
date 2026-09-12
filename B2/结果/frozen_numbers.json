@@ -1,0 +1,81 @@
+{
+  "scope": "validated synthetic examples of a conservative numerical strategy",
+  "not_global_optima": true,
+  "cases": {
+    "central_synthetic": {
+      "data_kind": "synthetic",
+      "status": "completed_with_numerical_bounds",
+      "recommended_local_m": [
+        798.825737200392,
+        -601.5625
+      ],
+      "recommended_world_m": [
+        798.825737200392,
+        -601.5625
+      ],
+      "movement_m": 999.9999999099999,
+      "worst_diameter_bounds_m": [
+        134.97461992158142,
+        135.80922861381495
+      ],
+      "worst_mec_radius_bounds_m": [
+        67.48730996079071,
+        67.90461430690758
+      ],
+      "clearance_20m_assessment": "counterexample_observation_found",
+      "candidate_count": 718,
+      "source_result": "B2/结果/central_synthetic.json"
+    },
+    "edge_synthetic": {
+      "data_kind": "synthetic",
+      "status": "completed_with_numerical_bounds",
+      "recommended_local_m": [
+        231.802427172802,
+        -200.552427172802
+      ],
+      "recommended_world_m": [
+        1731.802427172802,
+        -200.552427172802
+      ],
+      "movement_m": 306.5185822884222,
+      "worst_diameter_bounds_m": [
+        16.009338695665676,
+        16.983439987887447
+      ],
+      "worst_mec_radius_bounds_m": [
+        8.004669347832838,
+        8.491802024055879
+      ],
+      "clearance_20m_assessment": "supported_by_conservative_float_upper",
+      "candidate_count": 840,
+      "source_result": "B2/结果/edge_synthetic.json"
+    },
+    "inconsistent_synthetic": {
+      "status": "inconsistent_observation"
+    },
+    "wrap_synthetic": {
+      "data_kind": "synthetic",
+      "status": "completed_with_numerical_bounds",
+      "recommended_local_m": [
+        798.825737200392,
+        -601.5625
+      ],
+      "recommended_world_m": [
+        793.5457638533178,
+        -608.5105754959845
+      ],
+      "movement_m": 999.9999999099999,
+      "worst_diameter_bounds_m": [
+        134.97461992158142,
+        135.80922861381495
+      ],
+      "worst_mec_radius_bounds_m": [
+        67.48730996079071,
+        67.90461430690758
+      ],
+      "clearance_20m_assessment": "counterexample_observation_found",
+      "candidate_count": 718,
+      "source_result": "B2/结果/wrap_synthetic.json"
+    }
+  }
+}

@@ -1,0 +1,166 @@
+{
+  "status": "bounded",
+  "algebraic_status": "bounded",
+  "feasible_point": [
+    1.3127425272378462e-13,
+    0.0
+  ],
+  "feasible_point_exact": [
+    "1024/7800463371553963",
+    "0"
+  ],
+  "recession_direction": null,
+  "recession_direction_exact": null,
+  "recession_checks": [
+    {
+      "axis": "x",
+      "value": 1,
+      "feasible": false
+    },
+    {
+      "axis": "x",
+      "value": -1,
+      "feasible": false
+    },
+    {
+      "axis": "y",
+      "value": 1,
+      "feasible": false
+    },
+    {
+      "axis": "y",
+      "value": -1,
+      "feasible": false
+    }
+  ],
+  "vertices": [
+    [
+      1.3127425272378462e-13,
+      0.0
+    ],
+    [
+      36.00000000000013,
+      0.0
+    ],
+    [
+      18.00000000000013,
+      31.176914536239796
+    ]
+  ],
+  "diameter_m": 36.0,
+  "farthest_pair": [
+    [
+      1.3127425272378462e-13,
+      0.0
+    ],
+    [
+      18.00000000000013,
+      31.176914536239796
+    ]
+  ],
+  "farthest_pair_indices": [
+    0,
+    2
+  ],
+  "diameter_circle": {
+    "center": [
+      9.000000000000131,
+      15.588457268119898
+    ],
+    "radius_m": 18.0,
+    "covers": false,
+    "uncovered_vertex_indices": [
+      1
+    ],
+    "uncovered_vertices": [
+      [
+        36.00000000000013,
+        0.0
+      ]
+    ]
+  },
+  "minimum_enclosing_circle": {
+    "center": [
+      18.00000000000013,
+      10.392304845413268
+    ],
+    "radius_m": 20.784609690826528,
+    "diameter_m": 41.569219381653056,
+    "support_indices": [
+      0,
+      1,
+      2
+    ]
+  },
+  "circle_crosscheck_passed": true,
+  "diagnostics": [],
+  "numeric_policy": {
+    "coefficients": "exact rational arithmetic on input binary floats",
+    "absolute_output_tolerance_m": 1e-08,
+    "relative_output_tolerance": 1e-12,
+    "active_parallel_sine_guard": 1e-10
+  },
+  "halfplanes": [
+    [
+      0.0,
+      -1.0,
+      0.0
+    ],
+    [
+      -0.03489949670250097,
+      0.9993908270190958,
+      31.409547032250874
+    ],
+    [
+      0.8660254037844387,
+      0.49999999999999994,
+      31.176914536239906
+    ],
+    [
+      -0.848048096156426,
+      -0.5299192642332049,
+      0.8798155706194848
+    ],
+    [
+      -0.8660254037844387,
+      0.49999999999999994,
+      -1.1368683772161603e-13
+    ],
+    [
+      0.882947592858927,
+      -0.4694715627858908,
+      32.66592891354094
+    ]
+  ],
+  "marginal_circle_vertex_indices": [],
+  "schema_version": 1,
+  "region_definition": "intersection_of_closed_bearing_wedges",
+  "units": {
+    "coordinates": "m",
+    "bearings": "degree_ccw_from_east"
+  },
+  "error_deg": 1.0,
+  "observations": [
+    {
+      "x": -900.0,
+      "y": 0.0,
+      "svd_deg": 1.0
+    },
+    {
+      "x": 486.0,
+      "y": -779.4228634059947,
+      "svd_deg": 121.0
+    },
+    {
+      "x": 468.0,
+      "y": 810.5997779422345,
+      "svd_deg": 241.0
+    }
+  ],
+  "input_count": 3,
+  "unique_count": 3,
+  "duplicate_indices": [],
+  "case_id": "equilateral_counterexample",
+  "data_kind": "synthetic",
+  "input_sha256": "19a4cdb3ca7687a23fbed33c01e4a0092941e3bb80f084375793b676083d3399"
+}

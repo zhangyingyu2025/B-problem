@@ -1,0 +1,18 @@
+{
+  "case_id": "empty_outward_rays",
+  "data_kind": "synthetic",
+  "description": "Oppositely outward wedges have an empty intersection.",
+  "error_deg": 1.0,
+  "observations": [
+    {
+      "x": 1,
+      "y": 0,
+      "svd_deg": 0
+    },
+    {
+      "x": -1,
+      "y": 0,
+      "svd_deg": 180
+    }
+  ]
+}
