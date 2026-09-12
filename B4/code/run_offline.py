@@ -14,6 +14,9 @@ sys.path.insert(0,str(ROOT/'B3/code'))
 from protocol_adapter import Client
 from offline_environment_b4 import OfflineTransportB4, make_case, PATTERNS, ERROR_MODES
 from solver_g0 import G0Solver, RobotPort
+from solver_g1 import G1Solver, G1DeferredSolver
+
+SOLVERS={'G0':G0Solver,'G1':G1Solver,'G1D':G1DeferredSolver}
 
 
 def quantile(xs,q):
@@ -22,12 +25,12 @@ def quantile(xs,q):
 
 
 def run_case(case,variant='G0',error_mode='fixed_field',log_path=None):
-    if variant!='G0': raise ValueError('unsupported variant')
+    if variant not in SOLVERS: raise ValueError('unsupported variant')
     transport=OfflineTransportB4(case,error_mode=error_mode)
     client=Client(transport,'offline-test',log_path=log_path,session_id=f"b4-{case['seed']}-{variant}")
     start=time.perf_counter(); cpu=time.process_time(); error=None; solver=None
     try:
-        client.enter(); solver=G0Solver(RobotPort(client)); solver.run_all()
+        client.enter(); solver=SOLVERS[variant](RobotPort(client)); solver.run_all()
     except Exception as exc:
         error=f'{type(exc).__name__}: {exc}'
         client.record({'kind':'B4_failure','error':error})
@@ -118,7 +121,7 @@ def job(spec):
 def main():
     p=argparse.ArgumentParser(description=__doc__)
     p.add_argument('--start',type=int,required=True);p.add_argument('--count',type=int,required=True)
-    p.add_argument('--variant',default='G0',choices=['G0']);p.add_argument('--pattern',default='random_mixed',choices=PATTERNS)
+    p.add_argument('--variant',default='G0',choices=sorted(SOLVERS));p.add_argument('--pattern',default='random_mixed',choices=PATTERNS)
     p.add_argument('--error-mode',default='fixed_field',choices=ERROR_MODES)
     p.add_argument('--workers',type=int,default=4);p.add_argument('--output',type=Path,required=True)
     args=p.parse_args()
