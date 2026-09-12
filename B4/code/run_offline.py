@@ -15,8 +15,29 @@ from protocol_adapter import Client
 from offline_environment_b4 import OfflineTransportB4, make_case, PATTERNS, ERROR_MODES
 from solver_g0 import G0Solver, RobotPort
 from solver_g1 import G1Solver, G1DeferredSolver
+from solver_g2 import G2OpportunisticSolver, G2RouteFirstSolver, G2BetterRouteSolver, G2Detour250Solver, G2Detour500Solver, G2Detour800Solver, G2WideSolver, G2Range1000Solver, G2Angle20Solver, G2SixSolver, G2TwoSolver, G2Six1000Solver, G2Six1100Solver, G2Six1400Solver, G2SixAngle10Solver, G2EightSolver
+from solver_g3 import G3SpineSolver, G3Spine300, G3Spine450, G3Spine800, G3Spine1200
+from solver_g4 import G4TransitSolver, G4Transit2, G4Transit6, G4Transit8
+from solver_g5 import G5Info1, G5Info15, G5Info2, G5Info2R1000, G5Info15R1000
+from solver_g6 import G6Cap4,G6Cap5,G6Cap6,G6Cap7,G6Cap8
+from solver_g7 import G7Fine9,G7Fine7,G7Mid5,G7Fine9K3,G7Fine9K5
+from solver_g8 import G8Probe1,G8Probe2,G8Probe3,G8Probe4
+from solver_g9 import G9P1,G9P2,G9P3,G9P5
+from solver_g10 import G10D0,G10D100,G10D200,G10D300,G10D500,G10NoDefer
+from solver_g11 import G11SafeClear
+from solver_g12 import G12TransitClear
+from solver_g13 import G13FullClearRegion
+from solver_g14 import G14TransitFullClear
+from solver_g15 import G15TightMesh, G15SafeMesh
+from solver_g16 import G16SurrogateMesh, G16Aggressive, G16Conservative, G16CheapProbe
+from solver_g17 import G17TSPN, G17OneRound, G17ThreeRounds
+from solver_g18 import G18Convex21,G18P8,G18T6,G18P8T6,G18Wide,G18Compact21,G18CompactT6,G18T8,G18A,G18B,G18D,G18B8,G18R100,G18R250,G18R500
+from solver_g34 import G34R40,G34R60,G34R80,G34R100,G34R120,G34R180,G34R250,G34R350,G34R500,G34R800
+from solver_g35 import G35SafeBackbone,G36SafeBackboneDisks,G37SafeRouteClear,G38S75,G38S100,G38S125,G39P8,G39P10,G39P12,G39P15,G40PassiveSafe
+from solver_g31 import G31A,G31B,G31C,G31D,G31E,G31F
+from solver_g30 import G30B2,G30B3,G30B5,G30B75,G30B10,G30B15,G30B20,G30B25,G30B30,G30B45,G30B4,G30B45x,G30B55,G30B6,G30B65,G30B8,G30B5F98,G30B5F99,G30B5F1001,G30B5F1002,G30B6F1003
 
-SOLVERS={'G0':G0Solver,'G1':G1Solver,'G1D':G1DeferredSolver}
+SOLVERS={'G0':G0Solver,'G1':G1Solver,'G1D':G1DeferredSolver,'G2':G2OpportunisticSolver,'G2R':G2RouteFirstSolver,'G2T':G2BetterRouteSolver,'G2D250':G2Detour250Solver,'G2D500':G2Detour500Solver,'G2D800':G2Detour800Solver,'G2W':G2WideSolver,'G2R1000':G2Range1000Solver,'G2A20':G2Angle20Solver,'G2SIX':G2SixSolver,'G2TWO':G2TwoSolver,'G2S1000':G2Six1000Solver,'G2S1100':G2Six1100Solver,'G2S1400':G2Six1400Solver,'G2SA10':G2SixAngle10Solver,'G2EIGHT':G2EightSolver,'G3':G3SpineSolver,'G3S300':G3Spine300,'G3S450':G3Spine450,'G3S800':G3Spine800,'G3S1200':G3Spine1200,'G4':G4TransitSolver,'G4T2':G4Transit2,'G4T6':G4Transit6,'G4T8':G4Transit8,'G5I1':G5Info1,'G5I15':G5Info15,'G5I2':G5Info2,'G5I2R':G5Info2R1000,'G5I15R':G5Info15R1000,'G6C4':G6Cap4,'G6C5':G6Cap5,'G6C6':G6Cap6,'G6C7':G6Cap7,'G6C8':G6Cap8,'G7F9':G7Fine9,'G7F7':G7Fine7,'G7M5':G7Mid5,'G7F9K3':G7Fine9K3,'G7F9K5':G7Fine9K5,'G8P1':G8Probe1,'G8P2':G8Probe2,'G8P3':G8Probe3,'G8P4':G8Probe4,'G9P1':G9P1,'G9P2':G9P2,'G9P3':G9P3,'G9P5':G9P5,'G10D0':G10D0,'G10D100':G10D100,'G10D200':G10D200,'G10D300':G10D300,'G10D500':G10D500,'G10N':G10NoDefer,'G11':G11SafeClear,'G12':G12TransitClear,'G13':G13FullClearRegion,'G14':G14TransitFullClear,'G15':G15TightMesh,'G15S':G15SafeMesh,'G16':G16SurrogateMesh,'G16A':G16Aggressive,'G16C':G16Conservative,'G16P':G16CheapProbe,'G17':G17TSPN,'G17R1':G17OneRound,'G17R3':G17ThreeRounds,'G18':G18Convex21,'G18P8':G18P8,'G18T6':G18T6,'G18P8T6':G18P8T6,'G18W':G18Wide,'G18C':G18Compact21,'G18CT6':G18CompactT6,'G18T8':G18T8,'G18A':G18A,'G18B':G18B,'G18D':G18D,'G18B8':G18B8,'G18R100':G18R100,'G18R250':G18R250,'G18R500':G18R500,'G30B2':G30B2,'G30B3':G30B3,'G30B5':G30B5,'G30B75':G30B75,'G30B10':G30B10,'G30B15':G30B15,'G30B20':G30B20,'G30B25':G30B25,'G30B30':G30B30,'G30B45':G30B45,'G30B4':G30B4,'G30B45x':G30B45x,'G30B55':G30B55,'G30B6':G30B6,'G30B65':G30B65,'G30B8':G30B8,'G30B5F98':G30B5F98,'G30B5F99':G30B5F99,'G30B5F1001':G30B5F1001,'G30B5F1002':G30B5F1002,'G30B6F1003':G30B6F1003,'G31A':G31A,'G31B':G31B,'G31C':G31C,'G31D':G31D,'G31E':G31E,'G31F':G31F,'G34R40':G34R40,'G34R60':G34R60,'G34R80':G34R80,'G34R100':G34R100,'G34R120':G34R120,'G34R180':G34R180,'G34R250':G34R250,'G34R350':G34R350,'G34R500':G34R500,'G34R800':G34R800,'G35':G35SafeBackbone,'G36':G36SafeBackboneDisks,'G37':G37SafeRouteClear,'G38S75':G38S75,'G38S100':G38S100,'G38S125':G38S125,'G39P8':G39P8,'G39P10':G39P10,'G39P12':G39P12,'G39P15':G39P15,'G40':G40PassiveSafe}
 
 
 def quantile(xs,q):

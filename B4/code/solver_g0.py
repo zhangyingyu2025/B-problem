@@ -5,6 +5,7 @@ import math
 from b4_geometry import geometry, lower_distance, fallback_cover
 from discovery_mesh import mesh25
 from discovery_certificate import verify_mesh, absent_certified
+from discovery_convex_certificate import verify_local_convex_certificate
 from paired_fan import paired_fan
 
 
@@ -46,7 +47,11 @@ class SourceTrackB4:
 
 class G0Solver:
     def __init__(self, port, mesh=None, fan_limit=8):
-        self.port=port; self.mesh=mesh or mesh25(); self.certificate=verify_mesh(self.mesh)
+        self.port=port; self.mesh=mesh or mesh25()
+        if self.mesh.get('certificate_kind')=='local_convex':
+            self.certificate=verify_local_convex_certificate(self.mesh)
+        else:
+            self.certificate=verify_mesh(self.mesh)
         self.fan_limit=fan_limit; self.tracks={}; self.cleared=set(); self.absent=set()
         self.checked={c:set() for c in range(1,21)}
         self.stats={'certificate_sites_visited':0,'fan_steps':0,'fan_first_success':0,
@@ -68,7 +73,9 @@ class G0Solver:
                     t.proven_backside.append(tuple(p)); t.type_state='directional'
             elif site is not None:
                 self.checked[c].add(site)
-                if absent_certified(self.checked[c],self.mesh): self.absent.add(c)
+                if self.mesh.get('certificate_kind')=='local_convex':
+                    if len(self.checked[c])==len(self.mesh['vertices']): self.absent.add(c)
+                elif absent_certified(self.checked[c],self.mesh): self.absent.add(c)
             return body
         if c not in self.tracks:
             self.tracks[c]=SourceTrackB4(c); self.detection_times[c]=self.port.virtual_time_s
