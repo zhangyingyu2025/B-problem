@@ -10,7 +10,7 @@ def advance(solver, action, remaining):
         return True
     planned = []
     for channel, track in solver.tracks.items():
-        owner_second_bearing = solver.variant == 'R' and kind == 'supp' and channel == key and len(track['dirs']) == 1
+        owner_second_bearing = kind == 'supp' and channel == key and len(track['dirs']) == 1
         if channel in solver.env.cleared or (kind != 'cover' and channel == key and not owner_second_bearing) or solver.localized(track):
             continue
         planned.extend((u, channel, point) for u, point, _ in solver.segment_points(track, start, target, 2))
@@ -30,14 +30,14 @@ def advance(solver, action, remaining):
         solver.maybe_clear_near(solver.tracks[channel])
         new_targets = {n[1] for n in solver.eligible_targets()} - before_eligible
         new_bearing = len(solver.tracks[channel]['dirs']) > previous_directions
-        if solver.variant == 'R' and kind == 'supp' and channel == key and new_bearing:
+        if kind == 'supp' and channel == key and new_bearing:
             # Source-owner geometry moved: even an unchanged task id may have a new target.
             # At most once per source here, because later legs require exactly one prior direction.
             solver.env.c.record({'kind': 'E13_owner_second_bearing', 'old_action': action,
                                   'position': solver.env.pos,
                                   'new_radius_m': solver.tracks[channel]['mec'][1] if solver.tracks[channel].get('mec') else None})
             return False
-        if not new_targets and solver.env.cleared == before_cleared and not (solver.variant == 'N' and new_bearing):
+        if not new_targets and solver.env.cleared == before_cleared:
             continue
         nodes = solver.joint_nodes(remaining)
         if not nodes:

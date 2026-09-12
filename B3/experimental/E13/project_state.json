@@ -1,7 +1,7 @@
 {
   "goal": "stable all-clear approximately 220-225 seconds/source",
   "goal_complete": false,
-  "stage": "B1+ and event-aware online routing; paired synthetic experiments",
+  "stage": "R implementation retained; obsolete trials archived in Git; cleanup verification",
   "taskbook": "E:\\Download\\Codex_B3_直推220_完整研究结论与执行任务.md",
   "taskbook_sha256": "aedf44a09fcc3a72dec7dc7470ecdeb1287a35f89d438326eca09edf886ed41e",
   "protected_files": {
@@ -47,7 +47,18 @@
     "B3/code/coverage_templates.py": "ec149ea417012fb1e9e6bc67e5421def1226537576f4e5f101c0a4f894ea069c",
     "B3/code/e12_coverage_hook.py": "a36c23fc2f90c268804cb652dfe9af235169b93e2ea302c3131cd97bb5c8844a"
   },
-  "completed_batches": [
+  "best_confirmed_candidate": "R",
+  "coverage_deformation_enabled": false,
+  "new_official_runs": 0,
+  "new_formal_runs": 0,
+  "remaining": [
+    "improve online movement toward <=11.5km",
+    "failure-oriented stress tests",
+    "certified coverage deformation after gate",
+    "220-225s/source with stable tails",
+    "fresh final confirmation and 20-30 official rehearsals"
+  ],
+  "historical_batches": [
     "e13_A_01",
     "e13_AB_02",
     "e13_ACD_03",
@@ -65,15 +76,13 @@
     "e13_OR_15",
     "e13_OR_16"
   ],
-  "best_confirmed_candidate": "M; 100-case synthetic confirmation, not a final promotion",
-  "coverage_deformation_enabled": false,
-  "new_official_runs": 0,
-  "new_formal_runs": 0,
-  "remaining": [
-    "improve online movement toward <=11.5km",
-    "failure-oriented stress tests",
-    "certified coverage deformation after gate",
-    "220-225s/source with stable tails",
-    "fresh final confirmation and 20-30 official rehearsals"
-  ]
+  "archive_commit": "bb530fc229369e001976789c2ae5a22fc8414314",
+  "current_result_dir": "B3/结果/e13_OR_16",
+  "current_confirmation": {
+    "cases": 100,
+    "sources": 1305,
+    "all_cleared": true,
+    "weighted_s_per_source": 238.39984454865902,
+    "movement_m": 11774.339856710121
+  }
 }

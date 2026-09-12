@@ -29,7 +29,7 @@ class EventRouteTests(unittest.TestCase):
         case = {'seed': 54000200, 'sources': [{'channel': 1, 'x': 400., 'y': 0., 'radius': 1200.}]}
         client = Client(OfflineTransport(case, error_mode='zero'), 'offline-test')
         client.enter()
-        engine = build_e13(client, 'M')
+        engine = build_e13(client, 'R')
         engine.measure((0., 0.), 1, None, 'test_initial')
         self.assertFalse(engine.eligible_targets())
         # Isolate the trigger from the already-tested geometric point generator.

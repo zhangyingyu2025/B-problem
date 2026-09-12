@@ -1,0 +1,6 @@
+test_saved_100_cases_remain_exactly_equivalent (test_e13_r_equivalence.RetainedRTests.test_saved_100_cases_remain_exactly_equivalent) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 15.751s
+
+OK

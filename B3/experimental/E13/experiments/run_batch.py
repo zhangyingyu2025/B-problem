@@ -76,7 +76,7 @@ def job(spec, output):
 
 def main():
     p = argparse.ArgumentParser(); p.add_argument('--start', type=int, required=True); p.add_argument('--count', type=int, required=True)
-    p.add_argument('--variants', nargs='+', default=['A']); p.add_argument('--pattern', default='random')
+    p.add_argument('--variants', nargs='+', choices=['R'], default=['R']); p.add_argument('--pattern', default='random')
     p.add_argument('--output', type=Path, required=True); args = p.parse_args()
     if args.output.exists(): raise ValueError('refuse to overwrite experiment')
     verify_protected(); args.output.mkdir(parents=True)

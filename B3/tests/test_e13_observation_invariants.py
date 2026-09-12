@@ -20,7 +20,7 @@ class ObservationInvariantTests(unittest.TestCase):
         for i, pattern in enumerate(('random', 'boundary', 'cluster', 'origin') * 2):
             case = make_case(54001000+i, pattern=pattern)
             truth = {s['channel']: (s['x'], s['y']) for s in case['sources']}
-            for variant in ('M', 'O', 'R'):
+            for variant in ('R',):
                 with self.subTest(seed=case['seed'], pattern=pattern, variant=variant):
                     transport = OfflineTransport(case, error_mode='endpoints' if i < 4 else 'fixed_field')
                     client = Client(transport, 'offline-test')
