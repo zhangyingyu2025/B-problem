@@ -1,0 +1,13 @@
+{
+  "runs": [
+    {
+      "problem": "B3",
+      "mode": "rehearsal",
+      "case_code": null,
+      "actions": "../../B3/结果/e13_rehearsal/run-007/actions.jsonl",
+      "official_runtime_s": null,
+      "runtime_evidence": null,
+      "encrypted_log": null
+    }
+  ]
+}
