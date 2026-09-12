@@ -3,7 +3,7 @@
   "taskbook": "E:/Download/Codex_B4_完整建模与执行方案_目标350-380.md",
   "taskbook_sha256": "00bcb93f804f0f139490dab29c51c221fe0a77b8b4096e6296a1fe16829b4b41",
   "baseline_commit": "62f628d38fd1564dd3eee2f824ba5bef45d76db3",
-  "stage": "Phase A/B/C passed; implementing safe geometry and G0",
+  "stage": "G0 correctness frozen; G1 event scheduling preregistered",
   "phases": {
     "A": "31 tests passed",
     "B": {
@@ -29,7 +29,15 @@
         "ratio_margin": 0.08931674091799446
       }
     },
-    "D": "pending",
+    "D": {
+      "status": "passed correctness, performance unqualified",
+      "B4_tests": 51,
+      "full_clear_runs": 250,
+      "sources_cleared": 3248,
+      "fallback_runs": 0,
+      "regression": "B1 27, B2 31, B3/Q1502 24; current-start hashes65 + R100 exact actions",
+      "legacy_manifest_issue": "E12 manifest predates B2 change62f628d"
+    },
     "E": "pending",
     "F": "pending"
   },
