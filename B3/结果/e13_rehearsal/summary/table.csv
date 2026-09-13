@@ -1,0 +1,10 @@
+﻿记录序号,问题,测试类型,测试案例编码,清除干扰源个数,平均定位清除时间(s),程序运行时间(s),运行时间来源,日志审计通过,原始日志
+1,B3,演练,待从模拟器填写,12,257.333705,2.372000,enter/exit响应real_timestamp_ms之差；为接口重建值，需与官方可用记录核验,True,E:\DeskBox\jty1379\项目\数模\B-problem-jty\B3\结果\e13_rehearsal\run-001\actions.jsonl
+2,B3,演练,待从模拟器填写,10,304.543101,2.113000,enter/exit响应real_timestamp_ms之差；为接口重建值，需与官方可用记录核验,True,E:\DeskBox\jty1379\项目\数模\B-problem-jty\B3\结果\e13_rehearsal\run-002\actions.jsonl
+3,B3,演练,待从模拟器填写,10,267.350456,1.894000,enter/exit响应real_timestamp_ms之差；为接口重建值，需与官方可用记录核验,True,E:\DeskBox\jty1379\项目\数模\B-problem-jty\B3\结果\e13_rehearsal\run-003\actions.jsonl
+4,B3,演练,待从模拟器填写,12,271.751146,2.102000,enter/exit响应real_timestamp_ms之差；为接口重建值，需与官方可用记录核验,True,E:\DeskBox\jty1379\项目\数模\B-problem-jty\B3\结果\e13_rehearsal\run-004\actions.jsonl
+5,B3,演练,待从模拟器填写,12,274.571965,2.258000,enter/exit响应real_timestamp_ms之差；为接口重建值，需与官方可用记录核验,True,E:\DeskBox\jty1379\项目\数模\B-problem-jty\B3\结果\e13_rehearsal\run-005\actions.jsonl
+6,B3,演练,待从模拟器填写,16,206.514002,2.377000,enter/exit响应real_timestamp_ms之差；为接口重建值，需与官方可用记录核验,True,E:\DeskBox\jty1379\项目\数模\B-problem-jty\B3\结果\e13_rehearsal\run-006\actions.jsonl
+7,B3,演练,待从模拟器填写,13,233.486398,1.633000,enter/exit响应real_timestamp_ms之差；为接口重建值，需与官方可用记录核验,True,E:\DeskBox\jty1379\项目\数模\B-problem-jty\B3\结果\e13_rehearsal\run-007\actions.jsonl
+8,B3,演练,待从模拟器填写,11,247.949269,2.166000,enter/exit响应real_timestamp_ms之差；为接口重建值，需与官方可用记录核验,True,E:\DeskBox\jty1379\项目\数模\B-problem-jty\B3\结果\e13_rehearsal\test-20260913-100630\actions.jsonl
+9,B3,演练,待从模拟器填写,12,251.766398,2.399000,enter/exit响应real_timestamp_ms之差；为接口重建值，需与官方可用记录核验,True,E:\DeskBox\jty1379\项目\数模\B-problem-jty\B3\结果\e13_rehearsal\test-20260913-101230\actions.jsonl

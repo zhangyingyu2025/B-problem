@@ -1,0 +1,10 @@
+﻿{
+    "runs":  [
+                 {
+                     "actions":  "E:\\DeskBox\\jty1379\\项目\\数模\\B-problem-jty\\B3\\结果\\e13_formal\\run-20260913-103404-113\\actions.jsonl",
+                     "case_code":  "9HR8-M9ZV-Q9EY-XF5S",
+                     "mode":  "formal",
+                     "problem":  "B3"
+                 }
+             ]
+}

@@ -1,6 +1,0 @@
-test_outer_regions_retain_truth_and_shrink_on_stress_cases (test_e13_observation_invariants.ObservationInvariantTests.test_outer_regions_retain_truth_and_shrink_on_stress_cases) ... ok
-
-----------------------------------------------------------------------
-Ran 1 test in 13.815s
-
-OK

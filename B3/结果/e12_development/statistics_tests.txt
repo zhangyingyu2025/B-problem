@@ -1,8 +1,0 @@
-test_fixed_splits_and_selectors (test_e12_risk_statistics.RiskStatisticsTests.test_fixed_splits_and_selectors) ... ok
-test_linear_quantile_and_cvar (test_e12_risk_statistics.RiskStatisticsTests.test_linear_quantile_and_cvar) ... ok
-test_paired_ties_not_wins (test_e12_risk_statistics.RiskStatisticsTests.test_paired_ties_not_wins) ... ok
-
-----------------------------------------------------------------------
-Ran 3 tests in 0.007s
-
-OK

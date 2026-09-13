@@ -5,6 +5,7 @@ import hashlib
 from html import escape
 import json
 import math
+import os
 from pathlib import Path
 
 
@@ -109,12 +110,12 @@ def draw_svg(report,title):
     parts.append('</svg>');return '\n'.join(parts)
 
 
-def export(manifest_path,output):
+def export(manifest_path,output,write_tables=True):
     config=json.loads(manifest_path.read_text(encoding='utf-8-sig'));base=manifest_path.parent
-    return export_config(config,base,output)
+    return export_config(config,base,output,write_tables=write_tables)
 
 
-def export_config(config,base,output):
+def export_config(config,base,output,write_tables=True):
     if output.exists(): raise ValueError('output already exists; choose a new directory')
     prepared=[]
     for run in config['runs']:
@@ -124,6 +125,7 @@ def export_config(config,base,output):
         if official_runtime is not None and (not math.isfinite(official_runtime) or official_runtime<0 or not run.get('runtime_evidence')):
             raise ValueError('official runtime requires a nonnegative value and evidence description')
         report.update(mode=run['mode'],problem=run['problem'],case_code=case,actions_path=str(path))
+        report['official_runtime_provided']=official_runtime is not None
         report['table_runtime_s']=official_runtime if official_runtime is not None else report['server_response_elapsed_s']
         report['runtime_source']=run.get('runtime_evidence') if official_runtime is not None else 'enter/exit响应real_timestamp_ms之差；为接口重建值，需与官方可用记录核验'
         report['encrypted_log']=None
@@ -144,13 +146,69 @@ def export_config(config,base,output):
         with (output/f'run-{i:02d}-actions.csv').open('w',encoding='utf-8-sig',newline='') as f:
             names=['sequence','request_id','action','x_m','y_m','channel','result','virtual_time_s']
             w=csv.DictWriter(f,fieldnames=names);w.writeheader();w.writerows(r['points'])
-    with (output/'table.csv').open('w',encoding='utf-8-sig',newline='') as f:
-        w=csv.writer(f);w.writerow(headers);w.writerows(table)
+    if write_tables:
+        with (output/'table.csv').open('w',encoding='utf-8-sig',newline='') as f:
+            w=csv.writer(f);w.writerow(headers);w.writerows(table)
     md+=['','正式案例不返回真实总源数，本工具不计算清除比例。运行时间不是虚拟时间，也不是仅CPU耗时。','',
          '轨迹只包括收到accepted=true并通过适配器验证的动作。原始加密日志必须另行从模拟器导出并保持文件名；本工具输出不能替代它。']
-    (output/'table.md').write_text('\n'.join(md)+'\n',encoding='utf-8')
+    if write_tables:
+        (output/'table.md').write_text('\n'.join(md)+'\n',encoding='utf-8')
     (output/'manifest-used.json').write_text(json.dumps(config,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
     return prepared
+
+
+def update_ledger(reports, folder):
+    """Merge sessions by immutable log hash; atomically rebuild cumulative tables."""
+    folder.mkdir(parents=True, exist_ok=True)
+    lock=folder/'.update.lock'
+    # Exclusive creation prevents concurrent exports from losing a session.
+    with lock.open('x'):
+        pass
+    try:
+        registry=folder/'runs.json'
+        rows=json.loads(registry.read_text(encoding='utf-8')) if registry.exists() else []
+        # Preserve case codes entered by the operator in Excel between exports.
+        table_path=folder/'table.csv'
+        if table_path.exists():
+            with table_path.open(encoding='utf-8-sig',newline='') as f:
+                manual={x['原始日志']:x['测试案例编码'].strip() for x in csv.DictReader(f)}
+            for r in rows:
+                code=manual.get(r['actions_path'])
+                if code and code!='待从模拟器填写':r['case_code']=code
+        scopes={(r['problem'],r['mode']) for r in rows+reports}
+        if len(scopes)>1:
+            raise ValueError('cumulative table must contain only one problem and one test mode')
+        for report in reports:
+            r={k:v for k,v in report.items() if k!='points'}
+            existing=next((x for x in rows if x['log_sha256']==r['log_sha256']),None)
+            if existing is not None:
+                if (existing['problem'],existing['mode'])!=(r['problem'],r['mode']):
+                    raise ValueError('same log cannot be relabeled as another problem/mode')
+                if existing.get('case_code') and not r.get('case_code'):
+                    r['case_code']=existing['case_code']
+                if existing.get('official_runtime_provided') and not r.get('official_runtime_provided'):
+                    for key in ('table_runtime_s','runtime_source','official_runtime_provided'):
+                        r[key]=existing[key]
+                existing.update(r)
+            else:
+                rows.append(r)
+        headers=['记录序号','问题','测试类型','测试案例编码','清除干扰源个数','平均定位清除时间(s)','程序运行时间(s)','运行时间来源','日志审计通过','原始日志']
+        table=[]
+        for i,r in enumerate(rows,1):
+            number=lambda v: '' if v is None else f'{v:.6f}'
+            table.append([i,r['problem'],{'rehearsal':'演练','formal':'正式','synthetic':'人工构造'}[r['mode']],r.get('case_code') or '待从模拟器填写',r['cleared_count'],number(r['mean_time_per_clear_s']),number(r['table_runtime_s']),r['runtime_source'],r['normal_exit_and_audit_ok'],r['actions_path']])
+        (folder/'runs.json.tmp').write_text(json.dumps(rows,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+        with (folder/'table.csv.tmp').open('w',encoding='utf-8-sig',newline='') as f:
+            writer=csv.writer(f);writer.writerow(headers);writer.writerows(table)
+        md=['# 累计测试结果','', '| '+' | '.join(headers)+' |','| '+' | '.join(['---']*len(headers))+' |']
+        md+=['| '+' | '.join(str(x).replace('|','\\|').replace('\n',' ') for x in row)+' |' for row in table]
+        (folder/'table.md.tmp').write_text('\n'.join(md)+'\n',encoding='utf-8')
+        # Registry is authoritative; rerunning regenerates tables if interrupted.
+        for name in ('runs.json','table.csv','table.md'):
+            os.replace(folder/(name+'.tmp'),folder/name)
+        return rows
+    finally:
+        lock.unlink()
 
 
 if __name__=='__main__':
@@ -161,10 +219,12 @@ if __name__=='__main__':
     p.add_argument('--problem',choices=['B3','B4'],default='B3')
     p.add_argument('--mode',choices=['rehearsal','formal','synthetic'])
     p.add_argument('--case-code')
+    p.add_argument('--ledger',type=Path,help='Persistent cumulative table directory; same log is not counted twice')
     a=p.parse_args()
     if a.actions:
         if not a.mode:p.error('--actions requires explicit --mode; never infer formal/rehearsal')
         rows=export_config({'runs':[{'problem':a.problem,'mode':a.mode,'case_code':a.case_code,
-                                   'actions':str(a.actions.resolve())}]},Path.cwd(),a.output)
-    else:rows=export(a.manifest,a.output)
+                                   'actions':str(a.actions.resolve())}]},Path.cwd(),a.output,write_tables=not bool(a.ledger))
+    else:rows=export(a.manifest,a.output,write_tables=not bool(a.ledger))
+    if a.ledger:update_ledger(rows,a.ledger)
     print(json.dumps([{k:r[k] for k in ('problem','mode','case_code','cleared_count','mean_time_per_clear_s','table_runtime_s','normal_exit_and_audit_ok')} for r in rows],ensure_ascii=False,indent=2))

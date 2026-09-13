@@ -1,0 +1,25 @@
+{
+  "runs": [
+    {
+      "problem": "B3",
+      "mode": "formal",
+      "case_code": "845S-PDZN-BJES-56PB",
+      "actions": "结果/e13_formal/run-20260913-102814-099/actions.jsonl",
+      "encrypted_log": "结果/e13_formal/run-20260913-102814-099/simulator_logs/formal-p3-1-845S-PDZN-BJES-56PB.jlog"
+    },
+    {
+      "problem": "B3",
+      "mode": "formal",
+      "case_code": "9HR8-M9ZV-Q9EY-XF5S",
+      "actions": "结果/e13_formal/run-20260913-103404-113/actions.jsonl",
+      "encrypted_log": "结果/e13_formal/run-20260913-103404-113/simulator_logs/formal-p3-2-9HR8-M9ZV-Q9EY-XF5S.jlog"
+    },
+    {
+      "problem": "B3",
+      "mode": "formal",
+      "case_code": "V9S6-H7S5-WUA4-RBNE",
+      "actions": "结果/e13_formal/run-20260913-103633-059/actions.jsonl",
+      "encrypted_log": "结果/e13_formal/run-20260913-103633-059/simulator_logs/formal-p3-3-V9S6-H7S5-WUA4-RBNE.jlog"
+    }
+  ]
+}

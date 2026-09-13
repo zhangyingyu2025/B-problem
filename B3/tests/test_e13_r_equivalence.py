@@ -31,6 +31,7 @@ def compare_case(seed):
 
 
 class RetainedRTests(unittest.TestCase):
+    @unittest.skipUnless((FROZEN/'52001500-case.json').is_file(), 'Old frozen raw dataset removed by requested 2026-09-13 cleanup; not a passing equivalence result')
     def test_saved_100_cases_remain_exactly_equivalent(self):
         verify_protected()
         with ProcessPoolExecutor(max_workers=4) as pool:

@@ -1,0 +1,10 @@
+﻿{
+    "runs":  [
+                 {
+                     "actions":  "E:\\DeskBox\\jty1379\\项目\\数模\\B-problem-jty\\B3\\结果\\e13_formal\\run-20260913-102814-099\\actions.jsonl",
+                     "case_code":  "845S-PDZN-BJES-56PB",
+                     "mode":  "formal",
+                     "problem":  "B3"
+                 }
+             ]
+}

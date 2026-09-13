@@ -7,7 +7,7 @@ import unittest
 import xml.etree.ElementTree as ET
 
 sys.path.insert(0,str(Path(__file__).resolve().parent))
-from export import audit, draw_svg, export
+from export import audit, draw_svg, export, update_ledger
 
 class EvidenceTests(unittest.TestCase):
     def setUp(self):
@@ -73,6 +73,64 @@ class EvidenceTests(unittest.TestCase):
         self.assertIn('演练',(output/'table.md').read_text(encoding='utf-8'))
         self.assertIsNone(r[0]['case_code'])
         with self.assertRaises(ValueError):export(manifest,output)
+        export(manifest,self.folder/'ledger-artifacts',write_tables=False)
+        self.assertFalse((self.folder/'ledger-artifacts/table.csv').exists())
+        self.assertTrue((self.folder/'ledger-artifacts/run-01-trajectory.svg').exists())
+
+    def test_cumulative_table_dedup_new_session_and_lock(self):
+        log=self.write(self.events)
+        manifest=self.folder/'manifest.json'
+        manifest.write_text(json.dumps({'runs':[{'problem':'B3','mode':'rehearsal','actions':str(log)}]}),encoding='utf-8')
+        reports=export(manifest,self.folder/'out')
+        ledger=self.folder/'ledger'
+        self.assertEqual(len(update_ledger(reports,ledger)),1)
+        reports[0]['case_code']='case-1'
+        self.assertEqual(len(update_ledger(reports,ledger)),1)
+        again=copy.deepcopy(reports);again[0]['case_code']=None
+        self.assertEqual(update_ledger(again,ledger)[0]['case_code'],'case-1')
+        # Separate session with identical performance must still get its own row.
+        for e in self.events:e['payload']['request_id']+='-new'
+        new=audit(self.write(self.events))
+        other=copy.deepcopy(reports[0]);other.update(new)
+        other['actions_path']=str(self.folder/'second-session/actions.jsonl')
+        self.assertEqual(len(update_ledger([other],ledger)),2)
+        import csv
+        with (ledger/'table.csv').open(encoding='utf-8-sig',newline='') as f:
+            rows=list(csv.reader(f))
+        self.assertEqual(len(rows),3)
+        rows[1][3]='manually-pasted-code'
+        with (ledger/'table.csv').open('w',encoding='utf-8-sig',newline='') as f:
+            csv.writer(f).writerows(rows)
+        self.assertEqual(update_ledger(again,ledger)[0]['case_code'],'manually-pasted-code')
+        mixed=copy.deepcopy(other);mixed['log_sha256']='different-formal-log';mixed['mode']='formal'
+        with self.assertRaises(ValueError):update_ledger([mixed],ledger)
+        invalid=copy.deepcopy(reports);invalid[0]['mode']='formal'
+        with self.assertRaises(ValueError):update_ledger(invalid,ledger)
+        self.assertFalse((ledger/'.update.lock').exists())
+        (ledger/'.update.lock').touch()
+        with self.assertRaises(FileExistsError):update_ledger(reports,ledger)
+        self.assertTrue((ledger/'.update.lock').exists())
+
+    def test_formal_runner_mocked_no_network(self):
+        from unittest.mock import patch
+        import contextlib,io
+        sys.path.insert(0,str(Path(__file__).resolve().parents[2]/'B3/code'))
+        import run_e13_formal as runner
+        args=['run_e13_formal.py','--robot-id','test','--formal-ready','--output-dir','B3/结果/e13_formal/run-1']
+        result={'status':'completed','cleared_count':1}
+        with patch.object(runner,'ROOT',self.folder), patch.object(sys,'argv',args), \
+             patch.object(runner,'HTTPTransport') as transport,patch.object(runner,'Client'), \
+             patch.object(runner,'run_with_client',return_value=result) as run, \
+             patch.object(runner,'provenance',return_value={}), contextlib.redirect_stdout(io.StringIO()),contextlib.redirect_stderr(io.StringIO()):
+            self.assertEqual(runner.main(),0)
+            self.assertEqual(run.call_args.args[1],'operator_declared_official_formal')
+            saved=json.loads((self.folder/'B3/结果/e13_formal/run-1/result.json').read_text(encoding='utf-8'))
+            self.assertTrue(saved['official_formal']);self.assertFalse(saved['official_rehearsal'])
+            self.assertIsNone(saved['true_source_count'])
+            with self.assertRaises(FileExistsError):runner.main()
+            args[-1]='B3/结果/e13_rehearsal/run-2'
+            with self.assertRaises(SystemExit):runner.main()
+            self.assertEqual(transport.call_count,1)
 
 
 if __name__=='__main__':unittest.main()

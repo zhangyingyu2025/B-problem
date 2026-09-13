@@ -1,0 +1,432 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="860" height="900" viewBox="0 0 860 900">
+<rect width="860" height="900" fill="white"/>
+<style>text{font-family:"Microsoft YaHei",Arial,sans-serif;fill:#243746}</style>
+<text x="70" y="34" font-size="21">B3 演练轨迹 · 案例编码待补</text>
+<text x="70" y="59" font-size="14">按确认动作顺序连接；保留同点多频道动作，重合点不抖动</text>
+<text x="70" y="81" font-size="14">清除标记表示机器狗操作位置，不表示干扰源真实坐标</text>
+<path d="M168.49349938553462,110 V790 M90,711.5065006144654 H770" stroke="#e7eaed" stroke-width="1"/>
+<text x="153.49349938553462" y="810" font-size="12">-1500</text>
+<text x="35" y="715.5065006144654" font-size="12">-1500</text>
+<path d="M255.66233292368975,110 V790 M90,624.3376670763103 H770" stroke="#e7eaed" stroke-width="1"/>
+<text x="240.66233292368975" y="810" font-size="12">-1000</text>
+<text x="35" y="628.3376670763103" font-size="12">-1000</text>
+<path d="M342.8311664618449,110 V790 M90,537.1688335381551 H770" stroke="#e7eaed" stroke-width="1"/>
+<text x="327.8311664618449" y="810" font-size="12">-500</text>
+<text x="35" y="541.1688335381551" font-size="12">-500</text>
+<path d="M430.0,110 V790 M90,450.0 H770" stroke="#e7eaed" stroke-width="1"/>
+<text x="415.0" y="810" font-size="12">0</text>
+<text x="35" y="454.0" font-size="12">0</text>
+<path d="M517.1688335381551,110 V790 M90,362.8311664618449 H770" stroke="#e7eaed" stroke-width="1"/>
+<text x="502.1688335381551" y="810" font-size="12">500</text>
+<text x="35" y="366.8311664618449" font-size="12">500</text>
+<path d="M604.3376670763103,110 V790 M90,275.66233292368975 H770" stroke="#e7eaed" stroke-width="1"/>
+<text x="589.3376670763103" y="810" font-size="12">1000</text>
+<text x="35" y="279.66233292368975" font-size="12">1000</text>
+<path d="M691.5065006144654,110 V790 M90,188.49349938553462 H770" stroke="#e7eaed" stroke-width="1"/>
+<text x="676.5065006144654" y="810" font-size="12">1500</text>
+<text x="35" y="192.49349938553462" font-size="12">1500</text>
+<circle cx="430.0" cy="450.0" r="313.80780073735843" fill="none" stroke="#a2aab3" stroke-dasharray="5 4"/>
+<polyline points="430.000000,450.000000 430.000000,450.000000 430.000000,450.000000 430.000000,450.000000 430.000000,450.000000 430.000000,450.000000 430.000000,450.000000 430.000000,450.000000 430.000000,450.000000 430.000000,450.000000 430.000000,450.000000 430.000000,450.000000 430.000000,450.000000 430.000000,450.000000 430.000000,450.000000 430.000000,450.000000 430.000000,450.000000 430.000000,450.000000 430.000000,450.000000 430.000000,450.000000 430.000000,450.000000 424.014593,431.036348 422.019458,424.715131 421.309206,424.684122 408.524680,424.125971 380.114623,422.885634 380.114623,422.885634 380.114623,422.885634 379.404371,422.854625 380.141458,422.628595 380.141458,422.628595 408.887842,413.813402 416.995796,411.327066 422.892490,409.518822 422.892490,409.518822 422.892490,409.518822 421.896069,409.398907 415.917544,408.679416 364.103657,402.443834 364.103657,402.443834 363.107236,402.323919 363.651966,399.885043 363.651966,399.885043 374.001836,353.546390 390.343737,280.380097 395.791037,255.991333 395.791037,255.991333 395.791037,255.991333 395.791037,255.991333 395.791037,255.991333 395.791037,255.991333 395.791037,255.991333 395.791037,255.991333 395.791037,255.991333 395.791037,255.991333 395.791037,255.991333 395.791037,255.991333 321.948584,320.796491 320.697017,321.894883 319.433385,322.906993 290.369844,346.185529 244.879084,382.621497 244.879084,382.621497 244.879084,382.621497 244.879084,382.621497 244.879084,382.621497 244.879084,382.621497 244.879084,382.621497 244.879084,382.621497 244.879084,382.621497 244.879084,382.621497 244.879084,382.621497 244.879084,382.621497 202.754607,412.115229 167.598206,405.643894 255.684282,448.949002 300.856629,471.156750 303.115247,472.267138 279.088047,576.630164 279.088047,576.630164 279.088047,576.630164 279.088047,576.630164 279.088047,576.630164 279.088047,576.630164 279.088047,576.630164 279.088047,576.630164 279.088047,576.630164 279.088047,576.630164 279.088047,576.630164 286.463984,649.730130 288.857645,607.538396 347.859991,552.256082 363.373187,564.489760 437.060869,622.599731 464.208963,644.008667 464.208963,644.008667 464.208963,644.008667 464.208963,644.008667 464.208963,644.008667 464.208963,644.008667 464.208963,644.008667 464.208963,644.008667 464.208963,644.008667 464.208963,644.008667 467.753046,697.305374 436.998094,753.571429 550.349998,615.389348 615.120916,517.378503 615.120916,517.378503 615.120916,517.378503 615.120916,517.378503 615.120916,517.378503 615.120916,517.378503 615.120916,517.378503 615.120916,517.378503 615.120916,517.378503 596.433325,498.976116 683.418189,442.467973 580.911953,323.369836 580.911953,323.369836 580.911953,323.369836 580.911953,323.369836 580.911953,323.369836 580.911953,323.369836 580.911953,323.369836 580.911953,323.369836 580.911953,323.369836 625.951928,308.472167 626.453608,287.127683" fill="none" stroke="#596675" stroke-width="1.4"/>
+<g><title>#1 measure ch1 direction t=5.000000s</title>
+<circle cx="430.0" cy="450.0" r="3" fill="#2879a5"/>
+</g>
+<g><title>#2 measure ch2 no_signal t=11.000000s</title>
+<circle cx="430.0" cy="450.0" r="3" fill="#2879a5"/>
+</g>
+<g><title>#3 measure ch3 no_signal t=17.000000s</title>
+<circle cx="430.0" cy="450.0" r="3" fill="#2879a5"/>
+</g>
+<g><title>#4 measure ch4 no_signal t=23.000000s</title>
+<circle cx="430.0" cy="450.0" r="3" fill="#2879a5"/>
+</g>
+<g><title>#5 measure ch5 no_signal t=29.000000s</title>
+<circle cx="430.0" cy="450.0" r="3" fill="#2879a5"/>
+</g>
+<g><title>#6 measure ch6 direction t=35.000000s</title>
+<circle cx="430.0" cy="450.0" r="3" fill="#2879a5"/>
+</g>
+<g><title>#7 measure ch7 no_signal t=41.000000s</title>
+<circle cx="430.0" cy="450.0" r="3" fill="#2879a5"/>
+</g>
+<g><title>#8 measure ch8 direction t=47.000000s</title>
+<circle cx="430.0" cy="450.0" r="3" fill="#2879a5"/>
+</g>
+<g><title>#9 measure ch9 direction t=53.000000s</title>
+<circle cx="430.0" cy="450.0" r="3" fill="#2879a5"/>
+</g>
+<g><title>#10 measure ch10 direction t=59.000000s</title>
+<circle cx="430.0" cy="450.0" r="3" fill="#2879a5"/>
+</g>
+<g><title>#11 measure ch11 no_signal t=65.000000s</title>
+<circle cx="430.0" cy="450.0" r="3" fill="#2879a5"/>
+</g>
+<g><title>#12 measure ch12 direction t=71.000000s</title>
+<circle cx="430.0" cy="450.0" r="3" fill="#2879a5"/>
+</g>
+<g><title>#13 measure ch13 no_signal t=77.000000s</title>
+<circle cx="430.0" cy="450.0" r="3" fill="#2879a5"/>
+</g>
+<g><title>#14 measure ch14 direction t=83.000000s</title>
+<circle cx="430.0" cy="450.0" r="3" fill="#2879a5"/>
+</g>
+<g><title>#15 measure ch15 no_signal t=89.000000s</title>
+<circle cx="430.0" cy="450.0" r="3" fill="#2879a5"/>
+</g>
+<g><title>#16 measure ch16 no_signal t=95.000000s</title>
+<circle cx="430.0" cy="450.0" r="3" fill="#2879a5"/>
+</g>
+<g><title>#17 measure ch17 no_signal t=101.000000s</title>
+<circle cx="430.0" cy="450.0" r="3" fill="#2879a5"/>
+</g>
+<g><title>#18 measure ch18 no_signal t=107.000000s</title>
+<circle cx="430.0" cy="450.0" r="3" fill="#2879a5"/>
+</g>
+<g><title>#19 measure ch19 no_signal t=113.000000s</title>
+<circle cx="430.0" cy="450.0" r="3" fill="#2879a5"/>
+</g>
+<g><title>#20 measure ch20 direction t=119.000000s</title>
+<circle cx="430.0" cy="450.0" r="3" fill="#2879a5"/>
+</g>
+<g><title>#21 measure ch20 direction t=146.812975s</title>
+<circle cx="424.0145933361807" cy="431.0363479202844" r="3" fill="#2879a5"/>
+</g>
+<g><title>#22 measure ch10 direction t=160.417300s</title>
+<circle cx="422.0194577815743" cy="424.71513056037924" r="3" fill="#2879a5"/>
+</g>
+<g><title>#23 measure ch20 direction t=167.232876s</title>
+<circle cx="421.3092063377293" cy="424.6841221393871" r="3" fill="#2879a5"/>
+</g>
+<g><title>#24 measure ch12 direction t=187.913242s</title>
+<circle cx="408.5246803485185" cy="424.1259705615289" r="3" fill="#2879a5"/>
+</g>
+<g><title>#25 measure ch6 direction t=226.536279s</title>
+<circle cx="380.11462259471676" cy="422.88563372184404" r="3" fill="#2879a5"/>
+</g>
+<g><title>#26 measure ch12 direction t=232.536279s</title>
+<circle cx="380.11462259471676" cy="422.88563372184404" r="3" fill="#2879a5"/>
+</g>
+<g><title>#27 measure ch20 direction t=238.536279s</title>
+<circle cx="380.11462259471676" cy="422.88563372184404" r="3" fill="#2879a5"/>
+</g>
+<g><title>#28 clear ch10 success t=244.351855s</title>
+<path d="M374.4043711508717,417.8546253008519 l10,10 M374.4043711508717,427.8546253008519 l10,-10" stroke="#bd4b37" stroke-width="2"/>
+<text x="386.4043711508717" y="416.8546253008519" font-size="11">C10</text>
+</g>
+<g><title>#29 measure ch6 direction t=251.236305s</title>
+<circle cx="380.1414579106576" cy="422.62859472901977" r="3" fill="#2879a5"/>
+</g>
+<g><title>#30 measure ch20 direction t=257.236305s</title>
+<circle cx="380.1414579106576" cy="422.62859472901977" r="3" fill="#2879a5"/>
+</g>
+<g><title>#31 measure ch8 direction t=297.729857s</title>
+<circle cx="408.8878415423077" cy="413.8134024275653" r="3" fill="#2879a5"/>
+</g>
+<g><title>#32 measure ch20 direction t=313.458808s</title>
+<circle cx="416.9957958999526" cy="411.3270661374114" r="3" fill="#2879a5"/>
+</g>
+<g><title>#33 measure ch6 direction t=326.534408s</title>
+<circle cx="422.89248997823984" cy="409.51882156275406" r="3" fill="#2879a5"/>
+</g>
+<g><title>#34 measure ch8 direction t=332.534408s</title>
+<circle cx="422.89248997823984" cy="409.51882156275406" r="3" fill="#2879a5"/>
+</g>
+<g><title>#35 clear ch12 success t=337.534408s</title>
+<path d="M417.89248997823984,404.51882156275406 l10,10 M417.89248997823984,414.51882156275406 l10,-10" stroke="#bd4b37" stroke-width="2"/>
+<text x="429.89248997823984" y="403.51882156275406" font-size="11">C12</text>
+</g>
+<g><title>#36 measure ch6 direction t=344.685749s</title>
+<circle cx="421.89606907802" cy="409.39890652021944" r="3" fill="#2879a5"/>
+</g>
+<g><title>#37 measure ch20 direction t=357.593796s</title>
+<circle cx="415.917543676701" cy="408.6794162650117" r="3" fill="#2879a5"/>
+</g>
+<g><title>#38 measure ch6 direction t=423.463533s</title>
+<circle cx="364.1036568652694" cy="402.44383405321105" r="3" fill="#2879a5"/>
+</g>
+<g><title>#39 measure ch20 direction t=429.463533s</title>
+<circle cx="364.1036568652694" cy="402.44383405321105" r="3" fill="#2879a5"/>
+</g>
+<g><title>#40 clear ch8 success t=435.614874s</title>
+<path d="M358.10723596504954,397.3239190106764 l10,10 M358.10723596504954,407.3239190106764 l10,-10" stroke="#bd4b37" stroke-width="2"/>
+<text x="370.10723596504954" y="396.3239190106764" font-size="11">C8</text>
+</g>
+<g><title>#41 measure ch6 direction t=444.481689s</title>
+<circle cx="363.6519659897862" cy="399.8850425707975" r="3" fill="#2879a5"/>
+</g>
+<g><title>#42 measure ch20 direction t=450.481689s</title>
+<circle cx="363.6519659897862" cy="399.8850425707975" r="3" fill="#2879a5"/>
+</g>
+<g><title>#43 measure ch20 direction t=509.951183s</title>
+<circle cx="374.00183645978274" cy="353.5463902130986" r="3" fill="#2879a5"/>
+</g>
+<g><title>#44 measure ch6 direction t=601.955647s</title>
+<circle cx="390.34373720188245" cy="280.38009701673184" r="3" fill="#2879a5"/>
+</g>
+<g><title>#45 measure ch2 no_signal t=636.623802s</title>
+<circle cx="395.791037449249" cy="255.991332617943" r="3" fill="#2879a5"/>
+</g>
+<g><title>#46 measure ch3 no_signal t=642.623802s</title>
+<circle cx="395.791037449249" cy="255.991332617943" r="3" fill="#2879a5"/>
+</g>
+<g><title>#47 measure ch4 no_signal t=648.623802s</title>
+<circle cx="395.791037449249" cy="255.991332617943" r="3" fill="#2879a5"/>
+</g>
+<g><title>#48 measure ch5 no_signal t=654.623802s</title>
+<circle cx="395.791037449249" cy="255.991332617943" r="3" fill="#2879a5"/>
+</g>
+<g><title>#49 measure ch7 no_signal t=660.623802s</title>
+<circle cx="395.791037449249" cy="255.991332617943" r="3" fill="#2879a5"/>
+</g>
+<g><title>#50 measure ch11 no_signal t=666.623802s</title>
+<circle cx="395.791037449249" cy="255.991332617943" r="3" fill="#2879a5"/>
+</g>
+<g><title>#51 measure ch13 no_signal t=672.623802s</title>
+<circle cx="395.791037449249" cy="255.991332617943" r="3" fill="#2879a5"/>
+</g>
+<g><title>#52 measure ch15 no_signal t=678.623802s</title>
+<circle cx="395.791037449249" cy="255.991332617943" r="3" fill="#2879a5"/>
+</g>
+<g><title>#53 measure ch16 no_signal t=684.623802s</title>
+<circle cx="395.791037449249" cy="255.991332617943" r="3" fill="#2879a5"/>
+</g>
+<g><title>#54 measure ch17 no_signal t=690.623802s</title>
+<circle cx="395.791037449249" cy="255.991332617943" r="3" fill="#2879a5"/>
+</g>
+<g><title>#55 measure ch18 no_signal t=696.623802s</title>
+<circle cx="395.791037449249" cy="255.991332617943" r="3" fill="#2879a5"/>
+</g>
+<g><title>#56 measure ch19 no_signal t=702.623802s</title>
+<circle cx="395.791037449249" cy="255.991332617943" r="3" fill="#2879a5"/>
+</g>
+<g><title>#57 measure ch20 direction t=821.332333s</title>
+<circle cx="321.9485840767131" cy="320.7964907253194" r="3" fill="#2879a5"/>
+</g>
+<g><title>#58 clear ch6 success t=828.242647s</title>
+<path d="M315.6970170703989,316.894883235614 l10,10 M315.6970170703989,326.894883235614 l10,-10" stroke="#bd4b37" stroke-width="2"/>
+<text x="327.6970170703989" y="315.894883235614" font-size="11">C6</text>
+</g>
+<g><title>#59 measure ch20 direction t=835.099952s</title>
+<circle cx="319.4333848561822" cy="322.90699346360424" r="3" fill="#2879a5"/>
+</g>
+<g><title>#60 measure ch20 direction t=882.817978s</title>
+<circle cx="290.36984392919845" cy="346.1855287073813" r="3" fill="#2879a5"/>
+</g>
+<g><title>#61 measure ch19 direction t=955.680974s</title>
+<circle cx="244.87908421739778" cy="382.6214969150323" r="3" fill="#2879a5"/>
+</g>
+<g><title>#62 measure ch18 no_signal t=961.680974s</title>
+<circle cx="244.87908421739778" cy="382.6214969150323" r="3" fill="#2879a5"/>
+</g>
+<g><title>#63 measure ch17 no_signal t=967.680974s</title>
+<circle cx="244.87908421739778" cy="382.6214969150323" r="3" fill="#2879a5"/>
+</g>
+<g><title>#64 measure ch16 no_signal t=973.680974s</title>
+<circle cx="244.87908421739778" cy="382.6214969150323" r="3" fill="#2879a5"/>
+</g>
+<g><title>#65 measure ch15 no_signal t=979.680974s</title>
+<circle cx="244.87908421739778" cy="382.6214969150323" r="3" fill="#2879a5"/>
+</g>
+<g><title>#66 measure ch13 no_signal t=985.680974s</title>
+<circle cx="244.87908421739778" cy="382.6214969150323" r="3" fill="#2879a5"/>
+</g>
+<g><title>#67 measure ch11 no_signal t=991.680974s</title>
+<circle cx="244.87908421739778" cy="382.6214969150323" r="3" fill="#2879a5"/>
+</g>
+<g><title>#68 measure ch7 no_signal t=997.680974s</title>
+<circle cx="244.87908421739778" cy="382.6214969150323" r="3" fill="#2879a5"/>
+</g>
+<g><title>#69 measure ch5 no_signal t=1003.680974s</title>
+<circle cx="244.87908421739778" cy="382.6214969150323" r="3" fill="#2879a5"/>
+</g>
+<g><title>#70 measure ch4 no_signal t=1009.680974s</title>
+<circle cx="244.87908421739778" cy="382.6214969150323" r="3" fill="#2879a5"/>
+</g>
+<g><title>#71 measure ch3 no_signal t=1015.680974s</title>
+<circle cx="244.87908421739778" cy="382.6214969150323" r="3" fill="#2879a5"/>
+</g>
+<g><title>#72 measure ch2 no_signal t=1021.680974s</title>
+<circle cx="244.87908421739778" cy="382.6214969150323" r="3" fill="#2879a5"/>
+</g>
+<g><title>#73 measure ch19 direction t=1086.673689s</title>
+<circle cx="202.75460678725545" cy="412.11522868276376" r="3" fill="#2879a5"/>
+</g>
+<g><title>#74 clear ch19 success t=1132.682656s</title>
+<path d="M162.59820552335924,400.643893693472 l10,10 M162.59820552335924,410.643893693472 l10,-10" stroke="#bd4b37" stroke-width="2"/>
+<text x="174.59820552335924" y="399.643893693472" font-size="11">C19</text>
+</g>
+<g><title>#75 measure ch14 direction t=1251.286474s</title>
+<circle cx="255.68428230612275" cy="448.9490023564355" r="3" fill="#2879a5"/>
+</g>
+<g><title>#76 measure ch14 direction t=1314.032022s</title>
+<circle cx="300.8566293742066" cy="471.1567503887245" r="3" fill="#2879a5"/>
+</g>
+<g><title>#77 clear ch20 success t=1321.919299s</title>
+<path d="M298.1152467276108,467.26713779033895 l10,10 M298.1152467276108,477.26713779033895 l10,-10" stroke="#bd4b37" stroke-width="2"/>
+<text x="310.1152467276108" y="466.26713779033895" font-size="11">C20</text>
+</g>
+<g><title>#78 measure ch2 no_signal t=1450.776481s</title>
+<circle cx="279.08804676814873" cy="576.6301642970893" r="3" fill="#2879a5"/>
+</g>
+<g><title>#79 measure ch3 no_signal t=1456.776481s</title>
+<circle cx="279.08804676814873" cy="576.6301642970893" r="3" fill="#2879a5"/>
+</g>
+<g><title>#80 measure ch4 direction t=1462.776481s</title>
+<circle cx="279.08804676814873" cy="576.6301642970893" r="3" fill="#2879a5"/>
+</g>
+<g><title>#81 measure ch5 no_signal t=1468.776481s</title>
+<circle cx="279.08804676814873" cy="576.6301642970893" r="3" fill="#2879a5"/>
+</g>
+<g><title>#82 measure ch7 no_signal t=1474.776481s</title>
+<circle cx="279.08804676814873" cy="576.6301642970893" r="3" fill="#2879a5"/>
+</g>
+<g><title>#83 measure ch11 no_signal t=1480.776481s</title>
+<circle cx="279.08804676814873" cy="576.6301642970893" r="3" fill="#2879a5"/>
+</g>
+<g><title>#84 measure ch13 no_signal t=1486.776481s</title>
+<circle cx="279.08804676814873" cy="576.6301642970893" r="3" fill="#2879a5"/>
+</g>
+<g><title>#85 measure ch15 no_signal t=1492.776481s</title>
+<circle cx="279.08804676814873" cy="576.6301642970893" r="3" fill="#2879a5"/>
+</g>
+<g><title>#86 measure ch16 no_signal t=1498.776481s</title>
+<circle cx="279.08804676814873" cy="576.6301642970893" r="3" fill="#2879a5"/>
+</g>
+<g><title>#87 measure ch17 no_signal t=1504.776481s</title>
+<circle cx="279.08804676814873" cy="576.6301642970893" r="3" fill="#2879a5"/>
+</g>
+<g><title>#88 measure ch18 no_signal t=1510.776481s</title>
+<circle cx="279.08804676814873" cy="576.6301642970893" r="3" fill="#2879a5"/>
+</g>
+<g><title>#89 measure ch4 direction t=1601.062508s</title>
+<circle cx="286.4639841112405" cy="649.7301297056082" r="3" fill="#2879a5"/>
+</g>
+<g><title>#90 clear ch4 success t=1654.542655s</title>
+<path d="M283.8576450197701,602.5383963595864 l10,10 M283.8576450197701,612.5383963595864 l10,-10" stroke="#bd4b37" stroke-width="2"/>
+<text x="295.8576450197701" y="601.5383963595864" font-size="11">C4</text>
+</g>
+<g><title>#91 clear ch14 success t=1752.298581s</title>
+<path d="M342.85999106511974,547.2560815322091 l10,10 M342.85999106511974,557.2560815322091 l10,-10" stroke="#bd4b37" stroke-width="2"/>
+<text x="354.85999106511974" y="546.2560815322091" font-size="11">C14</text>
+</g>
+<g><title>#92 measure ch9 direction t=1780.963301s</title>
+<circle cx="363.37318726320393" cy="564.4897596455222" r="3" fill="#2879a5"/>
+</g>
+<g><title>#93 measure ch9 direction t=1893.620721s</title>
+<circle cx="437.06086920410365" cy="622.5997306837592" r="3" fill="#2879a5"/>
+</g>
+<g><title>#94 measure ch18 no_signal t=1939.283981s</title>
+<circle cx="464.20896255075087" cy="644.008667382057" r="3" fill="#2879a5"/>
+</g>
+<g><title>#95 measure ch17 direction t=1945.283981s</title>
+<circle cx="464.20896255075087" cy="644.008667382057" r="3" fill="#2879a5"/>
+</g>
+<g><title>#96 measure ch16 no_signal t=1951.283981s</title>
+<circle cx="464.20896255075087" cy="644.008667382057" r="3" fill="#2879a5"/>
+</g>
+<g><title>#97 measure ch15 no_signal t=1957.283981s</title>
+<circle cx="464.20896255075087" cy="644.008667382057" r="3" fill="#2879a5"/>
+</g>
+<g><title>#98 measure ch13 no_signal t=1963.283981s</title>
+<circle cx="464.20896255075087" cy="644.008667382057" r="3" fill="#2879a5"/>
+</g>
+<g><title>#99 measure ch11 no_signal t=1969.283981s</title>
+<circle cx="464.20896255075087" cy="644.008667382057" r="3" fill="#2879a5"/>
+</g>
+<g><title>#100 measure ch7 no_signal t=1975.283981s</title>
+<circle cx="464.20896255075087" cy="644.008667382057" r="3" fill="#2879a5"/>
+</g>
+<g><title>#101 measure ch5 no_signal t=1981.283981s</title>
+<circle cx="464.20896255075087" cy="644.008667382057" r="3" fill="#2879a5"/>
+</g>
+<g><title>#102 measure ch3 no_signal t=1987.283981s</title>
+<circle cx="464.20896255075087" cy="644.008667382057" r="3" fill="#2879a5"/>
+</g>
+<g><title>#103 measure ch2 no_signal t=1993.283981s</title>
+<circle cx="464.20896255075087" cy="644.008667382057" r="3" fill="#2879a5"/>
+</g>
+<g><title>#104 measure ch17 direction t=2060.560943s</title>
+<circle cx="467.75304638372074" cy="697.3053741943406" r="3" fill="#2879a5"/>
+</g>
+<g><title>#105 clear ch17 success t=2139.122578s</title>
+<path d="M431.9980938449113,748.5714285714286 l10,10 M431.9980938449113,758.5714285714286 l10,-10" stroke="#bd4b37" stroke-width="2"/>
+<text x="443.9980938449113" y="747.5714285714286" font-size="11">C17</text>
+</g>
+<g><title>#106 clear ch9 success t=2349.156735s</title>
+<path d="M545.3499976007593,610.3893483658219 l10,10 M545.3499976007593,620.3893483658219 l10,-10" stroke="#bd4b37" stroke-width="2"/>
+<text x="557.3499976007593" y="609.3893483658219" font-size="11">C9</text>
+</g>
+<g><title>#107 measure ch2 no_signal t=2489.928929s</title>
+<circle cx="615.1209157826023" cy="517.3785030849676" r="3" fill="#2879a5"/>
+</g>
+<g><title>#108 measure ch3 no_signal t=2495.928929s</title>
+<circle cx="615.1209157826023" cy="517.3785030849676" r="3" fill="#2879a5"/>
+</g>
+<g><title>#109 measure ch5 no_signal t=2501.928929s</title>
+<circle cx="615.1209157826023" cy="517.3785030849676" r="3" fill="#2879a5"/>
+</g>
+<g><title>#110 measure ch7 no_signal t=2507.928929s</title>
+<circle cx="615.1209157826023" cy="517.3785030849676" r="3" fill="#2879a5"/>
+</g>
+<g><title>#111 measure ch11 no_signal t=2513.928929s</title>
+<circle cx="615.1209157826023" cy="517.3785030849676" r="3" fill="#2879a5"/>
+</g>
+<g><title>#112 measure ch13 no_signal t=2519.928929s</title>
+<circle cx="615.1209157826023" cy="517.3785030849676" r="3" fill="#2879a5"/>
+</g>
+<g><title>#113 measure ch15 no_signal t=2525.928929s</title>
+<circle cx="615.1209157826023" cy="517.3785030849676" r="3" fill="#2879a5"/>
+</g>
+<g><title>#114 measure ch16 no_signal t=2531.928929s</title>
+<circle cx="615.1209157826023" cy="517.3785030849676" r="3" fill="#2879a5"/>
+</g>
+<g><title>#115 measure ch18 no_signal t=2537.928929s</title>
+<circle cx="615.1209157826023" cy="517.3785030849676" r="3" fill="#2879a5"/>
+</g>
+<g><title>#116 measure ch1 direction t=2574.016919s</title>
+<circle cx="596.4333251963014" cy="498.9761162017901" r="3" fill="#2879a5"/>
+</g>
+<g><title>#117 clear ch1 success t=2698.013793s</title>
+<path d="M678.4181893555914,437.46797293623985 l10,10 M678.4181893555914,447.46797293623985 l10,-10" stroke="#bd4b37" stroke-width="2"/>
+<text x="690.4181893555914" y="436.46797293623985" font-size="11">C1</text>
+</g>
+<g><title>#118 measure ch18 no_signal t=2884.280686s</title>
+<circle cx="580.9119532318513" cy="323.3698357029107" r="3" fill="#2879a5"/>
+</g>
+<g><title>#119 measure ch16 no_signal t=2890.280686s</title>
+<circle cx="580.9119532318513" cy="323.3698357029107" r="3" fill="#2879a5"/>
+</g>
+<g><title>#120 measure ch15 no_signal t=2896.280686s</title>
+<circle cx="580.9119532318513" cy="323.3698357029107" r="3" fill="#2879a5"/>
+</g>
+<g><title>#121 measure ch13 no_signal t=2902.280686s</title>
+<circle cx="580.9119532318513" cy="323.3698357029107" r="3" fill="#2879a5"/>
+</g>
+<g><title>#122 measure ch11 no_signal t=2908.280686s</title>
+<circle cx="580.9119532318513" cy="323.3698357029107" r="3" fill="#2879a5"/>
+</g>
+<g><title>#123 measure ch7 no_signal t=2914.280686s</title>
+<circle cx="580.9119532318513" cy="323.3698357029107" r="3" fill="#2879a5"/>
+</g>
+<g><title>#124 measure ch5 no_signal t=2920.280686s</title>
+<circle cx="580.9119532318513" cy="323.3698357029107" r="3" fill="#2879a5"/>
+</g>
+<g><title>#125 measure ch3 no_signal t=2926.280686s</title>
+<circle cx="580.9119532318513" cy="323.3698357029107" r="3" fill="#2879a5"/>
+</g>
+<g><title>#126 measure ch2 direction t=2932.280686s</title>
+<circle cx="580.9119532318513" cy="323.3698357029107" r="3" fill="#2879a5"/>
+</g>
+<g><title>#127 measure ch2 direction t=2991.703641s</title>
+<circle cx="625.9519282897311" cy="308.4721673556101" r="3" fill="#2879a5"/>
+</g>
+<g><title>#128 clear ch2 success t=3021.196775s</title>
+<path d="M621.453607955838,282.12768327437493 l10,10 M621.453607955838,292.12768327437493 l10,-10" stroke="#bd4b37" stroke-width="2"/>
+<text x="633.453607955838" y="281.12768327437493" font-size="11">C2</text>
+</g>
+<rect x="425.0" y="445.0" width="10" height="10" fill="#34856c"/>
+<polygon points="626.453607955838,279.12768327437493 628.5108563388617,284.2961237940626 634.0620600861993,284.65554731937533 629.782305762871,288.20924275468724 631.1558899741779,293.59981922937453 626.453607955838,290.62768327437493 621.7513259374982,293.59981922937453 623.124910148805,288.20924275468724 618.8451558254768,284.65554731937533 624.3963595728144,284.2961237940626" fill="#825599"/>
+<text x="410" y="835" font-size="14">x / m</text>
+<text x="14" y="104" font-size="14">y / m</text>
+<text x="65" y="865" font-size="13">● 检测   × 红：清除成功 / 黄：失败   ■ 起点   ★ 终点（异常时为最后确认位置）</text>
+<text x="65" y="888" font-size="13">清除 12；移动 11366.0 m；虚拟时间 3021.197 s</text>
+</svg>

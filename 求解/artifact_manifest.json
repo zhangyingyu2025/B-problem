@@ -1,0 +1,55 @@
+{
+  "scope": "B3 final handoff only",
+  "code": "tools/test_evidence/export.py",
+  "command": "python -B -X utf8 tools/test_evidence/export.py --manifest B3/final_formal_manifest.json --output B3/结果/paper-rebuilt",
+  "runs": [
+    {
+      "case_code": "845S-PDZN-BJES-56PB",
+      "source_result": "B3/结果/e13_formal/run-20260913-102814-099/result.json",
+      "actions": "B3/结果/e13_formal/run-20260913-102814-099/actions.jsonl",
+      "actions_sha256": "484a38e04c3c8178c4d7e3d5f8ab5dd136d46d8558617cc46b9c7ed4af214793",
+      "cleared_count": 14,
+      "total_virtual_s": 3084.466523,
+      "mean_time_per_clear_s": 220.31903735714286,
+      "runtime_reconstructed_s": 2.391,
+      "encrypted_log": "B3/结果/e13_formal/run-20260913-102814-099/simulator_logs/formal-p3-1-845S-PDZN-BJES-56PB.jlog",
+      "encrypted_sha256": "d9181c760b4f6e18ab0e5bf1592575ffa75554c838df0c9fdeed1d178e6f2f1c",
+      "figures": [
+        "B3/结果/e13_formal/run-20260913-102814-099/evidence-20260913-102831-621/run-01-trajectory.svg"
+      ]
+    },
+    {
+      "case_code": "9HR8-M9ZV-Q9EY-XF5S",
+      "source_result": "B3/结果/e13_formal/run-20260913-103404-113/result.json",
+      "actions": "B3/结果/e13_formal/run-20260913-103404-113/actions.jsonl",
+      "actions_sha256": "6c6bb5bb8811588f8db85a8b146553ed56bd69f70e35b8be858adde9a12fee71",
+      "cleared_count": 10,
+      "total_virtual_s": 3132.62567,
+      "mean_time_per_clear_s": 313.262567,
+      "runtime_reconstructed_s": 1.952,
+      "encrypted_log": "B3/结果/e13_formal/run-20260913-103404-113/simulator_logs/formal-p3-2-9HR8-M9ZV-Q9EY-XF5S.jlog",
+      "encrypted_sha256": "b413b1c74b4be91addf81f9f1c46f53357dfb0ab42596df42947e823bd31dc64",
+      "figures": [
+        "B3/结果/e13_formal/run-20260913-103404-113/evidence-20260913-103417-005/run-01-trajectory.svg"
+      ]
+    },
+    {
+      "case_code": "V9S6-H7S5-WUA4-RBNE",
+      "source_result": "B3/结果/e13_formal/run-20260913-103633-059/result.json",
+      "actions": "B3/结果/e13_formal/run-20260913-103633-059/actions.jsonl",
+      "actions_sha256": "07382045c0ad6fc23b683c4a4d4a76c0867f82ec6ef2888056e8d6180ddee7b9",
+      "cleared_count": 14,
+      "total_virtual_s": 3209.575494,
+      "mean_time_per_clear_s": 229.25539242857144,
+      "runtime_reconstructed_s": 2.079,
+      "encrypted_log": "B3/结果/e13_formal/run-20260913-103633-059/simulator_logs/formal-p3-3-V9S6-H7S5-WUA4-RBNE.jlog",
+      "encrypted_sha256": "de01178a0fbe6688fdf7cfe984363af0db75c58cb84cbf246acaf4109e43d191",
+      "figures": [
+        "B3/结果/e13_formal/run-20260913-103633-059/evidence-20260913-103645-515/run-01-trajectory.svg"
+      ]
+    }
+  ],
+  "total_cleared": 38,
+  "weighted_s_per_source": 248.0702022894737,
+  "case_mean_s_per_source": 254.27899892857144
+}
