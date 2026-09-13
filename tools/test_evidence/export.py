@@ -111,6 +111,10 @@ def draw_svg(report,title):
 
 def export(manifest_path,output):
     config=json.loads(manifest_path.read_text(encoding='utf-8-sig'));base=manifest_path.parent
+    return export_config(config,base,output)
+
+
+def export_config(config,base,output):
     if output.exists(): raise ValueError('output already exists; choose a new directory')
     prepared=[]
     for run in config['runs']:
@@ -151,6 +155,16 @@ def export(manifest_path,output):
 
 if __name__=='__main__':
     p=argparse.ArgumentParser(description=__doc__)
-    p.add_argument('--manifest',type=Path,required=True);p.add_argument('--output',type=Path,required=True)
-    a=p.parse_args();rows=export(a.manifest,a.output)
+    source=p.add_mutually_exclusive_group(required=True)
+    source.add_argument('--manifest',type=Path);source.add_argument('--actions',type=Path)
+    p.add_argument('--output',type=Path,required=True)
+    p.add_argument('--problem',choices=['B3','B4'],default='B3')
+    p.add_argument('--mode',choices=['rehearsal','formal','synthetic'])
+    p.add_argument('--case-code')
+    a=p.parse_args()
+    if a.actions:
+        if not a.mode:p.error('--actions requires explicit --mode; never infer formal/rehearsal')
+        rows=export_config({'runs':[{'problem':a.problem,'mode':a.mode,'case_code':a.case_code,
+                                   'actions':str(a.actions.resolve())}]},Path.cwd(),a.output)
+    else:rows=export(a.manifest,a.output)
     print(json.dumps([{k:r[k] for k in ('problem','mode','case_code','cleared_count','mean_time_per_clear_s','table_runtime_s','normal_exit_and_audit_ok')} for r in rows],ensure_ascii=False,indent=2))

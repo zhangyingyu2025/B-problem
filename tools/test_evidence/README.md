@@ -10,6 +10,14 @@ python -B -X utf8 tools/test_evidence/export.py --manifest tools/test_evidence/e
 
 输出table.csv/table.md、逐局JSON、全部确认动作CSV、等比例SVG路径。SVG可以用浏览器查看或作为矢量图插入论文。图保留动作顺序及重访；同点多频道标记允许重合，不人为挪动。清除点是机器人坐标，不能称为源的精确真值。绘图范围包括全部坐标，虚线圆半径1800m。
 
+单局可直接读日志，无需编写manifest：
+
+```powershell
+python -B -X utf8 tools/test_evidence/export.py --actions "B3/结果/e13_rehearsal/run-007/actions.jsonl" --problem B3 --mode rehearsal --output "B3/结果/e13_rehearsal/run-007/evidence"
+```
+
+可选`--case-code "界面显示的案例编码"`；不填则明确标记待补。`--mode`只标记已经发生的测试类型，不连接或启动模拟器。
+
 正式测试后复制manifest，runs写入三局；`mode`改为`formal`，`problem`填B3或B4，`actions`指向对应日志，`case_code`按模拟器显示原样填写。所有相对路径相对manifest目录。`encrypted_log`可填原始加密文件路径，工具只记录原文件名和SHA256，不改名、不解密。输出目录必须是新目录。
 
 ## 四列口径
