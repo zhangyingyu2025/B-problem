@@ -1,0 +1,23 @@
+{
+  "problem": "B4",
+  "mode": "formal",
+  "strategy": "B4 V2 B4Solver",
+  "robot_id": "202623001400",
+  "started_local": "2026-09-13T15:25:12.962918",
+  "code_sha256_lf": {
+    "B4/code/__init__.py": "0467fb94e02e2f093f216ceb156dc4ca98b87c128f0519b9d138f50e03d91bc6",
+    "B4/code/b4_geometry.py": "62003703dee41ef0841d9420db3a7d774a251c5e5787beff886483770bab4ab4",
+    "B4/code/discovery_certificate.py": "2e7a83caf1a8d62811737115f342838b79718cdcd61bfc30e440ceda78ad5e3d",
+    "B4/code/discovery_convex_certificate.py": "f826bb9c29c7e6fdf790c64d1f3b51a9733776fdcd7a80b78eee59087f83ad1e",
+    "B4/code/discovery_mesh.py": "908871092acbb8b02d696f867209a5cfdb0fd71bcc2737c5bbf5b93fcd710a6c",
+    "B4/code/offline_environment_b4.py": "d95846f37d45b634a1ba4d1698ca88060c815ef20f827c1d5479c468bcce3b59",
+    "B4/code/paired_fan.py": "1c2e09152754713062dfa7c963a65c6700ebce1148027a72f315a7befb9e5747",
+    "B4/code/protocol.py": "77b1ce8db702ab9e3d96cdd321437c077435f05cc32147353088e7a088d666ca",
+    "B4/code/run_official.py": "fd4e066fcb8bf71e36cf7d0a9911f83832ec0368c549ad90b89feadf5e915cee",
+    "B4/code/run_offline.py": "ba04ba9cb0551dd77718ca12d625c3daa896018e3706f071692ab8df7fd08d75",
+    "B4/code/solver.py": "e08264136e7bb16dcccb96b8e1d2c58e7e5c66a51a944aef416dfe1800ee21db",
+    "B4/code/vendor/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "B4/code/vendor/b1_geometry.py": "937802ec162bd5c2d1bb2cce11f23a4bc4cfdd07dc5bc7a1af42ed744e0838ff",
+    "B4/code/vendor/b1plus.py": "c3a48ac1a698d27aa429254a628772e54875baa43d5beb341e55ba336ef234e9"
+  }
+}

@@ -9,3 +9,6 @@
 .gitignore text eol=lf
 "B3/结果/e13_formal/**" -text
 "B3/结果/e13_rehearsal/**" -text
+"B4/results/v2_formal/**" -text
+"B4/results/dev50_cases.json" -text
+"B4/results/dev50_reference.json" -text

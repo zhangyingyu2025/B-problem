@@ -1,32 +1,47 @@
-# B4：全向与定向源的发现、定位和清除
+# B4 Final Consolidated Solver (V2 isolated package)
 
-按 `E:/Download/Codex_B4_完整建模与执行方案_目标350-380.md` 开发。任务书 SHA256 为 `00bcb93f804f0f139490dab29c51c221fe0a77b8b4096e6296a1fe16829b4b41`。开发起点为 jty 的 `62f628d`，B1/B2/B3 只读；已有 B2 缓存变更和 B3.zip 不属于本工作。
+正式测试与论文材料请先读 [论文交接.md](论文交接.md)。三局正式证据位于 `results/v2_formal/`；跨电脑重建表图使用 `final_formal_manifest.json`。
 
-目标：可靠全清后，在未调参确认集上达到 weighted≤380 s/源，350 为进阶目标。当前阶段不运行正式测试，演练入口仅准备。
+This directory is the standalone B4 solver. It does not depend on the historical `solver_gXX.py` chain or on repository B1/B3 modules.
 
-## 实施与验收
+## Important V2 change
 
-|阶段|交付|完成证据|
-|---|---|---|
-|A|独立定向源离线协议环境|至少20项业务协议/边界/幂等测试|
-|B|25点三角网格与严格发现证书|明确三角形、边长<1000、外边界包含1800圆；随机查错独立标记|
-|C|SPF45安全双扇|推导与10万随机组、端点压力测试|
-|D|G0、保守几何、有限清除覆盖、无真值策略接口|random100、boundary50、all_directional50、endpoints50全清；不泄漏真值|
-|E|依次单因素增加事件路由、减少网格、扇形/风险优化|DEV配对完整成本、分层、尾部、失败日志|
-|F|冻结候选、一次性HOLDOUT、演练入口|所有规定确认集全清且目标性能满足；不自动启动正式测试|
+All internal imports are package-relative (`B4.code...`). This prevents stale or same-named modules elsewhere in the repository from being imported accidentally. `source_manifest.json` fingerprints the executable source set using SHA256 after LF normalization.
 
-DEV random_mixed：64000000–64000199；专项验证使用6401/6402/6403万段。HOLDOUT 64100000–64100099、64110000–64110049、64120000–64120049、64130000–64130049 保留到候选冻结，禁止提前运行后调参。
+## Verify after copying into the repository
 
-## 已核验的物理与协议规则
-
-原题PDF4页和附件2原文核验：定向发射半平面从源指向检测点，±90°含边界；near需同时覆盖；clear仅看20m距离，不改频道。普通no_signal不提供距离下界，禁止传入B3的负观测半平面。重复位置误差固定，示向量化仍在±1°内。不存在频道必须有全域发现证书；发现16个才允许按总数上限终止发现。
-
-附件2进一步规定：JSON整数值1.0也可作频道；未知字段拒绝但不占用ID；已接受请求同ID同内容重试只执行一次；微秒累计时间。离线传输以Python对象作为已解码请求，验证业务字段，不宣称覆盖HTTP报文头、原始重复JSON键、并发套接字或服务器流量限额。
-
-25点外环理论上正好外切1800圆，编码时应略向外留裕量再给数值证书，不能让浮点内缩破坏边界保证。SPF的距离下界必须是可靠下界；使用点到外包的最短距离时需要向下数值保护。
+From the repository root:
 
 ```powershell
-python -B -X utf8 -m unittest discover -s B4/tests -v
+python B4/diagnose.py
+python -m unittest discover -s B4/tests -v
+python B4/verify_reproduction.py --count 50
 ```
 
-大批次日志及逐场数据保存在忽略的 `B4/results/`，精简验收记录与源码提交Git。阶段完成后更新此文档及验收记录；失败保留，不用小范围通过替代完整门槛。
+Expected unit tests: 4 tests, all `ok`.
+
+Expected DEV50 summary:
+
+- runs: 50
+- full_clear_runs: 50
+- sources: 648
+- weighted_s_per_source: 450.56364499382715
+- mismatches: []
+
+The DEV50 cases are frozen in `results/dev50_cases.json`, so reproduction does not regenerate the random cases.
+
+## Entry points
+
+Offline:
+
+```powershell
+python B4/run_offline.py --count 1
+```
+
+Official/local HTTP simulator:
+
+```powershell
+python B4/run_official.py --help
+```
+
+Python standard library only; no third-party package is required.

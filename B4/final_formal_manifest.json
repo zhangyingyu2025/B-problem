@@ -1,0 +1,25 @@
+{
+  "runs": [
+    {
+      "problem": "B4",
+      "mode": "formal",
+      "case_code": "5PYH-SS62-7UT9-GQXV",
+      "actions": "results/v2_formal/run-20260913-152325-720995/actions.jsonl",
+      "encrypted_log": "results/v2_formal/run-20260913-152325-720995/simulator_logs/formal-p4-1-5PYH-SS62-7UT9-GQXV.jlog"
+    },
+    {
+      "problem": "B4",
+      "mode": "formal",
+      "case_code": "8D8G-SXAP-SFEF-ZASW",
+      "actions": "results/v2_formal/run-20260913-152512-961913/actions.jsonl",
+      "encrypted_log": "results/v2_formal/run-20260913-152512-961913/simulator_logs/formal-p4-2-8D8G-SXAP-SFEF-ZASW.jlog"
+    },
+    {
+      "problem": "B4",
+      "mode": "formal",
+      "case_code": "6TUJ-XFUA-68AG-BR6X",
+      "actions": "results/v2_formal/run-20260913-152655-817033/actions.jsonl",
+      "encrypted_log": "results/v2_formal/run-20260913-152655-817033/simulator_logs/formal-p4-3-6TUJ-XFUA-68AG-BR6X.jlog"
+    }
+  ]
+}

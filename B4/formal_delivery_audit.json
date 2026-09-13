@@ -1,0 +1,34 @@
+{
+  "scope": "B4 three official sessions; source fingerprints and offline evidence rebuild",
+  "checks": [
+    {
+      "case_code": "5PYH-SS62-7UT9-GQXV",
+      "log_sha256": "854d7d4e6a184be75f82055e9cd30e14682c1f9a872e7fdf6f97e238452a6c38",
+      "encrypted_log_sha256": "fbb8453ddb8d4392e4598462a445fe7b7f54ce77186759d8b6adcc3ac12f3bdf",
+      "cleared_count": 14,
+      "mean_time_per_clear_s": 384.22020535714285,
+      "virtual_time_s": 5379.082875,
+      "runtime_reconstructed_s": 6.661
+    },
+    {
+      "case_code": "8D8G-SXAP-SFEF-ZASW",
+      "log_sha256": "71a9aa68de60b45ee57b4e02399e7a9aeddea176c91894bcec3c202239c403f2",
+      "encrypted_log_sha256": "1e459f684fa42c1ff3177f55757aed3f21852371ac2b4d082af21120eeee5f68",
+      "cleared_count": 12,
+      "mean_time_per_clear_s": 507.8875215,
+      "virtual_time_s": 6094.650258,
+      "runtime_reconstructed_s": 7.073
+    },
+    {
+      "case_code": "6TUJ-XFUA-68AG-BR6X",
+      "log_sha256": "c9be66168ac97f78e91091d37ba16488837518b8c5321ac4b66671dac71c8b51",
+      "encrypted_log_sha256": "f4757e6df6831abec87fe38fc8b6316cc72460a9288ebcf3f00f89bfc0fa91ef",
+      "cleared_count": 12,
+      "mean_time_per_clear_s": 486.36812633333335,
+      "virtual_time_s": 5836.417516,
+      "runtime_reconstructed_s": 7.288
+    }
+  ],
+  "source_unchanged": true,
+  "svg_byte_exact": true
+}

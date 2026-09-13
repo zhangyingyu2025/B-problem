@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "hash_policy": "UTF-8 text with CRLF/CR normalized to LF",
+  "sha256_lf": {
+    "__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "code/__init__.py": "0467fb94e02e2f093f216ceb156dc4ca98b87c128f0519b9d138f50e03d91bc6",
+    "code/solver.py": "e08264136e7bb16dcccb96b8e1d2c58e7e5c66a51a944aef416dfe1800ee21db",
+    "code/run_offline.py": "ba04ba9cb0551dd77718ca12d625c3daa896018e3706f071692ab8df7fd08d75",
+    "code/run_official.py": "fd4e066fcb8bf71e36cf7d0a9911f83832ec0368c549ad90b89feadf5e915cee",
+    "code/protocol.py": "77b1ce8db702ab9e3d96cdd321437c077435f05cc32147353088e7a088d666ca",
+    "code/b4_geometry.py": "62003703dee41ef0841d9420db3a7d774a251c5e5787beff886483770bab4ab4",
+    "code/discovery_certificate.py": "2e7a83caf1a8d62811737115f342838b79718cdcd61bfc30e440ceda78ad5e3d",
+    "code/discovery_convex_certificate.py": "f826bb9c29c7e6fdf790c64d1f3b51a9733776fdcd7a80b78eee59087f83ad1e",
+    "code/discovery_mesh.py": "908871092acbb8b02d696f867209a5cfdb0fd71bcc2737c5bbf5b93fcd710a6c",
+    "code/offline_environment_b4.py": "d95846f37d45b634a1ba4d1698ca88060c815ef20f827c1d5479c468bcce3b59",
+    "code/paired_fan.py": "1c2e09152754713062dfa7c963a65c6700ebce1148027a72f315a7befb9e5747",
+    "code/vendor/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "code/vendor/b1_geometry.py": "937802ec162bd5c2d1bb2cce11f23a4bc4cfdd07dc5bc7a1af42ed744e0838ff",
+    "code/vendor/b1plus.py": "c3a48ac1a698d27aa429254a628772e54875baa43d5beb341e55ba336ef234e9",
+    "run_offline.py": "19029d47b134f1bb279150c08823946d11e59ad149065ddf2b8beda635dda5aa",
+    "run_official.py": "0962b9eb4eb09fb49400e14ef7e4b8d4965478b54dd09fe22fa120c02ba0ef3b",
+    "verify_reproduction.py": "a4f166c7f73b377e3350bae4a2616d398b22d38e8b809fdcc1e25dfa46de23bb",
+    "diagnose.py": "c32a61c8e8ce3d610f43e9da649c864644f48d3713b21c962f37c0eff487702e"
+  }
+}

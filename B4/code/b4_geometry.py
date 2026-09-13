@@ -1,11 +1,6 @@
 """B4-safe outer geometry: ambiguous negative observations never clip position."""
 import math
-from pathlib import Path
-import sys
-
-ROOT = Path(__file__).resolve().parents[2]
-sys.path.insert(0,str(ROOT/'B3/experimental/E13'))
-from b1plus import intersection
+from .vendor.b1plus import intersection
 
 
 def geometry(directions, signals):

@@ -1,0 +1,10 @@
+{
+  "runs": [
+    {
+      "problem": "B4",
+      "mode": "formal",
+      "case_code": "8D8G-SXAP-SFEF-ZASW",
+      "actions": "actions.jsonl"
+    }
+  ]
+}

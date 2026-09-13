@@ -1,0 +1,10 @@
+{
+  "runs": [
+    {
+      "problem": "B4",
+      "mode": "formal",
+      "case_code": "5PYH-SS62-7UT9-GQXV",
+      "actions": "actions.jsonl"
+    }
+  ]
+}

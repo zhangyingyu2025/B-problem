@@ -1,0 +1,121 @@
+{
+  "schema_version": 1,
+  "solver": "B4Solver",
+  "baseline": "consolidated best G70-soft behavior",
+  "dev50": {
+    "seeds": "64000000..64000049",
+    "runs": 50,
+    "sources": 648,
+    "full_clear_runs": 50,
+    "weighted_s_per_source": 450.56364499382715,
+    "mismatches": 0
+  },
+  "third_party_dependencies": [],
+  "files": [
+    {
+      "path": "DEPENDENCIES.md",
+      "sha256": "e95f94a0667cff313ede151c28cb9f699ded54fe65f95aa865f3420a714b96de",
+      "bytes": 1139
+    },
+    {
+      "path": "README.md",
+      "sha256": "cbb75d044338340fbfbeb3bacacbedb2266183140f3caf65523fc61f9564fbc5",
+      "bytes": 3446
+    },
+    {
+      "path": "VERIFICATION.md",
+      "sha256": "101fd94801dc7aeb01c8f53c4a81e2bdd6fdc611f478b4721cceb5f0b145d430",
+      "bytes": 652
+    },
+    {
+      "path": "code/__init__.py",
+      "sha256": "0467fb94e02e2f093f216ceb156dc4ca98b87c128f0519b9d138f50e03d91bc6",
+      "bytes": 58
+    },
+    {
+      "path": "code/b4_geometry.py",
+      "sha256": "f5c671b04b45bc15556789bfe89857088287e93e068748fca867e234e839a357",
+      "bytes": 2101
+    },
+    {
+      "path": "code/discovery_certificate.py",
+      "sha256": "2e7a83caf1a8d62811737115f342838b79718cdcd61bfc30e440ceda78ad5e3d",
+      "bytes": 4806
+    },
+    {
+      "path": "code/discovery_convex_certificate.py",
+      "sha256": "e7c4d8bcbe7a04319efe7a8eacc43ed9f34e3a7aba3f4252a468b01faaf2dbf8",
+      "bytes": 5822
+    },
+    {
+      "path": "code/discovery_mesh.py",
+      "sha256": "908871092acbb8b02d696f867209a5cfdb0fd71bcc2737c5bbf5b93fcd710a6c",
+      "bytes": 891
+    },
+    {
+      "path": "code/offline_environment_b4.py",
+      "sha256": "d95846f37d45b634a1ba4d1698ca88060c815ef20f827c1d5479c468bcce3b59",
+      "bytes": 9084
+    },
+    {
+      "path": "code/paired_fan.py",
+      "sha256": "1c2e09152754713062dfa7c963a65c6700ebce1148027a72f315a7befb9e5747",
+      "bytes": 1127
+    },
+    {
+      "path": "code/protocol.py",
+      "sha256": "1635725e8cf3e6840535dbe157741108dd401f5f4b55569f4ae52001d4c2f9c3",
+      "bytes": 3388
+    },
+    {
+      "path": "code/run_official.py",
+      "sha256": "17c991be98ceb7e091c4da39251b1b6133c7ba059e5455ac8656a8e54a1a620a",
+      "bytes": 1013
+    },
+    {
+      "path": "code/run_offline.py",
+      "sha256": "c6ee02359868842dc9fa243131394fa1e8f5bdf3f5f5b3f914e7db267627dfac",
+      "bytes": 2412
+    },
+    {
+      "path": "code/solver.py",
+      "sha256": "16a3994fb042b62479accf6846e2c67f06e6b8b793b15129b84f61e4789d7b94",
+      "bytes": 114570
+    },
+    {
+      "path": "code/vendor/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "code/vendor/b1_geometry.py",
+      "sha256": "937802ec162bd5c2d1bb2cce11f23a4bc4cfdd07dc5bc7a1af42ed744e0838ff",
+      "bytes": 3522
+    },
+    {
+      "path": "code/vendor/b1plus.py",
+      "sha256": "c3a48ac1a698d27aa429254a628772e54875baa43d5beb341e55ba336ef234e9",
+      "bytes": 2699
+    },
+    {
+      "path": "requirements.txt",
+      "sha256": "a8016fa5e2f4076b17d2edd47a1af4fd549c86069ed30b3ad97a2b2ced5413d4",
+      "bytes": 61
+    },
+    {
+      "path": "results/dev50_reference.json",
+      "sha256": "8aa8e63f29ee3b2b20969a1e8359a88fcf9e3805c79b2445c9e2e3f3eb2aaa7e",
+      "bytes": 124037
+    },
+    {
+      "path": "tests/test_final.py",
+      "sha256": "51679693886d164dbf5584f1129a982e45b1bafe7aa1824581905078bc8bb8f4",
+      "bytes": 1594
+    },
+    {
+      "path": "verify_reproduction.py",
+      "sha256": "630351069901a0012c4cf70a318045e4a632851fa0a56491ffd2109082cca581",
+      "bytes": 1745
+    }
+  ]
+}

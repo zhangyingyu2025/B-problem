@@ -117,12 +117,45 @@ def verify_local_convex_certificate(mesh, initial_grid=64, max_boxes=250000):
     return result
 
 
+# Final-certificate coordinates are frozen as binary64 literals.  The previous
+# implementation generated these regular rings with platform libm sin/cos.
+# The geometry is symmetric, so ulp-scale Windows/Linux trig differences could
+# change a near-tied route orientation and cascade into different opportunity
+# measurements.  Freezing the final 1868.0/997.5 design removes that platform
+# dependency without changing a single final-coordinate bit on the reference run.
+_FINAL_1868_9975 = (
+    (0.0, 0.0),
+    (1868.0, 0.0),
+    (1617.7354542693315, 933.9999999999999),
+    (934.0000000000002, 1617.7354542693313),
+    (1.1438201104036278e-13, 1868.0),
+    (-933.9999999999995, 1617.7354542693315),
+    (-1617.7354542693315, 933.9999999999999),
+    (-1868.0, 2.2876402208072556e-13),
+    (-1617.7354542693313, -934.0000000000002),
+    (-934.0000000000008, -1617.7354542693308),
+    (-3.4314603312108834e-13, -1868.0),
+    (934.0000000000002, -1617.7354542693313),
+    (1617.7354542693308, -934.0000000000008),
+    (997.5, 0.0),
+    (705.3390142335812, 705.3390142335811),
+    (6.107925910747424e-14, 997.5),
+    (-705.3390142335811, 705.3390142335812),
+    (-997.5, 1.2215851821494847e-13),
+    (-705.3390142335813, -705.3390142335811),
+    (-1.832377773224227e-13, -997.5),
+    (705.339014233581, -705.3390142335813),
+)
+
 def mesh21(outer_radius=1868.7,inner_radius=999.9):
-    """21-site G18 candidate: center + regular 12 outer + regular 8 inner, aligned."""
-    polar=lambda r,a:(r*math.cos(math.radians(a)),r*math.sin(math.radians(a)))
-    vertices=[(0.,0.)]
-    vertices += [polar(outer_radius,30*k) for k in range(12)]
-    vertices += [polar(inner_radius,45*k) for k in range(8)]
+    """21-site candidate; the final design uses frozen cross-platform coordinates."""
+    if float(outer_radius) == 1868.0 and float(inner_radius) == 997.5:
+        vertices=list(_FINAL_1868_9975)
+    else:
+        polar=lambda r,a:(r*math.cos(math.radians(a)),r*math.sin(math.radians(a)))
+        vertices=[(0.,0.)]
+        vertices += [polar(outer_radius,30*k) for k in range(12)]
+        vertices += [polar(inner_radius,45*k) for k in range(8)]
     return {'name':'G18-local-convex-21','vertices':vertices,
             'target_radius':1800.0,'range':1000.0,
             'certificate_kind':'local_convex'}

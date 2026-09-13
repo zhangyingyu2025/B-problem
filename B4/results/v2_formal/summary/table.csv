@@ -1,0 +1,4 @@
+﻿记录序号,问题,测试类型,测试案例编码,清除干扰源个数,平均定位清除时间(s),程序运行时间(s),运行时间来源,日志审计通过,原始日志
+1,B4,正式,5PYH-SS62-7UT9-GQXV,14,384.220205,6.661000,enter/exit响应real_timestamp_ms之差；为接口重建值，需与官方可用记录核验,True,E:\DeskBox\jty1379\项目\数模\B-problem-jty\B4\results\v2_formal\run-20260913-152325-720995\actions.jsonl
+2,B4,正式,8D8G-SXAP-SFEF-ZASW,12,507.887521,7.073000,enter/exit响应real_timestamp_ms之差；为接口重建值，需与官方可用记录核验,True,E:\DeskBox\jty1379\项目\数模\B-problem-jty\B4\results\v2_formal\run-20260913-152512-961913\actions.jsonl
+3,B4,正式,6TUJ-XFUA-68AG-BR6X,12,486.368126,7.288000,enter/exit响应real_timestamp_ms之差；为接口重建值，需与官方可用记录核验,True,E:\DeskBox\jty1379\项目\数模\B-problem-jty\B4\results\v2_formal\run-20260913-152655-817033\actions.jsonl
